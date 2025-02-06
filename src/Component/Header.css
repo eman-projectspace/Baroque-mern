@@ -1,0 +1,57 @@
+.div1{
+  height:40px ;
+  width:100% ;
+  background-color: black;
+  }
+  .toptext {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .toptext::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: black;
+    transition: width 0.2s ease-in-out;
+  }
+  
+  .toptext:hover::after {
+    width: 100%;
+  }
+  
+      .animated-text{
+          margin-top: 40px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          margin-left: 700px; 
+          color:white;
+          position: absolute;
+          transform: translate(-230px,-40px);
+          height: 30px;
+          background:black;
+          position: absolute;
+          overflow: hidden;
+          padding: 0 40px;
+      }
+      .line{
+        
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 30px;
+  font-size: 13px;
+  font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      }
+      .line:first-child{
+          animation: anim 3s infinite;
+      }
+  
+  
+      @keyframes anim{
+    50%{margin-top:-30px ;}
+    100%{margin-top:-60px ;}
+  
+      }
