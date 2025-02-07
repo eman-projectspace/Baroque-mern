@@ -10,7 +10,6 @@ function Header() {
       <div className='line'>CLICK HERE FOR: <u className='toptext'>DISPATCH TIMELINE</u><br/></div>
       </div>
       </div>
-    
       </div>
   )
 }
