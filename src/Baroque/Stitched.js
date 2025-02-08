@@ -1,6 +1,15 @@
 import React from 'react'
+import { useState } from "react";
 
 function Stitched() {
+  const [openSections, setOpenSections] = useState({});
+  
+  const toggleSection = (section) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
+  };
   return (
     <div>
     <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >STITCHED</h1>
@@ -8,7 +17,46 @@ function Stitched() {
       <div className="text-center font-semibold mx-auto ">44 PRODUCTS</div>
       <div className='mr-8'>SORT BY</div>
      </div>
-     <div className=' mr-10 ml-10  h-100 w-80 position-sticky top-60 '>
+     <div className="mr-10 ml-10 w-64 sticky top-16 text-start text-gray-800 font-serif  ">
+      {[
+        "AVAILABILITY",
+        "PRICE",
+        "PRODUCT TYPE",
+        "TYPE",
+        "FABRIC",
+        "SIZE",
+        "PRODUCT STYLE",
+      ].map((section) => (
+        <div key={section} className="mb-4">
+          <div
+            className="cursor-pointer flex justify-between items-center "
+            onClick={() => toggleSection(section)}
+          >
+            {section}
+            <span className="text-lg">
+              {openSections[section] ? "−" : "+"}
+            </span>
+          </div>
+          <hr />
+          <div
+            className={`overflow-hidden transition-all duration-300 ${
+              openSections[section] ? "max-h-40" : "max-h-0"
+            }`}
+          >
+            {/* Example: Replace with actual filter options */}
+            <div className="p-2 text-sm text-gray-600">
+              <label className="block">
+                <input className="mr-2" />
+              </label>
+              <label className="block">
+                <input className="mr-2" />
+              </label>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+     {/* <div className=' mr-10 ml-10  h-100 w-80 position-sticky top-60 '>
     <div className='cursor-pointer'>AVABILITY</div>
     <br/><hr/>
     <div className='cursor-pointer'>PRICE</div>
@@ -22,7 +70,7 @@ function Stitched() {
     <div className='cursor-pointer'>SIZE</div>
     <br/><hr/>
     <div className='cursor-pointer'>PRODUCT STYLE</div>
-  </div>
+  </div> */}
   <div className='grid grid-cols-2 grid-row-12 gap-4 place-content-evenly ml-96 mr-10 -mt-80 '>
   <div><img src="https://baroque.pk/cdn/shop/files/133_ad66401e-0778-4f3a-ac2f-e8e3c425e5a1.jpg?v=1734072621&width=600" alt=''/>
 <p className='text-center'>EMBROIDERED NET CH13-01 STITCHED<br/><b>PKR 29,900.00</b><br/>CHANTELLE 13</p></div>
