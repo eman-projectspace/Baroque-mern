@@ -1,39 +1,47 @@
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+  const navigate = useNavigate(); // Hook to navigate
   return (
     <div>
        <div>
       <div className='w-10/12 h-2 mt-2'></div>
       <img  className="-mt-20" src="https://baroque.pk/cdn/shop/files/MAin_BAnner94.jpg?v=1738656243&width=2000 " alt=""/>
       <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-4">
-      <button className="bg-white text-black px-6 py-2 w-40 mt-20 h-12">STITCHED</button>
-      <button className="bg-black text-white px-6 py-2 w-40  mt-20">UNSTITCHED</button>
+      <button
+      className="bg-white text-black px-6 py-2 w-40 mt-20 h-12"
+      onClick={() => navigate("/stitched")}>STITCHED</button>
+      <button
+       className="bg-black text-white px-6 py-2 w-40  mt-20"
+       onClick={() => navigate("/unstitched")}>UNSTITCHED</button>
       </div>
       </div>
       <div class="flex mt-24 mb-3">
   <div class="flex mx-5" >
-    <img  src="./Images/flex-1.webp" alt=""/>
-
+    <img  src="https://baroque.pk/cdn/shop/files/02_Banner242.jpg?v=1738845059&width=800" alt=""/>
   </div>
   <div class="flex mx-5">
-  <img src="./Images/flex-2.webp" alt=""/>
+  <img src="https://baroque.pk/cdn/shop/files/02_Banner240.jpg?v=1738051357&width=800" alt=""/>
   </div>
   <div class="flex mx-5">
-  <img src="./Images/flex-3.webp" alt=""/>
+  <img src="https://baroque.pk/cdn/shop/files/02_Banner239.jpg?v=1738051379&width=800" alt=""/>
   </div>
 </div>
 
-<div class="flex mb-3">
-  <div class="ms-20 text-3xl font-serif">CHANTELLE</div>
-  <div class="ms-60 text-3xl font-serif">READY TO WEAR</div>
-  <div class="ms-60 text-3xl font-serif">SHAWLS</div>
+<div class="flex mb-3 ml-20 space-x-48">
+  <div class=" text-3xl font-serif">READY TO WEAR</div>
+  <div class=" text-3xl font-serif">CHANTELLE</div>
+  <div class=" text-3xl font-serif"><p className='ml-20'>SHAWLS</p></div>
 </div>
 <div class="flex">
-<div><button class="bg-black w-40 h-12 text-white ml-24 mr-72">SHOP NOW</button></div>
-<div><button  class="bg-black w-40 h-12 text-white mr-5">SHOP NOW</button></div>
-<div><button  class="bg-black w-40 h-12 text-white ml-64 mr-20">SHOP NOW</button></div>
+<div><button class="bg-black w-40 h-12 text-white ml-24 mr-72"
+  onClick={() => navigate("/readytowear")}>SHOP NOW</button></div>
+<div><button  class="bg-black w-40 h-12 text-white mr-5"
+  onClick={() => navigate("/chantelle")}>SHOP NOW</button></div>
+<div><button  class="bg-black w-40 h-12 text-white ml-64 mr-20"
+  onClick={() => navigate("/shawls")}>SHOP NOW</button></div>
 </div>
 <br/><br/><br/><br/>
 <hr/>
