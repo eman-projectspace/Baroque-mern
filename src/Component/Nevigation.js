@@ -5,7 +5,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Outlet,Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
+
 function Nevigation() {
+  const navigate = useNavigate(); // Hook to navigate
   return (
  
 <div className="w-full h-15 bg-transparent hover:bg-white transition-all duration-300">
@@ -17,7 +20,7 @@ function Nevigation() {
         className="!bg-transparent hover:!bg-white transition-all duration-300 mb-0 shadow-xl relative w-full 
         after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full h-15 -mt-3  cursor-pointer"
       >
-        <Container fluid className="w-96 inline-block -ml-0 !bg-transparent hover:!bg-white transition-all duration-300 mr-40 mt-2">
+        <Container fluid className="w-96 inline-block -ml-0 !bg-transparent hover:!bg-white transition-all duration-300 mt-2">
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
           <Navbar.Brand href="#" />
           <Navbar.Offcanvas
@@ -106,9 +109,8 @@ function Nevigation() {
               </Nav>
               <div className="flex gap-4 mt-2 mb-4 ml-4"></div>
               <hr />
-              <p className="mt-3 cursor-pointer font-mono inline-block">
-                PAKISTAN
-              </p>
+              <p className="mt-3 cursor-pointer font-mono inline-block">PAKISTAN</p>
+              
             </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
@@ -118,20 +120,21 @@ function Nevigation() {
             alt=""
           />
         </div>
-        <Container fluid className="w-96 inline-block !bg-transparent hover:!bg-white transition-all duration-300 ml-44">
-          <div className="flex">
+        <Container fluid className="w-96 inline-block !bg-transparent hover:!bg-white transition-all duration-300 ml-20 ">
+          <div className="flex space-x-3">
             <div>
-              <p className="font-serif font-medium mt-3 text-black hover:!text-gray-700">Pakistan</p>
-            </div>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <img src="" alt="" />
-            </div>
-            <div>
-              <img src="" alt="" />
-            </div>
+              <p className="font-serif font-medium mt-3 mr-5 text-black hover:!text-gray-700 ml-40">Pakistan</p></div>
+           <div><button className='mt-3' onClick={() => navigate("/service")}><img className='h-5 w-5 mr-20 -ml-4' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
+           </div>
+           <div>
+            <button className='mt-3' onClick={() => navigate("/student")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
+           </div>
+           <div>
+            <button className='mt-3' onClick={() => navigate("/usecallback")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""></img></button>
+           </div>
+           <div>
+            <button className='mt-3'  onClick={() => navigate("/usememo")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
+           </div>
           </div>
         </Container>
       </Navbar>
