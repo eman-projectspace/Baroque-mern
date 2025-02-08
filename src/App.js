@@ -22,13 +22,12 @@ import Student from './Sub-components/Student';
 import Footer from './Component/Footer';
 
 
-
-
 function App() {
   return (
     <div>
       <Header/>
       <StudentState>
+
 <BrowserRouter>      
 <Nevigation/>
 <Routes>
