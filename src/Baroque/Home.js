@@ -10,11 +10,14 @@ function Home() {
       <div className='w-10/12 h-2 mt-2'></div>
       <img  className="-mt-20" src="https://baroque.pk/cdn/shop/files/MAin_BAnner94.jpg?v=1738656243&width=2000 " alt=""/>
       <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-4">
-      <button
-      className="bg-white text-black px-6 py-2 w-40 mt-20 h-12"
+      {/* BUTTON */}
+     <button className=" 
+     bg-white text-black px-6 py-2 w-40  mt-20 border-white border-2
+     hover:!bg-transparent hover:!border-white hover:!border-2 hover:!text-white hover:!duration-500 ease-in-out"
       onClick={() => navigate("/stitched")}>STITCHED</button>
       <button
-       className="bg-black text-white px-6 py-2 w-40  mt-20"
+       className="bg-black text-white px-6 py-2 w-40  mt-20
+       hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
        onClick={() => navigate("/unstitched")}>UNSTITCHED</button>
       </div>
       </div>
@@ -31,16 +34,19 @@ function Home() {
 </div>
 
 <div class="flex mb-3 ml-20 space-x-48">
-  <div class=" text-3xl font-serif">READY TO WEAR</div>
-  <div class=" text-3xl font-serif">CHANTELLE</div>
-  <div class=" text-3xl font-serif"><p className='ml-20'>SHAWLS</p></div>
+  <div class="mr-20 text-2xl font-serif font-light">READY TO WEAR</div>
+  <div class=" text-2xl font-serif font-light">CHANTELLE</div>
+  <div class=" text-2xl font-serif font-light"><p className='ml-28'>SHAWLS</p></div>
 </div>
 <div class="flex">
-<div><button class="bg-black w-40 h-12 text-white ml-24 mr-72"
+<div><button class="bg-black w-40 h-12 text-white ml-24 mr-72
+ hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out "
   onClick={() => navigate("/readytowear")}>SHOP NOW</button></div>
-<div><button  class="bg-black w-40 h-12 text-white mr-5"
+<div><button  class="bg-black w-40 h-12 text-white mr-5
+ hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
   onClick={() => navigate("/chantelle")}>SHOP NOW</button></div>
-<div><button  class="bg-black w-40 h-12 text-white ml-64 mr-20"
+<div><button  class="bg-black w-40 h-12 text-white ml-64 mr-20
+ hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
   onClick={() => navigate("/shawls")}>SHOP NOW</button></div>
 </div>
 <br/><br/><br/><br/>
@@ -60,7 +66,8 @@ function Home() {
         <img src="https://baroque.pk/cdn/shop/files/65_889fa37c-e256-48fc-84b2-52a924288dc7.jpg?v=1737462104&width=600" alt=""></img>
         <div className='font-serif w-52 mt-2'>EMBROIDERED CHIFFON PR-1056</div>
         <div className='font-serif'>PKR 29,900.00</div>
-        <button className='bg-black w-44 h-12 text-white mt-3'>VIEW PRODUCT</button>
+        <button className='bg-black w-44 h-12 text-white mt-3
+          hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"'>VIEW PRODUCT</button>
          </div>
     </div>
       </Carousel.Item>
@@ -74,7 +81,8 @@ function Home() {
         <img src="https://baroque.pk/cdn/shop/files/88_a84d6f90-d659-4fab-9637-d77cfe27f98a.jpg?v=1735813514" alt=""></img>
         <div className='font-serif w-52 mt-2'>EMBROIDERED CHIFFON PR-1056</div>
         <div className='font-serif'>PKR 10,900.00</div>
-        <button className='bg-black w-44 h-12 mt-3 text-white'>VIEW PRODUCT</button>
+        <button className='bg-black w-44 h-12 mt-3 text-white
+         hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out'>VIEW PRODUCT</button>
   </div>
     </div>
       </Carousel.Item>
@@ -88,7 +96,8 @@ function Home() {
           <img src="https://baroque.pk/cdn/shop/files/27_44117e97-c365-4b12-9d32-17b4a9d77f7f.jpg?v=1733309562" alt=""></img>
           <div className='font-serif w-52 mt-2'>EMBROIDERED CHIFFON PR-1056</div>
         <div className='font-serif'>PKR 29,900.00</div>
-       <button className='bg-black w-44 h-12 text-white mt-3'>VIEW PRODUCT</button>
+       <button className='bg-black w-44 h-12 text-white mt-3
+         hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"'>VIEW PRODUCT</button>
 </div>
     </div>
       </Carousel.Item>
@@ -123,7 +132,8 @@ function Home() {
 <br/>
 <div class="flex mb-24">
 <div class="ms-20"><input placeholder="E-mail" class="ml-72 border 1 h-12 w-72"></input>&nbsp;
-<button  class="bg-black  h-12 w-72 text-white">SUBSCRIBE</button></div>
+<button  class="bg-black  h-12 w-72 text-white
+ hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out">SUBSCRIBE</button></div>
 </div>
 <div class="flex mb-10 ml-20 space-x-14">
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Priority Stitching</p><br/>Receive your stitched orders more<br/> quickly in a timeline of 2 weeks</div>
