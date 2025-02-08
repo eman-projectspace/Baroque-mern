@@ -56,21 +56,6 @@ function Stitched() {
         </div>
       ))}
     </div>
-     {/* <div className=' mr-10 ml-10  h-100 w-80 position-sticky top-60 '>
-    <div className='cursor-pointer'>AVABILITY</div>
-    <br/><hr/>
-    <div className='cursor-pointer'>PRICE</div>
-    <br/><hr/>
-    <div className='cursor-pointer'>PRODUCT TYPE</div>
-    <br/><hr/>
-    <div className='cursor-pointer'>TYPE</div>
-    <br/><hr/>
-    <div className='cursor-pointer'>FABRIC</div>
-    <br/><hr/>
-    <div className='cursor-pointer'>SIZE</div>
-    <br/><hr/>
-    <div className='cursor-pointer'>PRODUCT STYLE</div>
-  </div> */}
   <div className='grid grid-cols-2 grid-row-12 gap-4 place-content-evenly ml-96 mr-10 -mt-80 '>
   <div><img src="https://baroque.pk/cdn/shop/files/133_ad66401e-0778-4f3a-ac2f-e8e3c425e5a1.jpg?v=1734072621&width=600" alt=''/>
 <p className='text-center'>EMBROIDERED NET CH13-01 STITCHED<br/><b>PKR 29,900.00</b><br/>CHANTELLE 13</p></div>
