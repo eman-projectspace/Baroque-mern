@@ -111,20 +111,17 @@ function Home() {
 <br/><br/><br/><br/>
 <hr/>
 <br/><br/><br/><br/>
-<div class=" ml-96 text-1xl italic ">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SUBSCRIBE FOR NEWSLETTER</div>
+<div class="text-center text-1xl font-serif ">SUBSCRIBE FOR NEWSLETTER</div>
 <br/>
-<div class="flex mb-10">
-<div class="ms-20"><input placeholder="E-mail" class="ms-80 border 1 h-10 w-60"></input>&nbsp;
-<button  class="bg-black mb-10 w-60">SUBSCRIBE</button></div>
+<div class="flex mb-24">
+<div class="ms-20"><input placeholder="E-mail" class="ml-72 border 1 h-12 w-72"></input>&nbsp;
+<button  class="bg-black  h-12 w-72 text-white">SUBSCRIBE</button></div>
 </div>
-<div class="flex mb-10">
- 
-  <div class="ms-20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Priority Stitching<br/>Receive your stitched orders more<br/> quickly in a timeline of 2 weeks</div>
-  <div class="ms-20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Custom SIze<br/>Get your outfit tailored to<br/>perfection as per your desired<br/>measurements</div>
-  <div class="ms-20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Free Shipping<br/>We provide free shipping all<br/>across Pakistan on all of our<br/>orders</div>
-  <div class="ms-20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ORDER EXCHANGE<br/>For a hassle free exchange service,<br/>fill out the exchange form<br/></div>
+<div class="flex mb-10 ml-20 space-x-14">
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Priority Stitching</p><br/>Receive your stitched orders more<br/> quickly in a timeline of 2 weeks</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Custom SIze</p><br/>Get your outfit tailored to<br/>perfection as per your desired<br/>measurements</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Free Shipping</p><br/>We provide free shipping all<br/>across Pakistan on all of our<br/>orders</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>ORDER EXCHANGE</p><br/>For a hassle free exchange service,<br/>fill out the exchange form<br/></div>
 </div>
 <br></br> <br></br> <br></br>
     </div>
