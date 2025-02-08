@@ -89,32 +89,22 @@ function Home() {
   <br/><br/><br/>
   <hr/>
   <br/><br/><br/>
-  <div class="ml-96 text-4xl italic ">
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BE&nbsp;INSPIRED&nbsp;&nbsp;</div>
-  <br></br>
-  <div class="flex my-5">
-  <div class="flex mx-5" >
-
-
+  <div class="text-center text-4xl font-serif font-thin mb-20 ">BE INSPIRED</div>
+  <div className="flex space-x-8 ml-20">
+  <div>
+    <video className="h-[500px] w-[350px] cursor-pointer"  
+      src="https://baroque.pk/cdn/shop/videos/c/vp/66c69f47322c49cfb73d44220fc567fc/66c69f47322c49cfb73d44220fc567fc.HD-1080p-2.5Mbps-40062159.mp4?v=0"
+      type="video/mp4" playsInline autoPlay loop muted  />
   </div>
-  <div class="flex mx-5">
-  <img src="./Images/flex-2video.mp4" alt=""/>
+  <div>
+    <video className="h-[500px] w-[350px] cursor-pointer"  
+      src="https://baroque.pk/cdn/shop/videos/c/vp/8335de5a5387470494ab6c998865d268/8335de5a5387470494ab6c998865d268.HD-1080p-2.5Mbps-40062160.mp4?v=0"
+      type="video/mp4" playsInline autoPlay loop muted />
   </div>
-  <div class="flex mx-5">
-  <img src="./Images/flex-3video.mp4" alt=""/>
-  </div>
-</div>
-
-<div class="flex my-5">
-  <div class="flex mx-5" >
-    <video  src="/public/Images/flex-1video.mp4" type="video/mp4" controls alt=""/>
-  
-  </div>
-  <div class="flex mx-5">
-  <video src="/public/Images/flex-2video.mp4" type="video/mp4" controls alt=""/>
-  </div>
-  <div class="flex mx-5">
-  <video src="/public/Images/flex-3video.mp4" type="video/mp4" controls alt=""/>
+  <div>
+    <video className="h-[500px] w-[350px] cursor-pointer"  
+      src="https://baroque.pk/cdn/shop/videos/c/vp/3398a9dc34404ca78f8621b87f59e445/3398a9dc34404ca78f8621b87f59e445.HD-1080p-2.5Mbps-40062158.mp4?v=0"
+      type="video/mp4" playsInline autoPlay loop muted  />
   </div>
 </div>
 
