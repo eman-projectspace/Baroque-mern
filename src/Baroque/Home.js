@@ -21,38 +21,38 @@ function Home() {
        onClick={() => navigate("/unstitched")}>UNSTITCHED</button>
       </div>
       </div>
-      <div class="flex mt-24 mb-3">
-  <div class="flex mx-5" >
+      <div className="flex mt-24 mb-3">
+  <div className="flex mx-5" >
     <img  src="https://baroque.pk/cdn/shop/files/02_Banner242.jpg?v=1738845059&width=800" alt=""/>
   </div>
-  <div class="flex mx-5">
+  <div className="flex mx-5">
   <img src="https://baroque.pk/cdn/shop/files/02_Banner240.jpg?v=1738051357&width=800" alt=""/>
   </div>
-  <div class="flex mx-5">
+  <div className="flex mx-5">
   <img src="https://baroque.pk/cdn/shop/files/02_Banner239.jpg?v=1738051379&width=800" alt=""/>
   </div>
 </div>
 
-<div class="flex mb-3 ml-20 space-x-48">
-  <div class="mr-20 text-2xl font-serif font-light">READY TO WEAR</div>
-  <div class=" text-2xl font-serif font-light">CHANTELLE</div>
-  <div class=" text-2xl font-serif font-light"><p className='ml-28'>SHAWLS</p></div>
+<div className="flex mb-3 ml-20 space-x-48">
+  <div className="mr-20 text-2xl font-serif font-light">READY TO WEAR</div>
+  <div className=" text-2xl font-serif font-light">CHANTELLE</div>
+  <div className=" text-2xl font-serif font-light"><p className='ml-28'>SHAWLS</p></div>
 </div>
-<div class="flex">
-<div><button class="bg-black w-40 h-12 text-white ml-24 mr-72
+<div className="flex">
+<div><button className="bg-black w-40 h-12 text-white ml-24 mr-72
  hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out "
   onClick={() => navigate("/readytowear")}>SHOP NOW</button></div>
-<div><button  class="bg-black w-40 h-12 text-white mr-5
+<div><button  className="bg-black w-40 h-12 text-white mr-5
  hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
   onClick={() => navigate("/chantelle")}>SHOP NOW</button></div>
-<div><button  class="bg-black w-40 h-12 text-white ml-64 mr-20
+<div><button  className="bg-black w-40 h-12 text-white ml-64 mr-20
  hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
   onClick={() => navigate("/shawls")}>SHOP NOW</button></div>
 </div>
 <br/><br/><br/><br/>
 <hr/>
 <br/><br/><br/>
-<div class="ml-14 text-4xl font-light mb-20 ">
+<div className="ml-14 text-4xl font-light mb-20 ">
   <u>SHOP THE LOOK</u></div>
 
   <Carousel data-bs-theme="dark">
@@ -106,7 +106,7 @@ function Home() {
   <br/><br/><br/>
   <hr/>
   <br/><br/><br/>
-  <div class="text-center text-4xl font-serif font-thin mb-20 ">BE INSPIRED</div>
+  <div className="text-center text-4xl font-serif font-thin mb-20 ">BE INSPIRED</div>
   <div className="flex space-x-8 ml-20">
   <div>
     <video className="h-[500px] w-[350px] cursor-pointer"  
@@ -128,14 +128,14 @@ function Home() {
 <br/><br/><br/><br/>
 <hr/>
 <br/><br/><br/><br/>
-<div class="text-center text-1xl font-serif ">SUBSCRIBE FOR NEWSLETTER</div>
+<div className="text-center text-1xl font-serif ">SUBSCRIBE FOR NEWSLETTER</div>
 <br/>
-<div class="flex mb-24">
-<div class="ms-20"><input placeholder="E-mail" class="ml-72 border 1 h-12 w-72"></input>&nbsp;
-<button  class="bg-black  h-12 w-72 text-white
+<div className="flex mb-24">
+<div className="ms-20"><input placeholder="E-mail" className="ml-72 border 1 h-12 w-72"></input>&nbsp;
+<button  className="bg-black  h-12 w-72 text-white
  hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out">SUBSCRIBE</button></div>
 </div>
-<div class="flex mb-10 ml-20 space-x-14">
+<div className="flex mb-10 ml-20 space-x-14">
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Priority Stitching</p><br/>Receive your stitched orders more<br/> quickly in a timeline of 2 weeks</div>
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Custom SIze</p><br/>Get your outfit tailored to<br/>perfection as per your desired<br/>measurements</div>
   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Free Shipping</p><br/>We provide free shipping all<br/>across Pakistan on all of our<br/>orders</div>

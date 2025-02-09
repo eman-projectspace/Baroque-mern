@@ -5,10 +5,10 @@ function Footer() {
 
 <hr/>
 <br/><br/><br/><br/>
-<div class="flex leading-8">
-  <div class="ms-20"><b>ABOUT</b><br/>who we are<br/>Our Responsibility<br/>Servie We Provide<br/>Careers<br/>Legal</div>
-  <div class="ms-80"><b>CUSTOMER SERVICE</b><br/>Contact Us<br/>Dispatch TimeLine<br/>Email: info@ baroque.pk<br/>Call:+92 325 700 1111<br/>Whatsapp:+92 325 700 1111</div>
-  <div class="ms-80"><b>POLICIES</b><br/>Privacy Policy<br/>Refund Policy<br/>Shipping Policy<br/>Terms of Service<br/>Exchange Information</div>
+<div className="flex leading-8">
+  <div className="ms-20"><b>ABOUT</b><br/>who we are<br/>Our Responsibility<br/>Servie We Provide<br/>Careers<br/>Legal</div>
+  <div className="ms-80"><b>CUSTOMER SERVICE</b><br/>Contact Us<br/>Dispatch TimeLine<br/>Email: info@ baroque.pk<br/>Call:+92 325 700 1111<br/>Whatsapp:+92 325 700 1111</div>
+  <div className="ms-80"><b>POLICIES</b><br/>Privacy Policy<br/>Refund Policy<br/>Shipping Policy<br/>Terms of Service<br/>Exchange Information</div>
 </div>
 
 
