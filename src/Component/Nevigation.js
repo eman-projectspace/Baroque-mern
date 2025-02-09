@@ -71,7 +71,7 @@ function Nevigation() {
                 <hr />
                 <br />
                 <Link to="/service" className="font-serif">
-                  Hooks
+                    SERVICE
                 </Link>
                 <hr />
                 <br />
