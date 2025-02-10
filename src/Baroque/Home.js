@@ -234,7 +234,9 @@ function Home({ products }) {
               View Product
             </button>
           </div>
+          
         ))}
+        
       </div>
     </div>
   );

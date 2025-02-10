@@ -167,7 +167,7 @@ const ReadyToWear = () => {
 
   // Fetch products from JSON
   useEffect(() => {
-    fetch("/products.json") // Fetch from public folder
+    fetch("/products.json") 
       .then((response) => response.json())
       .then((data) => {
         const filteredProducts = data.filter((product) => product.category === "readytowear");
@@ -177,6 +177,12 @@ const ReadyToWear = () => {
   }, []);
 
   return (
+    <div>
+           <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >READY TO WEAR</h1>
+         <div className='flex h-10 w-ful p-1 mb-20 border-t-2 border-b-2'>
+          <div className="text-center font-semibold mx-auto ">{products.length} PRODUCTS</div>
+          <div className='mr-8'>SORT BY</div>
+          </div>
     <div className="flex p-8"> {/* Flex container for sidebar & products */}
       
       {/* Left Sidebar (Filter) */}
@@ -234,9 +240,7 @@ const ReadyToWear = () => {
 
       {/* Product Grid */}
       <div className="w-3/4 ml-8">
-        <h1 className="text-3xl font-serif font-bold text-center mb-8">Ready to Wear Collection</h1>
-
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid grid-cols-2 row-auto gap-8">
           {products.map((product) => (
             <div 
               key={product.id} 
@@ -264,6 +268,7 @@ const ReadyToWear = () => {
         </div>
       </div>
       
+    </div>
     </div>
   );
 };
