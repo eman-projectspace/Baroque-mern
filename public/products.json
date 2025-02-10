@@ -1,0 +1,79 @@
+[
+  {
+    "id": 1,
+    "category": "unstitched",
+    "name": "Luxury Lawn Suit",
+    "price": 5000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "Premium unstitched lawn suit with intricate embroidery.",
+    "fabric": "Lawn",
+    "size": null
+  },
+  {
+    "id": 2,
+    "category": "stitched",
+    "name": "Embroidered Kurti",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "Elegant stitched kurti with detailed embroidery.",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  },
+  {
+    "id": 3,
+    "category": "chantelle",
+    "name": "Chantelle Dress",
+    "price": 7000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "Luxurious Chantelle dress with unique design.",
+    "fabric": "Chiffon",
+    "size": "M, L"
+  },
+  {
+    "id": 4,
+    "category": "ready-to-wear",
+    "name": "Ready-to-Wear Suit",
+    "price": 6000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "Stylish ready-to-wear suit for any occasion.",
+    "fabric": "Lawn",
+    "size": "S, M, L"
+  },
+  {
+    "id": 5,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 6,
+    "category": "readytowear",
+    "name": "Elegant Kurti",
+    "price": 5000,
+    "image": "https://baroque.pk/cdn/shop/files/02_Banner242.jpg?v=1738845059&width=800",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  },
+  {
+    "id": 7,
+    "category": "readytowear",
+    "name": "Chiffon Dress",
+    "price": 6500,
+    "image": "https://baroque.pk/cdn/shop/files/49_b0d60b5e-562b-467f-a37e-cd79e4048009.jpg?v=1738239154&width=600",
+    "fabric": "Chiffon",
+    "size": "M, L, XL"
+  },
+  {
+    "id": 8,
+    "category": "readytowear",
+    "name": "Silk Suit",
+    "price": 4800,
+    "image": "https://baroque.pk/cdn/shop/files/02_059c3197-fcc2-402b-ad1e-482fadb4d864.jpg?v=1738681084&width=600",
+    "fabric": "Silk",
+    "size": "S, M"
+  }
+]

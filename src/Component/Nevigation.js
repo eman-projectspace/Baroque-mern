@@ -11,17 +11,17 @@ function Nevigation() {
   const navigate = useNavigate(); // Hook to navigate
   return (
  
-<div className="w-full h-15 bg-transparent hover:bg-white transition-all duration-300">
+<div className="w-full h-16">
   <div>
     {[false].map((expand) => (
       <Navbar
         key={expand}
         expand={expand}
-        className="!bg-transparent hover:!bg-white transition-all duration-300 mb-0 shadow-xl relative w-full 
-        after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full h-15 -mt-3  cursor-pointer"
+        className="fixed top-0 z-50 bg-transparent duration-300 shadow-xl w-full h-20 flex items-center
+        after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full pt-4 cursor-pointer"
       >
-        <Container fluid className="w-96 inline-block -ml-0 !bg-transparent hover:!bg-white transition-all duration-300 mt-2">
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+        <Container fluid className="max-w-96 inline-block -ml-0">
+          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='mt-2' />
           <Navbar.Brand href="#" />
           <Navbar.Offcanvas
             id={`offcanvasNavbar-expand-${expand}`}
@@ -120,7 +120,7 @@ function Nevigation() {
             alt=""
           />
         </div>
-        <Container fluid className="w-96 inline-block !bg-transparent hover:!bg-white transition-all duration-300 ml-20 ">
+        <Container fluid className="w-96 inline-block !bg-transparent transition-all duration-300 ml-20 ">
           <div className="flex space-x-3">
             <div>
               <p className="font-serif font-medium mt-3 mr-5 text-black hover:!text-gray-700 ml-40">Pakistan</p></div>
