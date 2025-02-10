@@ -1,12 +1,20 @@
 [
   {
     "id": 1,
-    "name": "Elegant Unstitched Dress",
-    "price": 2000
+    "name": "Elegant Baroque Gown",
+    "price": 199.99,
+    "category": "Dresses",
+    "image": "https://baroque.pk/cdn/shop/files/02_7bdd0b51-9b57-4a91-8d18-ceae92707598.jpg?v=1738672970&width=600",
+    "description": "A luxurious baroque-style gown with intricate embroidery.",
+    "stock": 5
   },
   {
     "id": 2,
-    "name": "Luxury Lawn Suit",
-    "price": 2500
+    "name": "Vintage Lace Dress",
+    "price": 149.99,
+    "category": "Dresses",
+    "image": "https://baroque.pk/cdn/shop/files/13_649ca38b-f4f2-4b58-a12f-5f13c5e17ace.jpg?v=1738673015&width=600",
+    "description": "An elegant lace dress inspired by the baroque era.",
+    "stock": 10
   }
 ]
