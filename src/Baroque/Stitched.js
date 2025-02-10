@@ -152,30 +152,3 @@ function Stitched() {
 }
 
 export default Stitched
-// import { useContext } from "react";
-// import { ProductContext } from "../Context/ProductContext.js";
-
-// const ProductList = () => {
-//   const { products, loading, error } = useContext(ProductContext);
-
-//   if (loading) return <p>Loading products...</p>;
-//   if (error) return <p>Error: {error}</p>;
-
-//   return (
-//     <div>
-//       <h2>Products</h2>
-//       <ul>
-//         {products.map((product) => (
-//           <li key={product.id}>
-//             <h3>{product.name}</h3>
-//             <p>{product.description}</p>
-//             <p>Price: ${product.price}</p>
-//             <img src={product.image} alt={product.name} width="100" />
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// };
-
-// export default ProductList;
