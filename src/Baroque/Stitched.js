@@ -22,7 +22,7 @@ const Stitched = () => {
 
   return (
     <div>
-           <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >READY TO WEAR</h1>
+           <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >STITCHED</h1>
          <div className='flex h-10 w-full p-1 mb-20 border-t-2 border-b-2'>
           <div className="text-center font-semibold mx-auto ">{products.length} PRODUCTS</div>
           <div className='mr-8'>SORT BY</div>

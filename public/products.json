@@ -1,6 +1,458 @@
 [
   {
     "id": 1,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/03_1e917e66-da9f-4c79-aac6-73bae876c419.jpg?v=1738675530&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  },
+  {
+    "id": 2,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/13_5cf995c4-d7e8-41a1-a37d-b086b9b3fc1b.jpg?v=1738676056&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 3,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/29_030947f4-e662-4dcc-8e50-dd090a38e315.jpg?v=1738676577&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 4,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/37_eb88d056-02eb-4fed-8b23-7b738fb7b589.jpg?v=1738676623&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 5,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "/images/136_fc0aae66-23a9-439b-bc6a-8c1c9eda78a3.webp",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 6,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/149_a4129274-881c-414d-ba8d-a9149c71d3f4.jpg?v=1738676824&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 7,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/160_5f96ce7e-8e4b-459a-836b-1941c109dcab.jpg?v=1738676940&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 8,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/178_4066d077-7399-4af6-b931-aa4aa9c9e70a.jpg?v=1738676939&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 9,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/56_7423ba71-4a1a-4466-8dbf-8ca2128cb4fc.jpg?v=1738413803&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 10,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/130_51fc4477-9b3b-4385-afd1-0e9a1b63b3a1.jpg?v=1738414094&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 11,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/90_dea8a968-b171-4c43-8bb6-fdc41a4470e0.jpg?v=1738413972&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 12,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/145_28355539-293b-45b7-a3cb-d72cbf1f58d5.jpg?v=1738414132&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 13,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/167_5db4278d-16d8-4e2f-9d8e-70bc64935fbd.jpg?v=1738414158&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 14,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/171_845f18ef-aeac-4dc7-9fad-6e1bef27d3df.jpg?v=1738414230&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 15,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/50_08e000c8-6877-46bc-9d1c-aa1a44583e48.jpg?v=1738413808&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 16,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/64_7c191827-4550-4bc4-953d-b6185e6dab63.jpg?v=1738413884&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 17,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/24_66a1d427-3573-414d-90d2-c173e1013c03.jpg?v=1738413662&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 18,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/98_e67b2d7a-1274-4767-b5f4-27fb87335835.jpg?v=1738414019&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 19,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/43_d7881087-dcc3-4c46-8fe5-7d984fd7a057.jpg?v=1738413719&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 20,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/186_7bfae2b8-fefa-4bfc-ab90-6e5e49cbf79c.jpg?v=1738414261&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 21,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/79_5d0f8952-40a2-4378-822e-f1a247d7ab88.jpg?v=1738240885&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 22,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/20_2230959e-89f3-4e90-afda-96153c109bc8.jpg?v=1737625406&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 23,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/32_d1e38e3d-3254-47dd-91e9-aa53528d895a.jpg?v=1737625436&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 24,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 25,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/88_a84d6f90-d659-4fab-9637-d77cfe27f98a.jpg?v=1735813514&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 26,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/80_5449f4c2-37f6-47fb-adc4-37144445fda8.jpg?v=1735812952&width=1200",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 27,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 28,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 29,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 30,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 31,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 32,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 33,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 34,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 35,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 36,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 37,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 38,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 39,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 40,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 41,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 42,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 43,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 44,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 45,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 46,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 47,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 48,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 49,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  }, {
+    "id": 50,
+    "category": "stitched",
+    "name": "EMBROIDERED VISCOSE SILK SF-4039",
+    "price": 3000,
+    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
+    "description": "EMBROIDERED VISCOSE SILK SF-4039",
+    "fabric": "Cotton",
+    "size": "S, M, L, XL"
+  },
+  {
+    "id": 20,
     "category": "unstitched",
     "name": "Luxury Lawn Suit",
     "price": 5000,
@@ -10,22 +462,12 @@
     "size": null
   },
   {
-    "id": 2,
-    "category": "stitched",
-    "name": "Embroidered Kurti",
-    "price": 3000,
-    "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
-    "description": "Elegant stitched kurti with detailed embroidery.",
-    "fabric": "Cotton",
-    "size": "S, M, L, XL"
-  },
-  {
     "id": 3,
     "category": "chantelle",
     "name": "Chantelle Dress",
     "price": 7000,
     "image": "https://baroque.pk/cdn/shop/files/15_c61bc1df-da35-446b-9b23-450eae0963c2.jpg?v=1738681142&width=600",
-    "description": "Luxurious Chantelle dress with unique design.",
+    "description": "Luxurious Chantelle dress with a unique design.",
     "fabric": "Chiffon",
     "size": "M, L"
   },
@@ -55,6 +497,7 @@
     "name": "Elegant Kurti",
     "price": 5000,
     "image": "https://baroque.pk/cdn/shop/files/02_Banner242.jpg?v=1738845059&width=800",
+    "description": "A classic and elegant kurti perfect for casual and formal wear.",
     "fabric": "Cotton",
     "size": "S, M, L, XL"
   },
@@ -64,6 +507,7 @@
     "name": "Chiffon Dress",
     "price": 6500,
     "image": "https://baroque.pk/cdn/shop/files/49_b0d60b5e-562b-467f-a37e-cd79e4048009.jpg?v=1738239154&width=600",
+    "description": "A beautifully crafted chiffon dress for elegant occasions.",
     "fabric": "Chiffon",
     "size": "M, L, XL"
   },
@@ -73,6 +517,7 @@
     "name": "Silk Suit",
     "price": 4800,
     "image": "https://baroque.pk/cdn/shop/files/02_059c3197-fcc2-402b-ad1e-482fadb4d864.jpg?v=1738681084&width=600",
+    "description": "A luxurious silk suit designed for sophistication and style.",
     "fabric": "Silk",
     "size": "S, M"
   }

@@ -234,13 +234,49 @@ function Home({ products }) {
               View Product
             </button>
           </div>
-          
-        ))}
-        
-      </div>
-    </div>
-  );
-}
+            ))}
+            
 
-export default Home;
+     {/* <br/>
+      <hr/>
+   <br/>
+   <div className="text-center text-4xl font-serif font-thin mb-20 ">BE INSPIRED</div>
+   <div className="flex space-x-8 ml-20">
+   <div>
+     <video className="h-[500px] w-[350px] cursor-pointer"  
+      src="https://baroque.pk/cdn/shop/videos/c/vp/66c69f47322c49cfb73d44220fc567fc/66c69f47322c49cfb73d44220fc567fc.HD-1080p-2.5Mbps-40062159.mp4?v=0"
+      type="video/mp4" playsInline autoPlay loop muted  />
+  </div>
+  <div>
+    <video className="h-[500px] w-[350px] cursor-pointer"  
+      src="https://baroque.pk/cdn/shop/videos/c/vp/8335de5a5387470494ab6c998865d268/8335de5a5387470494ab6c998865d268.HD-1080p-2.5Mbps-40062160.mp4?v=0"
+      type="video/mp4" playsInline autoPlay loop muted />
+  </div>
+  <div>
+    <video className="h-[500px] w-[350px] cursor-pointer"  
+      src="https://baroque.pk/cdn/shop/videos/c/vp/3398a9dc34404ca78f8621b87f59e445/3398a9dc34404ca78f8621b87f59e445.HD-1080p-2.5Mbps-40062158.mp4?v=0"
+      type="video/mp4" playsInline autoPlay loop muted  />
+  </div>
+</div>
 
+<br/><br/><br/><br/>
+<hr/>
+             <br/><br/><br/><br/>
+ <div className="text-center text-1xl font-serif ">SUBSCRIBE FOR NEWSLETTER</div>
+ <br/>
+ <div className="flex mb-24"> <div className="ms-20"><input placeholder="E-mail" className="ml-72 border 1 h-12 w-72"></input>&nbsp;
+ <button  className="bg-black  h-12 w-72 text-white
+  hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out">SUBSCRIBE</button></div>
+ </div>
+ <div className="flex mb-10 ml-20 space-x-14">
+   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Priority Stitching</p><br/>Receive your stitched orders more<br/> quickly in a timeline of 2 weeks</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Custom SIze</p><br/>Get your outfit tailored to<br/>perfection as per your desired<br/>measurements</div>
+   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>Free Shipping</p><br/>We provide free shipping all<br/>across Pakistan on all of our<br/>orders</div>
+   <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p className='font-serif -m-4'>ORDER EXCHANGE</p><br/>For a hassle free e xchange service,<br/>fill out the exchange form<br/></div>
+ </div>
+ <br></br> <br></br> <br></br> */}
+     </div>
+</div>
+   )
+ }
+ export default Home
