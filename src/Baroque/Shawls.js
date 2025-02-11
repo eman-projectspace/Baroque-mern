@@ -9,7 +9,7 @@ const Shawls = ()=> {
   const[products,setProducts] = useState([]);
   const navigate = useNavigate();
   useEffect(()=>{
-    fetch("/product.json")
+    fetch("/products.json")
     .then((response)=>response.json())
     .then((data)=>{
       const filteredProducts = data.filter((product)=>product.category === "shawls");
@@ -21,64 +21,64 @@ const Shawls = ()=> {
     <div>
     <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >Shawls</h1>
     <div className='flex h-10 w-full p-1 mb-20 border-t-2 border-b-2'>
-     <div className="text-center font-semibold mx-auto ">{products.length}PRODUCTS</div>
+     <div className="text-center font-semibold mx-auto ">{products.length} PRODUCTS</div>
      <div className='mr-8'>SORT BY</div>
      </div>
      <div className="flex p-8"> {/* Flex container for sidebar & products */}
       
       {/* Left Sidebar (Filter) */}
       <div className="w-1/4 p-6 bg-gray-100 shadow-md rounded-lg sticky top-20 h-fit">
-        <h2 className="text-2xl font-semibold mb-4">Filters</h2>
-
+    
         {/* Availability Filter */}
         <div>
           <button
-            className="w-full text-left font-semibold text-lg flex justify-between"
+            className="w-full text-left font-serif text-lg flex justify-between"
             onClick={() => setAvailabilityOpen(!isAvailabilityOpen)}
           >
             Availability
             <span>{isAvailabilityOpen ? "▲" : "▼"}</span>
           </button>
-          {isAvailabilityOpen && <p className="mt-2 pl-4">In Stock</p>}
+          {isAvailabilityOpen && <p className="mt-2 pl-4 font-semibold">In Stock</p>}
         </div>
-
+        <hr/>
         {/* Price Filter */}
         <div className="mt-4">
           <button
-            className="w-full text-left font-semibold text-lg flex justify-between"
+            className="w-full text-left font-serif text-lg flex justify-between"
             onClick={() => setPriceOpen(!isPriceOpen)}
           >
             Price
             <span>{isPriceOpen ? "▲" : "▼"}</span>
           </button>
-          {isPriceOpen && <p className="mt-2 pl-4">PKR 5,000 - 30,000</p>}
+          {isPriceOpen && <p className="mt-2 pl-4 font-semibold">PKR 5,000 - 30,000</p>}
         </div>
-
+        <hr/>
         {/* Fabric Filter */}
         <div className="mt-4">
           <button
-            className="w-full text-left font-semibold text-lg flex justify-between"
+            className="w-full text-left font-serif text-lg flex justify-between"
             onClick={() => setFabricOpen(!isFabricOpen)}
           >
             Fabric
             <span>{isFabricOpen ? "▲" : "▼"}</span>
           </button>
-          {isFabricOpen && <p className="mt-2 pl-4">Cotton, Silk, Chiffon</p>}
+          {isFabricOpen && <p className="mt-2 pl-4 font-semibold">Cotton, Silk, Chiffon</p>}
         </div>
-
+        <hr/>
         {/* Size Filter */}
         <div className="mt-4">
           <button
-            className="w-full text-left font-semibold text-lg flex justify-between"
+            className="w-full text-left font-serif text-lg flex justify-between"
             onClick={() => setSizeOpen(!isSizeOpen)}
           >
             Size
             <span>{isSizeOpen ? "▲" : "▼"}</span>
           </button>
-          {isSizeOpen && <p className="mt-2 pl-4">S, M, L, XL</p>}
+          {isSizeOpen && <p className="mt-2 pl-4 font-semibold">S, M, L, XL</p>}
         </div>
+        <hr/>
       </div>
-
+      <hr/>
       {/* Product Grid */}
       <div className="w-3/4 ml-8">
         <div className="grid grid-cols-2 row-auto gap-8">

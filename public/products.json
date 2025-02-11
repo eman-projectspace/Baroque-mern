@@ -1800,16 +1800,126 @@
   "fabric": "Wool",
   "size": null
 },
-
-
   {
     "id": 0,
     "category": "shawls",
     "name": "Winter Wool Shawl",
     "price": 4000,
-    "image": "https://baroque.pk/cdn/shop/files/06_8074c48a-3a54-4b5b-be1e-636e08855319.jpg?v=1729854198&width=1200",
+    "image": "https://baroque.pk/cdn/shop/files/60_1cd74ebe-7d01-4093-b2b3-c82dd8dcc4d0.jpg?v=1727772337&width=1200",
     "description": "Warm wool shawl with intricate patterns.",
     "fabric": "Wool",
     "size": null
   }
+  ,
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/95_5cf61249-b425-4784-9840-5e1c13058fba.jpg?v=1727772400&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/68_5bf28224-c068-4d55-9741-d5ade1d349f7.jpg?v=1727772369&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/53_0ee4318b-9eab-499e-8756-e43b7c246fb1.jpg?v=1727772295&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/48_2bda2b36-2470-4596-9227-9d9df338aa03.jpg?v=1727772253&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/products/38_19.jpg?v=1693402721&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/80_1ffd5690-8478-4881-93ba-52442c7ee16d.jpg?v=1727772611&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/76_62567c68-60c9-4e79-ad2b-817d9a784227.jpg?v=1694854013&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/products/65.jpg?v=1632894665&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/products/48_15.jpg?v=1693402740&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  },
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/39_bb516716-16fd-4701-a668-3fc0bde0e0e4.jpg?v=1727772505&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  }
+  ,
+  {
+    "id": 0,
+    "category": "shawls",
+    "name": "Winter Wool Shawl",
+    "price": 4000,
+    "image": "https://baroque.pk/cdn/shop/files/30_94e24345-0b1e-405c-a0c0-b7be6f30fd17.jpg?v=1727772462&width=1200",
+    "description": "Warm wool shawl with intricate patterns.",
+    "fabric": "Wool",
+    "size": null
+  } 
 ]
