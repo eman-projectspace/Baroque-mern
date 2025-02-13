@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Stitched = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
@@ -10,15 +11,17 @@ const Stitched = () => {
   const navigate = useNavigate();
 
   // Fetch products from JSON
-  useEffect(() => {
-    fetch("/products.json") 
-      .then((response) => response.json())
-      .then((data) => {
-        const filteredProducts = data.filter((product) => product.category === "stitched");
-        setProducts(filteredProducts); // Only show Stitched products
-      })
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []);
+useEffect(() => {
+  const fetchStitchedProducts = async () => {
+    try {
+      const res = await axios.get("http://localhost:8888/api/products/category/stitched"); 
+      setProducts(res.data); // Store only stitched products
+    } catch (error) {
+      console.error("Error fetching stitched products:", error);
+    }
+  };
+  fetchStitchedProducts();
+}, []);
 
   return (
     <div>
@@ -91,8 +94,8 @@ const Stitched = () => {
             >
               {/* Image (Full View) */}
               <div className="w-full h-full">
-                <img 
-                  src={product.image} 
+                <img
+                src={product.image} 
                   alt={product.name} 
                   className="w-full h-full object-cover"
                 />

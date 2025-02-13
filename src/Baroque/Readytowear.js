@@ -1,29 +1,32 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
-const ReadyToWear = () => {
+const Stitched = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
   const [isPriceOpen, setPriceOpen] = useState(false);
   const [isFabricOpen, setFabricOpen] = useState(false);
   const [isSizeOpen, setSizeOpen] = useState(false);
-  const [products, setProducts] = useState([]); // State to store products
+  const [products, setProducts] = useState([]); //  State to store products
   const navigate = useNavigate();
 
   // Fetch products from JSON
-  useEffect(() => {
-    fetch("/products.json") 
-      .then((response) => response.json())
-      .then((data) => {
-        const filteredProducts = data.filter((product) => product.category === "readytowear");
-        setProducts(filteredProducts); // Only show Ready to Wear products
-      })
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []);
+useEffect(() => {
+  const fetchStitchedProducts = async () => {
+    try {
+      const res = await axios.get("http://localhost:8888/api/products/category/readytowear"); 
+      setProducts(res.data); // Store only stitched products
+    } catch (error) {
+      console.error("Error fetching stitched products:", error);
+    }
+  };
+  fetchStitchedProducts();
+}, []);
 
   return (
     <div>
            <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >READY TO WEAR</h1>
-         <div className='flex h-10 w-ful p-1 mb-20 border-t-2 border-b-2'>
+         <div className='flex h-10 w-full p-1 mb-20 border-t-2 border-b-2'>
           <div className="text-center font-semibold mx-auto ">{products.length} PRODUCTS</div>
           <div className='mr-8'>SORT BY</div>
           </div>
@@ -31,19 +34,17 @@ const ReadyToWear = () => {
       
       {/* Left Sidebar (Filter) */}
       <div className="w-1/4 p-6 bg-gray-100 shadow-md rounded-lg sticky top-20 h-fit">
-       
+        
         {/* Availability Filter */}
         <div>
           <button
-            className="w-full text-left font-serif text-lg flex justify-between"
-            onClick={() => setAvailabilityOpen(!isAvailabilityOpen)}
-          >
-            Availability
-            <span>{isAvailabilityOpen ? "▲" : "▼"}</span>
-          </button>
+            className="w-full text-left text-lg flex justify-between font-serif"
+            onClick={() => setAvailabilityOpen(!isAvailabilityOpen)}>
+                            Availability
+            <span>{isAvailabilityOpen ? "▲" : "▼"}</span> </button>
           {isAvailabilityOpen && <p className="mt-2 pl-4 font-semibold">In Stock</p>}
         </div>
-        <hr/>
+     <hr/>
         {/* Price Filter */}
         <div className="mt-4">
           <button
@@ -53,7 +54,7 @@ const ReadyToWear = () => {
             Price
             <span>{isPriceOpen ? "▲" : "▼"}</span>
           </button>
-          {isPriceOpen && <p className="mt-2 pl-4 font-semibold">PKR 5,000 - 30,000</p>}
+          {isPriceOpen && <p className="mt-2 pl-4 font-bold">PKR 5,000 - 30,000</p>}
         </div>
         <hr/>
         {/* Fabric Filter */}
@@ -79,8 +80,9 @@ const ReadyToWear = () => {
           </button>
           {isSizeOpen && <p className="mt-2 pl-4 font-semibold">S, M, L, XL</p>}
         </div>
+        <hr/>
       </div>
-      <hr/>
+  
       {/* Product Grid */}
       <div className="w-3/4 ml-8">
         <div className="grid grid-cols-2 row-auto gap-8">
@@ -92,8 +94,8 @@ const ReadyToWear = () => {
             >
               {/* Image (Full View) */}
               <div className="w-full h-full">
-                <img 
-                  src={product.image} 
+                <img
+                src={product.image} 
                   alt={product.name} 
                   className="w-full h-full object-cover"
                 />
@@ -116,4 +118,123 @@ const ReadyToWear = () => {
   );
 };
 
-export default ReadyToWear;
+export default Stitched;
+// import React, { useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
+
+// const ReadyToWear = () => {
+//   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
+//   const [isPriceOpen, setPriceOpen] = useState(false);
+//   const [isFabricOpen, setFabricOpen] = useState(false);
+//   const [isSizeOpen, setSizeOpen] = useState(false);
+//   const [products, setProducts] = useState([]); // State to store products
+//   const navigate = useNavigate();
+
+//   // Fetch products from JSON
+//   useEffect(() => {
+//     fetch("/products.json") 
+//       .then((response) => response.json())
+//       .then((data) => {
+//         const filteredProducts = data.filter((product) => product.category === "readytowear");
+//         setProducts(filteredProducts); // Only show Ready to Wear products
+//       })
+//       .catch((error) => console.error("Error fetching products:", error));
+//   }, []);
+
+//   return (
+//     <div>
+//            <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >READY TO WEAR</h1>
+//          <div className='flex h-10 w-ful p-1 mb-20 border-t-2 border-b-2'>
+//           <div className="text-center font-semibold mx-auto ">{products.length} PRODUCTS</div>
+//           <div className='mr-8'>SORT BY</div>
+//           </div>
+//     <div className="flex p-8"> {/* Flex container for sidebar & products */}
+      
+//       {/* Left Sidebar (Filter) */}
+//       <div className="w-1/4 p-6 bg-gray-100 shadow-md rounded-lg sticky top-20 h-fit">
+       
+//         {/* Availability Filter */}
+//         <div>
+//           <button
+//             className="w-full text-left font-serif text-lg flex justify-between"
+//             onClick={() => setAvailabilityOpen(!isAvailabilityOpen)}
+//           >
+//             Availability
+//             <span>{isAvailabilityOpen ? "▲" : "▼"}</span>
+//           </button>
+//           {isAvailabilityOpen && <p className="mt-2 pl-4 font-semibold">In Stock</p>}
+//         </div>
+//         <hr/>
+//         {/* Price Filter */}
+//         <div className="mt-4">
+//           <button
+//             className="w-full text-left font-serif text-lg flex justify-between"
+//             onClick={() => setPriceOpen(!isPriceOpen)}
+//           >
+//             Price
+//             <span>{isPriceOpen ? "▲" : "▼"}</span>
+//           </button>
+//           {isPriceOpen && <p className="mt-2 pl-4 font-semibold">PKR 5,000 - 30,000</p>}
+//         </div>
+//         <hr/>
+//         {/* Fabric Filter */}
+//         <div className="mt-4">
+//           <button
+//             className="w-full text-left font-serif text-lg flex justify-between"
+//             onClick={() => setFabricOpen(!isFabricOpen)}
+//           >
+//             Fabric
+//             <span>{isFabricOpen ? "▲" : "▼"}</span>
+//           </button>
+//           {isFabricOpen && <p className="mt-2 pl-4 font-semibold">Cotton, Silk, Chiffon</p>}
+//         </div>
+//         <hr/>
+//         {/* Size Filter */}
+//         <div className="mt-4">
+//           <button
+//             className="w-full text-left font-serif text-lg flex justify-between"
+//             onClick={() => setSizeOpen(!isSizeOpen)}
+//           >
+//             Size
+//             <span>{isSizeOpen ? "▲" : "▼"}</span>
+//           </button>
+//           {isSizeOpen && <p className="mt-2 pl-4 font-semibold">S, M, L, XL</p>}
+//         </div>
+//       </div>
+//       <hr/>
+//       {/* Product Grid */}
+//       <div className="w-3/4 ml-8">
+//         <div className="grid grid-cols-2 row-auto gap-8">
+//           {products.map((product) => (
+//             <div 
+//               key={product.id} 
+//               className="cursor-pointer flex flex-col items-center"
+//               onClick={() => navigate(`/product/${product.id}`)}
+//             >
+//               {/* Image (Full View) */}
+//               <div className="w-full h-full">
+//                 <img 
+//                   src={product.image} 
+//                   alt={product.name} 
+//                   className="w-full h-full object-cover"
+//                 />
+//               </div>
+
+//               {/* Product Details */}
+//               <div className="mt-4 text-center">
+//                 <h2 className="text-xl font-semibold">{product.name}</h2>
+//                 <p className="text-gray-600 font-medium">PKR {product.price}</p>
+//                 <p className="text-gray-500 text-sm">{product.fabric} - {product.size}</p>
+//                 <p className="text-red-600 font-bold mt-2">3 PIECE</p>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+      
+//     </div>
+//     </div>
+//   );
+// };
+
+// export default ReadyToWear;

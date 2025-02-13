@@ -21,17 +21,30 @@ import Edit from './Sub-components/Edit';
 import Student from './Sub-components/Student';
 import Footer from './Component/Footer';
 import DressesContext from './Context/DressesContext'; // Import DressContext
+import axios from "axios";
 
 function App() {
   // Dress state
   const [dresses, setDresses] = useState([]);
 
-  // Fetch dresses from an API or local JSON file when the app loads
-  useEffect(() => {
-    fetch('/data/dresses.json') // Replace this with actual API if needed
-      .then((res) => res.json())
-      .then((data) => setDresses(data));
-  }, []);
+useEffect(() => {
+  const fetchDresses = async () => {
+    try {
+      const res = await axios.get("http://localhost:8888/api/products"); // Fetch from backend
+      setDresses(res.data);
+    } catch (error) {
+      console.error("Error fetching dresses:", error);
+    }
+  };
+  fetchDresses();
+}, []);
+
+  //  Fetch dresses from an API or local JSON file when the app loads
+  // useEffect(() => {
+  //  fetch('/data/dresses.json') // Replace this with actual API if needed
+  //     .then((res) => res.json())
+  //     .then((data) => setDresses(data));
+  // }, []);
 
   return (
     <DressesContext.Provider value={{ dresses, setDresses }}>  
@@ -40,22 +53,23 @@ function App() {
         <BrowserRouter>
           <Nevigation />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/chantelle" element={<Chantelle />} />
-            <Route path="/unstitched" element={<Unstitched />} />
-            <Route path="/stitched" element={<Stitched />} />
-            <Route path="/readytowear" element={<Readytowear />} />
-            <Route path="/specialprices" element={<Specialprices />} />
-            <Route path="/seperates" element={<Seperates />} />
-            <Route path="/shawls" element={<Shawls />} />
-            <Route path="/service" element={<Service />} />
-            <Route path="/crud" element={<Crud />} />
-            <Route path="/edit" element={<Edit />} />
-            <Route path="crud/student" element={<Student />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/usecallbackhook" element={<Usecallbackhook />} />
-            <Route path="/usememohook" element={<UseMemohook />} />
-          </Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/chantelle" element={<Chantelle dresses={dresses.filter(d => d.category === "chantelle")}    />} />
+  <Route path="/unstitched" element={<Unstitched dresses={dresses.filter(d => d.category === "unstitched")} />} />
+  <Route path="/stitched" element={<Stitched dresses={dresses.filter(d => d.category === "stitched")}        />} />
+  <Route path="/readytowear" element={<Readytowear dresses={dresses.filter(d => d.category === "readytowear")} />} />
+  <Route path="/specialprices" element={<Specialprices dresses={dresses.filter(d => d.category === "specialprices")} />} />
+  <Route path="/seperates" element={<Seperates dresses={dresses.filter(d => d.category === "seperates")} />} />
+  <Route path="/shawls" element={<Shawls dresses={dresses.filter(d => d.category === "shawls")} />} />
+  <Route path="/service" element={<Service />} />
+  <Route path="/crud" element={<Crud />} />
+  <Route path="/edit" element={<Edit />} />
+  <Route path="crud/student" element={<Student />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/usecallbackhook" element={<Usecallbackhook />} />
+  <Route path="/usememohook" element={<UseMemohook />} />
+</Routes>
+
         </BrowserRouter>
       </StudentState>
       <Footer />
