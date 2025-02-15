@@ -127,13 +127,13 @@ function Nevigation() {
            <div><button className='mt-3' onClick={() => navigate("/service")}><img className='h-5 w-5 mr-20 -ml-4' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
            </div>
            <div>
-            <button className='mt-3' onClick={() => navigate("/student")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
+            <button className='mt-3' onClick={() => navigate("/login")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
            </div>
            <div>
             <button className='mt-3' onClick={() => navigate("/usecallback")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""></img></button>
            </div>
            <div>
-            <button className='mt-3'  onClick={() => navigate("/usememo")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
+            <button className='mt-3'  onClick={() => navigate("/signup")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
            </div>
           </div>
         </Container>
