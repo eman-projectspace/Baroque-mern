@@ -70,27 +70,7 @@ function Nevigation() {
                 </Link>
                 <hr />
                 <br />
-                <Link to="/service" className="font-serif">
-                    SERVICE
-                </Link>
-                <hr />
-                <br />
-                <Link to="/about">About</Link>
-                <hr />
-                <br />
                 <Link to="/crud">CRUD</Link>
-                <hr />
-                <br />
-                <Link to="/edit">EDIT</Link>
-                <hr />
-                <br />
-                <Link to="/student">Student</Link>
-                <hr />
-                <br />
-                <Link to="/usecallbackhook">Usecallback</Link>
-                <hr />
-                <br />
-                <Link to="/usememohook">Use Memo</Link>
                 <hr />
                 <br />
                 <NavDropdown
@@ -127,13 +107,13 @@ function Nevigation() {
            <div><button className='mt-3' onClick={() => navigate("/service")}><img className='h-5 w-5 mr-20 -ml-4' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
            </div>
            <div>
-            <button className='mt-3' onClick={() => navigate("/login")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
+            <button className='mt-3' onClick={() => navigate("/")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
            </div>
            <div>
-            <button className='mt-3' onClick={() => navigate("/usecallback")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""></img></button>
+            <button className='mt-3' onClick={() => navigate("/")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""></img></button>
            </div>
            <div>
-            <button className='mt-3'  onClick={() => navigate("/signup")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
+            <button className='mt-3'  onClick={() => navigate("/")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
            </div>
           </div>
         </Container>

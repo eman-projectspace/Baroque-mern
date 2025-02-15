@@ -25,12 +25,6 @@ export default function Student() {
       });
   }
 
-  // function changeHandler(e) {
-  //   setData(prevData => ({
-  //     ...prevData,
-  //     [e.target.id]: e.target.value
-  //   }));                
-  // }
 function changeHandler(e){
   const newdata = {...data}
   console.log(newdata)
