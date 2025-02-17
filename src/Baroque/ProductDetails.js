@@ -1,16 +1,41 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useCart } from "../Context/CartContext";  // Import the useCart hook
+import { useCart } from "../Context/CartContext";  
 
 const ProductDetails = () => {
-  const { id } = useParams(); // Get product ID from URL
+  const { id } = useParams(); // It Get product ID from URL
   const { addToCart } = useCart();  // Access addToCart function from context
+
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);  
 
-  console.log("Product ID from URL:", id);  // Debugging log
+  const sizes = ['XS', 'S', 'M', 'L', 'XL'];
+
+  console.log("Product ID from URL:", id);  // If any error occur
+
+//INCREASE AND DECREASE
+const [quantity, setQuantity] = useState(1);  // State to track quantity
+const increaseQuantity = () => {
+  setQuantity((prevQuantity) => prevQuantity + 1);
+};
+
+const decreaseQuantity = () => {
+  if (quantity > 1) {
+    setQuantity((prevQuantity) => prevQuantity - 1);
+  }
+}; 
+
+
+//SIDE BAR 
+  const [isProductDetailsOpen, setProductDetailsOpen] = useState(false);
+  const [isDeliveryOpen, setDeliveryOpen] = useState(false);
+  const [isreturnOpen, setreturnOpen] = useState(false);
+  const [isCareOpen, setCareOpen] = useState(false);
+
+
 
   useEffect(() => {
     if (!id) {
@@ -35,29 +60,115 @@ const ProductDetails = () => {
     fetchProduct();
   }, [id]);
 
+  // Now My all hooks are above the conditional return statements
   if (loading) return <p>Loading product details...</p>;
   if (error) return <p className="text-red-500">{error}</p>;
   if (!product) return <p className="text-red-500">Product not found.</p>;
 
-  
   const handleAddToCart = () => {
     addToCart(product);  // Add the product to the cart
   };
 
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+  };
+
   return (
-    <div className="flex flex-col items-center p-10">
-      <h2 className="text-3xl font-bold">{product.name}</h2>
-      <img src={product.image} alt={product.name} className="w-96 h-auto mt-4" />
-      <p className="text-xl mt-2 font-semibold text-gray-700">PKR {product.price}</p>
-      <p className="text-lg text-gray-600 mt-1">Fabric: {product.fabric}</p>
-      <p className="text-lg text-gray-600 mt-1">Size: {product.size}</p>
-      <p className="text-red-600 font-bold mt-2">3 PIECE</p>
-      <button
-        onClick={handleAddToCart}  // Add the onClick event to trigger Add to Cart
-        className="mt-4 bg-red-500 text-white px-6 py-2 rounded-lg"
-      >
-        Add to Cart
-      </button>
+    <div className="flex flex-row mb-28">
+      <hr />
+      <div className="w-32 h-auto flex flex-col space-y-5 ml-6 items-center">
+        <div className="w-20 h-20 border-2 border-black "></div>
+        <div className="w-20 h-20 border-2 border-black  "></div>
+        <div className="w-20 h-20 border-2 border-black  "></div>
+        <div className="w-20 h-20 border-2 border-black  "></div>
+        <div className="w-20 h-20 border-2 border-black  "></div>
+      </div>
+      <div className=" w-2/4 flex flex-col ml-10 ">
+        <img src={product.image} alt={product.name} />
+      </div>
+      <div className="w-80 ml-12 text-left ">
+        <p className="text-xl text-gray-500 mt-2">{product.name}</p>
+        <p className="mt-2 font-semibold font-serif text-gray-700">PKR {product.price}</p>
+        <p className="text-lg text-gray-600 mt-1">Fabric: {product.fabric}</p>
+        <p className="text-lg text-gray-600 mt-1">Size: {product.size}</p>
+        <p className="text-gray-600 font-semibold mt-2">3 PIECE</p>
+        <p className="text-gray-600 font-semibold mt-2 mb-5">Colour : Printed piece</p>
+        <hr />
+        <p className="text-balck text-left text-xl mt-2 mb-2">Type : </p>
+        <button className="border-gray-500 border-2 px-6 py-2">Stitched</button>
+        <br />
+        <p className="text-balck text-left text-xl mt-2 mb-2">Size : </p>
+        {/* SIZE CHART */}
+        <div className="size-chart">
+          <div className="flex space-x-4 mt-4">
+            {sizes.map((size) => (
+              <button key={size}
+            className={`w-10 h-10 border-black border-1
+          ${selectedSize === size ? 'border-black text-black' : 'bg-gray-200'}`}
+            onClick={() => handleSizeSelect(size)}>{size}</button>
+            ))}
+          </div>
+          {selectedSize && <p className="mt-2">Selected Size: {selectedSize}</p>}
+        </div>
+        <br />
+        
+        {/* INCREASE AND DECREASE BUTTON */}
+        <div className="flex items-center space-x-4 ">
+        <div className="border-2 border-gray-700 h-10 w-28 flex flex-row  ml-28">
+  <button onClick={decreaseQuantity} className="mr-5 ml-5">-</button>
+  <p className="text-xl">{quantity} </p>
+  <button onClick={increaseQuantity} className="mr-5 ml-5">+</button>
+  </div>
+ </div>
+                 {/* ADD TO CART BUTTON */}
+    <button onClick={handleAddToCart}
+    className="mt-4 bg-black border-2 text-white px-6 py-2 w-5/6 mb-5">
+    Add to Cart</button>
+
+    <div className="sticky top-96 h-fit">
+        {/* Product Filter */}
+        <div>
+          <button
+            className="w-full text-left text-lg flex justify-between font-serif"
+            onClick={() => setProductDetailsOpen(!isProductDetailsOpen)}>
+            Product Details<span>{isProductDetailsOpen ? "▲" : "▼"}</span> </button>
+          {isProductDetailsOpen && <p className="mt-2 pl-4 font-semibold">lrny laiwr 3 dwrfyc  clu</p>}
+        </div>
+     <hr/>
+
+        {/* Delivry Filter */}
+        <div className="mt-4">
+          <button
+            className="w-full text-left font-serif text-lg flex justify-between"
+            onClick={() => setDeliveryOpen(!isDeliveryOpen)}
+          >Delivery<span>{isDeliveryOpen ? "▲" : "▼"}</span></button>
+          {isDeliveryOpen && <p className="mt-2 pl-4 font-bold">PKR 5,000 - 30,000</p>}
+        </div>
+        <hr/>
+
+        {/* Return & Exchange Filter */}
+        <div className="mt-4">
+          <button
+            className="w-full text-left font-serif text-lg flex justify-between"
+            onClick={() => setreturnOpen(!isreturnOpen)}
+            >Return and Exchange<span>{isreturnOpen ? "▲" : "▼"}</span></button>
+          {isreturnOpen && <p className="mt-2 pl-4 font-semibold">Cotton, Silk, Chiffon</p>}
+        </div>
+        <hr/>
+
+        {/* Care Filter */}
+        <div className="mt-4">
+          <button
+            className="w-full text-left font-serif text-lg flex justify-between"
+            onClick={() => setCareOpen(!isCareOpen)}
+          > Care <span>{isCareOpen ? "▲" : "▼"}</span> </button>
+          {isCareOpen && <p className="mt-2 pl-4 font-semibold"></p>}
+
+        </div>
+        <hr/>
+      </div>
+
+      </div>
     </div>
   );
 };
