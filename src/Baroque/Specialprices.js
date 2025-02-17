@@ -90,7 +90,7 @@ useEffect(() => {
             <div 
               key={product.id} 
               className="cursor-pointer flex flex-col items-center"
-              onClick={() => navigate(`/product/${product.id}`)}
+              onClick={() => navigate(`/product/${product._id}`)}
             >
               {/* Image (Full View) */}
               <div className="w-full h-full">
