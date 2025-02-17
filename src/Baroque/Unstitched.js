@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const Stitched = () => {
+const Unstitched = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
   const [isPriceOpen, setPriceOpen] = useState(false);
   const [isFabricOpen, setFabricOpen] = useState(false);
@@ -10,18 +10,19 @@ const Stitched = () => {
   const [products, setProducts] = useState([]); //  State to store products
   const navigate = useNavigate();
 
-  // Fetch products from JSON
-useEffect(() => {
-  const fetchStitchedProducts = async () => {
-    try {
-      const res = await axios.get("http://localhost:8888/api/products/category/unstitched"); 
-      setProducts(res.data); // Store only stitched products
-    } catch (error) {
-      console.error("Error fetching stitched products:", error);
-    }
-  };
-  fetchStitchedProducts();
-}, []);
+  // Fetch unstitched products from API
+  useEffect(() => {
+    const fetchUnstitchedProducts = async () => {
+      try {
+       const res = await axios.get("http://localhost:8888/api/products/category/unstitched"); 
+        setProducts(res.data);
+      } catch (error) {
+        console.error("Error fetching unstitched products:", error);
+      }
+    };
+    fetchUnstitchedProducts();
+  }, []);
+
 
   return (
     <div>
@@ -90,7 +91,7 @@ useEffect(() => {
             <div 
               key={product.id} 
               className="cursor-pointer flex flex-col items-center"
-              onClick={() => navigate(`/product/${product.id}`)}
+              onClick={() => navigate(`/product/${product._id}`)}
             >
               {/* Image (Full View) */}
               <div className="w-full h-full">
@@ -118,7 +119,7 @@ useEffect(() => {
   );
 };
 
-export default Stitched;
+export default Unstitched;
 // import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 

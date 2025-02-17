@@ -22,6 +22,8 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import PrivateRoute from './pages/PrivateRoute';
+import ProductDetails from './Baroque/ProductDetails';
+
 
 function App() {
   const [dresses, setDresses] = useState([]);
@@ -54,7 +56,7 @@ useEffect(() => {
     />}/>
   <Route path="/seperates" element={<Seperates dresses={dresses.filter(d => d.category === "seperates")} />} />
   <Route path="/shawls" element={<Shawls dresses={dresses.filter(d => d.category === "shawls")} />} />
-    
+  <Route path="/product/:id" element={<ProductDetails />} /> {/* Add this */}
   <Route path="/signup" element={<Signup />} />
   <Route path="/login" element={<Login />} />
   <Route path="/dashboard" element={<PrivateRoute />}>
