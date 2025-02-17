@@ -1,28 +1,38 @@
-// import { useCart } from "../Context/CartContext";
-// import { Link } from "react-router-dom";
+import React from "react";
+import { useCart } from "../Context/CartContext";
+import { Link } from "react-router-dom";
 
-// const Cart = () => {
-//   const { cart, dispatch } = useCart();
+const Cart = () => {
+  const { cart, removeFromCart } = useCart();  // Access cart and removeFromCart from context
 
-//   return (
-//     <div>
-//       <h2>Shopping Cart</h2>
-//       {cart.length === 0 ? (
-//         <p>Your cart is empty. <Link to="/">Go shopping</Link></p>
-//       ) : (
-//         cart.map((item) => (
-//           <div key={item.id}>
-//             <img src={item.image} alt={item.name} width="100" />
-//             <p>{item.name}</p>
-//             <p>Price: ${item.price}</p>
-//             <button onClick={() => dispatch({ type: "REMOVE_FROM_CART", payload: item.id })}>
-//               Remove
-//             </button>
-//           </div>
-//         ))
-//       )}
-//     </div>
-//   );
-// };
+  if (cart.length === 0) {
+    return <p>Your cart is empty</p>;
+  }
 
-// export default Cart;
+  return (
+    <div>
+      <h1 className="text-center text-3xl mt-4">Cart</h1>
+      <div className="flex flex-col items-center p-10">
+        {cart.map((product) => (
+          <div key={product._id} className="flex items-center justify-between w-full p-4 border-b">
+            <img src={product.image} alt={product.name} className="w-24 h-auto" />
+            <div className="ml-4">
+              <h3 className="text-lg font-semibold">{product.name}</h3>
+              <p>PKR {product.price}</p>
+            </div>
+            <button
+              onClick={() => removeFromCart(product._id)}  // Remove the product from the cart
+              className="bg-red-500 text-white px-4 py-2 rounded-lg"
+            >
+              Remove
+            </button>
+          </div>
+        ))}
+      </div>
+      <Link to="/" className="text-blue-500 mt-4">Continue Shopping</Link>
+    </div>
+  );
+};
+
+export default Cart;
+

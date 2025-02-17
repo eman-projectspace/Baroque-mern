@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { useCart } from "../Context/CartContext";  // Import the useCart hook
 
 const ProductDetails = () => {
   const { id } = useParams(); // Get product ID from URL
+  const { addToCart } = useCart();  // Access addToCart function from context
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -37,6 +39,11 @@ const ProductDetails = () => {
   if (error) return <p className="text-red-500">{error}</p>;
   if (!product) return <p className="text-red-500">Product not found.</p>;
 
+  
+  const handleAddToCart = () => {
+    addToCart(product);  // Add the product to the cart
+  };
+
   return (
     <div className="flex flex-col items-center p-10">
       <h2 className="text-3xl font-bold">{product.name}</h2>
@@ -45,7 +52,12 @@ const ProductDetails = () => {
       <p className="text-lg text-gray-600 mt-1">Fabric: {product.fabric}</p>
       <p className="text-lg text-gray-600 mt-1">Size: {product.size}</p>
       <p className="text-red-600 font-bold mt-2">3 PIECE</p>
-      <button className="mt-4 bg-red-500 text-white px-6 py-2 rounded-lg">Add to Cart</button>
+      <button
+        onClick={handleAddToCart}  // Add the onClick event to trigger Add to Cart
+        className="mt-4 bg-red-500 text-white px-6 py-2 rounded-lg"
+      >
+        Add to Cart
+      </button>
     </div>
   );
 };

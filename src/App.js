@@ -23,6 +23,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import PrivateRoute from './pages/PrivateRoute';
 import ProductDetails from './Baroque/ProductDetails';
+import Cart from './Baroque/Cart';
 
 
 function App() {
@@ -54,6 +55,7 @@ useEffect(() => {
   <Route path="/readytowear" element={<Readytowear dresses={dresses.filter(d => d.category === "readytowear")} />}/>
   <Route path="/specialprices"element={<Specialprices dresses={dresses.filter(d => d.category==="specialprices")}
     />}/>
+   <Route path="/cart" element={<Cart />} />
   <Route path="/seperates" element={<Seperates dresses={dresses.filter(d => d.category === "seperates")} />} />
   <Route path="/shawls" element={<Shawls dresses={dresses.filter(d => d.category === "shawls")} />} />
   <Route path="/product/:id" element={<ProductDetails />} /> {/* Add this */}

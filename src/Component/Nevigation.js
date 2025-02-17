@@ -113,7 +113,7 @@ function Nevigation() {
             <button className='mt-3' onClick={() => navigate("/")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/54/54481.png" alt=""></img></button>
            </div>
            <div>
-            <button className='mt-3'  onClick={() => navigate("/")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
+            <button className='mt-3'  onClick={() => navigate("/cart")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
            </div>
           </div>
         </Container>

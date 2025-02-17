@@ -26,7 +26,7 @@ import reportWebVitals from "./reportWebVitals";
 
 import AuthContext from "./Context/AuthContext.js";
 import DressesContext from "./Context/DressesContext.js";
-import CartContext from "./Context/CartContext.js";
+import { CartProvider } from './Context/CartContext';
 import OrderContext from "./Context/OrderContext.js";
 import AdminContext from "./Context/AdminContext.js";
 
@@ -36,13 +36,13 @@ root.render(
   <React.StrictMode>
     <AuthContext.Provider value={{ user: null, setUser: () => {} }}>
       <DressesContext.Provider value={{ dresses: [], setDresses: () => {} }}>
-        <CartContext.Provider value={{ cart: [], setCart: () => {} }}>
+        <CartProvider> {/* Use CartProvider here */}
           <OrderContext.Provider value={{ orders: [], setOrders: () => {} }}>
             <AdminContext.Provider value={{ admin: { isAdmin: false }, setAdmin: () => {} }}>
               <App />
             </AdminContext.Provider>
           </OrderContext.Provider>
-        </CartContext.Provider>
+        </CartProvider> {/* Close CartProvider here */}
       </DressesContext.Provider>
     </AuthContext.Provider>
   </React.StrictMode>
