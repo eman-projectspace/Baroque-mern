@@ -49,23 +49,25 @@ useEffect(() => {
         <BrowserRouter>
           <Nevigation />
           <Routes>
+            {/* USER WILL SEE THESE ROUTES */}
   <Route path="/" element={<Home />} />
   <Route path="/chantelle" element={<Chantelle dresses={dresses.filter(d => d.category === "chantelle")}    />} />
   <Route path="/unstitched" element={<Unstitched dresses={dresses.filter(d => d.category === "unstitched")} />} />
   <Route path="/stitched" element={<Stitched dresses={dresses.filter(d => d.category === "stitched")}        />} />
   <Route path="/readytowear" element={<Readytowear dresses={dresses.filter(d => d.category === "readytowear")} />}/>
-  <Route path="/specialprices"element={<Specialprices dresses={dresses.filter(d => d.category==="specialprices")}
-    />}/>
-   <Route path="/cart" element={<Cart />} />
+  <Route path="/specialprices"element={<Specialprices dresses={dresses.filter(d => d.category==="specialprices")}/>}/>
   <Route path="/seperates" element={<Seperates dresses={dresses.filter(d => d.category === "seperates")} />} />
   <Route path="/shawls" element={<Shawls dresses={dresses.filter(d => d.category === "shawls")} />} />
   <Route path="/product/:id" element={<ProductDetails />} /> {/* Add this */}
+  <Route path="/cart" element={<Cart />} />
   <Route path="/checkout" element={<Checkout />} />
+            {/* USER CANT SEE THESE ROUTES */}
   <Route path="/signup" element={<Signup />} />
   <Route path="/login" element={<Login />} />
   <Route path="/dashboard" element={<PrivateRoute />}>
   <Route path="" element={<Dashboard />} />
 </Route>
+         {/* CRUD API */}
   <Route path="/crud" element={<Crud />} />
   <Route path="/edit" element={<Edit />} />
   <Route path="crud/student" element={<Student />} />

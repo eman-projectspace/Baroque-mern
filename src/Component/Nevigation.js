@@ -18,7 +18,8 @@ function Nevigation() {
         key={expand}
         expand={expand}
         className="fixed top-0 z-50 bg-transparent duration-300 shadow-xl w-full h-20 flex items-center
-        after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full pt-4 cursor-pointer"
+        after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full mt-8 cursor-pointer
+       hover:!bg-white scroll-mt-0"
       >
         <Container fluid className="max-w-96 inline-block -ml-0">
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='mt-2' />
@@ -70,9 +71,6 @@ function Nevigation() {
                 </Link>
                 <hr />
                 <br />
-                <Link to="/crud">CRUD</Link>
-                <hr />
-                <br />
                 <NavDropdown
                   title="Dropdown"
                   id={`offcanvasNavbarDropdown-expand-${expand}`}
@@ -104,7 +102,7 @@ function Nevigation() {
           <div className="flex space-x-3">
             <div>
               <p className="font-serif font-medium mt-3 mr-5 text-black hover:!text-gray-700 ml-40">Pakistan</p></div>
-           <div><button className='mt-3' onClick={() => navigate("/service")}><img className='h-5 w-5 mr-20 -ml-4' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
+           <div><button className='mt-3' onClick={() => navigate("/crud")}><img className='h-5 w-5 mr-20 -ml-4' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
            </div>
            <div>
             <button className='mt-3' onClick={() => navigate("/")}><img className='h-5 w-5 mr-8' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>

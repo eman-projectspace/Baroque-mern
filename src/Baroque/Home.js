@@ -9,7 +9,7 @@ function Home({ products }) {
       <div>
         <img 
         className="-mt-20 w-full"
-        src="https://baroque.pk/cdn/shop/files/MAin_BAnner94.jpg?v=1738656243&width=2000" alt="Main Banner"/></div>
+        src="https://baroque.pk/cdn/shop/files/MAin_BAnner1_1_956c01d0-c419-4524-a423-85b416fa5603.jpg?v=1739516173&width=2000" alt="Main Banner"/></div>
         <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-4">
        {/*STITCHED & UNSTITCHED BUTTON */}
       <button className=" 
@@ -22,7 +22,7 @@ function Home({ products }) {
        onClick={() => navigate("/unstitched")}>UNSTITCHED</button>
        </div>
       {/* Category Section (Ready to Wear, Chantelle, Shawls) */}
-      <div className="flex justify-center mt-10 space-x-12 mb-28">
+      <div className="flex justify-center mt-20 space-x-12 mb-28">
         <div>
           <img 
             className="w-[350px] h-[400px] object-cover" 
