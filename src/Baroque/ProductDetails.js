@@ -74,7 +74,7 @@ const decreaseQuantity = () => {
   };
 
   return (
-    <div className="flex flex-row mb-28">
+    <div className="flex flex-row mb-28 mt-16">
       <hr />
       <div className="w-32 h-auto flex flex-col space-y-5 ml-6 items-center">
         <div className="w-20 h-20 border-2 border-black "></div>

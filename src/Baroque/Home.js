@@ -18,7 +18,7 @@ function Home({ products }) {
       onClick={() => navigate("/stitched")}>STITCHED</button>
       <button
         className="bg-black text-white px-6 py-2 w-40  mt-20
-      hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
+      hover:!bg-transparent hover:!border-black hover:!border-2  hover:!text-black hover:!duration-500 ease-in-out"
        onClick={() => navigate("/unstitched")}>UNSTITCHED</button>
        </div>
       {/* Category Section (Ready to Wear, Chantelle, Shawls) */}
@@ -31,7 +31,9 @@ function Home({ products }) {
           />
           <p className="text-center text-2xl font-serif mt-2">READY TO WEAR</p>
           <button
-            className="bg-black w-40 h-12 text-white block mx-auto mt-2 hover:bg-transparent hover:border-black hover:border-2 hover:text-black transition duration-500"
+            className="bg-black text-white px-6 py-2 w-40  mt-20
+              hover:!bg-transparent hover:!border-black hover:!border-2
+             hover:!text-black hover:!duration-500 ease-in-out"
             onClick={() => navigate("/readytowear")}
           >
             SHOP NOW
@@ -46,7 +48,9 @@ function Home({ products }) {
           />
           <p className="text-center text-2xl font-serif mt-2">CHANTELLE</p>
           <button
-            className="bg-black w-40 h-12 text-white block mx-auto mt-2 hover:bg-transparent hover:border-black hover:border-2 hover:text-black transition duration-500"
+             className="bg-black text-white px-6 py-2 w-40  mt-20
+            hover:!bg-transparent hover:!border-black hover:!border-2
+           hover:!text-black hover:!duration-500 ease-in-out"
             onClick={() => navigate("/chantelle")}
           >
             SHOP NOW
@@ -61,7 +65,9 @@ function Home({ products }) {
           />
           <p className="text-center text-2xl font-serif mt-2">SHAWLS</p>
           <button
-            className="bg-black w-40 h-12 text-white block mx-auto mt-2 hover:bg-transparent hover:border-black hover:border-2 hover:text-black transition duration-500"
+              className="bg-black border-2 text-white px-6 py-2 w-40  mt-20
+              hover:!bg-transparent hover:!border-black hover:!border-2 
+            hover:!text-black hover:!duration-500 ease-in-out"
             onClick={() => navigate("/shawls")}
           >
             SHOP NOW
