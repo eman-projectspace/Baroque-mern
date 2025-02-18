@@ -28,23 +28,25 @@ import { useNavigate } from "react-router-dom";
 
   return (
     <div >
-      <div  className="h-72 w-2/3 border-2 border-gray ml-48 mt-14 mb-24 shadow-lg">
-        <p className="text-center text-4xl font-bold">BAROQUE</p>
-        <br></br>
-        <p className="itext-2xl font-bold">Customer Log In</p>
-        <p>enter your email and we will send you a login</p>
+      <div  className="h-96 w-2/3 border-2 border-gray ml-48 mt-14 mb-24 shadow-lg">
+          <img className="h-20 w-52 ml-80 mt-3 " 
+           src="https://baroque.pk/cdn/shop/files/LOGO_PNG_V01.png?v=1689675712" alt=""/>
+
+        <p className="text-2xl font-bold text-left ml-5">Log In</p>
+        <p className="text-left ml-7 text-slate-500 font-sans">
+          enter your email Login to your existing account</p>
       <form onSubmit={handleLogin}>
-        <input  className="border-2 border-black w-60" 
+        <input  className="border-2 border-gray-400 w-96 mt-2 rounded-md p-1" 
         type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <br/><br/>
-        <input className="border-2 border-black w-60" 
+        <br/>
+        <input  className="border-2 border-gray-400 w-96 mt-2 rounded-md p-1" 
         type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <br/><br/>
-        <button className="border-2 border-black w-60 hover:bg-white hover:text-black" type="submit">
-            Login
-          </button>
+        <button className="border-2  border-gray-200 w-32 hover:text-black rounded-md" type="submit"> Login </button>
       </form>
+      <p className="hover:underline inline-block ml-96 font-medium cursor-pointer">Privacy</p>
     </div>
+
     </div>
   );
 };

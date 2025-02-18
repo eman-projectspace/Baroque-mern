@@ -1,6 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
  const CustomerSignup = () => {
+ 
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,27 +24,31 @@ import { useState } from "react";
       alert(data.message);
     }
   };
-
+  const navigate = useNavigate();
   return (
-      <div  className="h-72 w-2/3 border-2 border-gray ml-48 mt-14 mb-24 shadow-lg">
-        <p className="text-center text-4xl font-bold">BAROQUE</p>
-        <br></br>
-        <p className="itext-2xl font-bold">Customer Sign up In</p>
-        <p>enter your email and we will send you will Sign up</p>
-      <form onSubmit={handleSignup}>
-      <input  className="border-2 border-black w-60" 
+      <div  className="h-96 w-2/3 border-2 border-gray ml-48 mt-10 mb-24 shadow-lg bg-slate-200">
+       <img className="h-20 w-52 ml-80 mt-3 " 
+           src="https://baroque.pk/cdn/shop/files/LOGO_PNG_V01.png?v=1689675712" alt=""/>
+        <p className="text-2xl font-bold text-left ml-10">Sign up</p>
+        <p className="text-left ml-10 text-slate-700 font-serif mb-2">enter your email and we will send you will Sign up</p>
+        <input  className="border-2 border-black w-96 rounded-md" 
         type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required />
-        <br/>
-          <input  className="border-2 border-black w-60" 
-         type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          <br/>
-          <input  className="border-2 border-black w-60" 
+       <br/><br/>
+      <input  className="border-2 border-black w-96  rounded-md" 
+      type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+      <br/><br/>
+      <input  className="border-2 border-black w-96 rounded-md" 
          type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-          <br/>
-          <button className="border-2 border-black w-60 hover:bg-white hover:text-black" type="submit">
-            Sign up
-          </button>
-      </form>
+          <br/><br/>
+           <form onSubmit={handleSignup}>
+          <button className="w-32 ml-12 bg-black text-white font-mono" type="submit">
+            Submit</button>
+          </form>
+      <div className="mt-10">
+        <p className="text-right">If you already made an account then Click here !!!</p>
+         <button className="w-30 hover:text-blue-800 ml-96 "
+           onClick={() => navigate("/Customerlogin")}>Login In</button>
+      </div>
     </div>
   );
 };
