@@ -122,7 +122,8 @@ const decreaseQuantity = () => {
  </div>
                  {/* ADD TO CART BUTTON */}
     <button onClick={handleAddToCart}
-    className="mt-4 bg-black border-2 text-white px-6 py-2 w-5/6 mb-5">
+      className="bg-black text-white px-6 py-2 w-80 mt-10 mb-5 border-2
+      hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out">
     Add to Cart</button>
 
     <div className="sticky top-96 h-fit">
