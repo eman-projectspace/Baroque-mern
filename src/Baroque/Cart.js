@@ -6,12 +6,12 @@ const Cart = () => {
   const { cart, removeFromCart } = useCart();  // Access cart and removeFromCart from context
 
   if (cart.length === 0) {
-    return <p>Your cart is empty</p>;
+    return <p className="text-center m-52 font-bold text-3xl  ">Your cart is empty</p>;
   }
 
   return (
     <div>
-      <h1 className="text-center text-3xl mt-4">Cart</h1>
+      <h1 className="text-center font-bold text-3xl mt-4">Your Cart</h1>
       <div className="flex flex-col items-center p-10">
         {cart.map((product) => (
           <div key={product._id} className="flex items-center justify-between w-full p-4 border-b">
