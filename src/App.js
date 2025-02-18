@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './App.css';
+// import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Nevigation from './Component/Nevigation';
 import Header from './Component/Header';
