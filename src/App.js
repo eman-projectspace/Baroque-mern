@@ -26,6 +26,9 @@ import ProductDetails from './Baroque/ProductDetails';
 import Cart from './Baroque/Cart';
 import Checkout from './pages/Checkout';
 import EditProduct from './pages/EditProducts';
+import CustomerLogin from './pages/CustomerLogin';
+import CustomerSignup from './pages/CustomerSignup';
+import CustomerDashboard from './pages/CustomerDashboard';
 
 
 function App() {
@@ -62,6 +65,10 @@ useEffect(() => {
   <Route path="/product/:id" element={<ProductDetails />} /> {/* Add this */}
   <Route path="/cart" element={<Cart />} />
   <Route path="/checkout" element={<Checkout />} />
+  {/* Customer Login Signup Route */}
+  <Route path="/customerlogin" element={<CustomerLogin />} />         
+  <Route path="/customersignup" element={<CustomerSignup />} />
+  <Route path="/customerdashboard" element={<CustomerDashboard />} />
             {/* USER CANT SEE THESE ROUTES */}
   <Route path="/editproduct" element={<EditProduct />} />         
   <Route path="/signup" element={<Signup />} />

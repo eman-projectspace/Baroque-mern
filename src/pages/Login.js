@@ -17,9 +17,9 @@ const Login = () => {
 
     const data = await response.json();
     if (response.ok) {
-      localStorage.setItem("token", data.token); // ✅ Store JWT Token
+      localStorage.setItem("token", data.token); // Store JWT Token
       alert("Login successful!");
-      navigate("/dashboard"); // ✅ Redirect to dashboard
+      navigate("/dashboard"); // Redirect to dashboard
     } else {
       alert(data.message);
     }
