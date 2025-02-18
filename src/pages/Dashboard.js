@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Navigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [user, setUser] = useState(null);
@@ -20,6 +21,7 @@ const Dashboard = () => {
     <div>
       <h2>Dashboard</h2>
       {user ? <p>Welcome, {user.name}!</p> : <p>...</p>}
+      <button onClick={() => Navigate("/editproduct")}>Edit Product</button>
     </div>
   );
 };

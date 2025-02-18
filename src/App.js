@@ -25,6 +25,7 @@ import PrivateRoute from './pages/PrivateRoute';
 import ProductDetails from './Baroque/ProductDetails';
 import Cart from './Baroque/Cart';
 import Checkout from './pages/Checkout';
+import EditProduct from './pages/EditProducts';
 
 
 function App() {
@@ -62,6 +63,7 @@ useEffect(() => {
   <Route path="/cart" element={<Cart />} />
   <Route path="/checkout" element={<Checkout />} />
             {/* USER CANT SEE THESE ROUTES */}
+  <Route path="/editproduct" element={<EditProduct />} />         
   <Route path="/signup" element={<Signup />} />
   <Route path="/login" element={<Login />} />
   <Route path="/dashboard" element={<PrivateRoute />}>
