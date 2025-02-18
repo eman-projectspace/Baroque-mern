@@ -6,9 +6,26 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Outlet,Link } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function Nevigation() {
   const navigate = useNavigate(); // Hook to navigate
+
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
  
 <div className="w-full h-16">
@@ -17,9 +34,9 @@ function Nevigation() {
       <Navbar
         key={expand}
         expand={expand}
-        className="fixed top-0 z-50 bg-transparent duration-300 shadow-xl w-full h-20 flex items-center
-        after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full mt-8 cursor-pointer
-       hover:!bg-white scroll-mt-0"
+        className={`fixed top-0 left-0 w-full z-50 duration-300 shadow-xl h-20 flex items-center 
+        after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full cursor-pointer 
+        transition-all ${scrolled ? "bg-white top-0" : "bg-transparent mt-8"}`}
       >
         <Container fluid className="max-w-96 inline-block -ml-0">
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='mt-2' />
