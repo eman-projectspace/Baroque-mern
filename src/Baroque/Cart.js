@@ -26,7 +26,10 @@ const Cart = () => {
             >
               Remove
             </button>
+            <Link to="/checkout" className="bg-green-500 text-white px-6 py-2 rounded-lg">Proceed to Checkout</Link>
+
           </div>
+          
         ))}
       </div>
       <Link to="/" className="text-blue-500 mt-4">Continue Shopping</Link>
