@@ -104,10 +104,11 @@ const Unstitched = () => {
 
               {/* Product Details */}
               <div className="mt-4 text-center">
-                <h2 className="text-xl font-semibold">{product.name}</h2>
-                <p className="text-gray-600 font-medium">PKR {product.price}</p>
-                <p className="text-gray-500 text-sm">{product.fabric} - {product.size}</p>
-                <p className="text-red-600 font-bold mt-2">3 PIECE</p>
+                <h2 className="font-thin font-serif">{product.name}</h2>
+                <p className="text-black font-medium font-sans">PKR {product.price}</p>
+                <p className="text-gray-600">{product.season}</p>
+                {/* <p className="text-gray-500 text-sm">{product.fabric} - {product.size}</p>
+                <p className="text-red-600 font-bold mt-2">3 PIECE</p> */}
               </div>
             </div>
           ))}
