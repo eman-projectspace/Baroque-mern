@@ -11,29 +11,40 @@ const Checkout = () => {
 
   const totalAmount = cart.reduce((acc, item) => acc + item.price, 0);
 
-  const handlePlaceOrder = () => {
+  const handlePlaceOrder = async () => {
     if (!shippingAddress) {
       alert("Please enter a shipping address.");
       return;
     }
-
+  
     const orderDetails = {
       items: cart,
       shippingAddress,
       paymentMethod,
       totalAmount,
     };
-
-    console.log("Order Placed:", orderDetails);
-    alert("Order placed successfully!");
-
-    clearCart(); // Clear cart after placing order
-    navigate("/"); // Redirect to home or confirmation page
+  
+    try {
+      const response = await fetch("http://localhost:8888/api/orders/place-order", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(orderDetails),
+      });
+  
+      const data = await response.json();
+      if (response.ok) {
+        alert("Order placed successfully!");
+        clearCart(); // Clear cart after successful order
+        navigate("/"); // Redirect to home or order confirmation page
+      } else {
+        alert("Error placing order: " + data.error);
+      }
+    } catch (error) {
+      console.error("Checkout Error:", error);
+      alert("Failed to place order. Please try again.");
+    }
   };
-
-  if (cart.length === 0) {
-    return <p className="text-center m-52 font-bold text-3xl">Your cart is empty</p>;
-  }
+  
 
   return (
     <div className="p-10">
