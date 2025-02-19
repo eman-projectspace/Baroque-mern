@@ -112,28 +112,32 @@ function Nevigation() {
         </Container>
                                                    {/* BAROQUE CENTER OF NAV */}
         <div>
-          <img className='md:ml-96 mr-28 ' 
+          <img className='md:ml-96 mr-28 md:mr-40' 
             src="https://baroque.pk/cdn/shop/files/LOGO_PNG_V01.png?v=1689675712&width=150"
             alt=""
           />
         </div>
         <Container fluid className="w-72 transition-all duration-300
-        mr-28  ">
+        mr-38  ">
           <div className="flex space-x-3">
             <div>
-              <p className="font-serif font-medium mr-5 text-black hover:!text-gray-700 
-              md:block hidden 
+              <p className="font-serif font-medium mr-5 text-black hover:!text-gray-700 hidden md:block
+              
              ">Pakistan</p></div>
-           <div><button onClick={() => navigate("/crud")}><img className='h-5 w-5 mr-5 -ml-4 md:block hidden ' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
+           <div><button onClick={() => navigate("/crud")}><img className='h-5 w-5 mr-10 -ml-4 hidden md:block ' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
            </div>
            <div>
-            <button onClick={() => navigate("/customerSignup")}><img className='h-5 w-5 mr-3 md:block hidden ' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
+            <button onClick={() => navigate("/customerSignup")}><img className='h-5 w-5 mr-5 hidden md:block' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
            </div>
            <div>
-            <button onClick={() => navigate("/")}><img className='h-5 w-5 mr-3 md:block hidden ' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img></button>
+            <button onClick={() => navigate("/")}><img className=' h-5 w-5 md:mr-3 hidden md:block ' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img>
+            <img className=' h-5 w-5 mr-3 ml-64 -mt-14 block md:hidden sm:hidden' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img>
+            </button>
            </div>
            <div>
-            <button onClick={() => navigate("/cart")}><img className='h-5 w-5 md:block hidden ' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
+            <button onClick={() => navigate("/cart")}><img className='h-5 w-5 md:mr-10 hidden sm:block md:block' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img>
+            <img className=' h-5 w-5 mr-3 ml-5 -mt-14 block sm:hidden md:hidden ' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img>
+            </button>
            </div>
           </div>
         </Container>
