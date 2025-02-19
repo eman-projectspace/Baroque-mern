@@ -28,13 +28,16 @@ const Unstitched = () => {
     <div>
            <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >UNSTITCHED</h1>
          <div className='flex h-10 w-full p-1 mb-20 border-t-2 border-b-2'>
-          <div className="text-center font-semibold mx-auto ">{products.length} PRODUCTS</div>
-          <div className='mr-8'>SORT BY</div>
+          <div className="text-center font-semibold mx-auto hidden md:block ">{products.length} PRODUCTS</div>
+          <div className='md:mr-8 hidden md:block'>SORT BY</div>
+          <div className='mr-20 ml-24 block md:hidden text-gray-500 hover:text-black cursor-pointer '>FILTERS</div>
+          <div className="md:block border-r-2 border-gray-400"></div>
+          <div className='md:mr-8 block md:hidden text-gray-500 hover:text-black cursor-pointer ml-10'>SORT BY</div>
           </div>
     <div className="flex p-8"> {/* Flex container for sidebar & products */}
       
       {/* Left Sidebar (Filter) */}
-      <div className="w-1/4 p-6 bg-gray-100 shadow-md rounded-lg sticky top-20 h-fit">
+      <div className="w-1/4 p-6 bg-gray-100 shadow-md rounded-lg sticky top-20 h-fit hidden md:block">
         
         {/* Availability Filter */}
         <div>
@@ -85,8 +88,8 @@ const Unstitched = () => {
       </div>
   
       {/* Product Grid */}
-      <div className="w-3/4 ml-8">
-        <div className="grid grid-cols-2 row-auto gap-8">
+      <div className="md:w-3/4 md:ml-8 ">
+      <div className="grid md:grid-cols-2 row-auto md:gap-8 -mt-16 ">
           {products.map((product) => (
             <div 
               key={product.id} 
@@ -105,8 +108,8 @@ const Unstitched = () => {
               {/* Product Details */}
               <div className="mt-4 text-center">
                 <h2 className="font-thin font-serif">{product.name}</h2>
-                <p className="text-black font-medium font-sans">PKR {product.price}</p>
-                <p className="text-gray-600">{product.season}</p>
+                <p className="text-black font-medium font-serif md:mt-0 mt-2">PKR {product.price}</p>
+                <p className="text-gray-600 md:mb-0 mb-5 text-sm mt-2 md:mt-2">{product.season}</p>
                 {/* <p className="text-gray-500 text-sm">{product.fabric} - {product.size}</p>
                 <p className="text-red-600 font-bold mt-2">3 PIECE</p> */}
               </div>
