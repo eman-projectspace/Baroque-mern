@@ -38,7 +38,7 @@ function Nevigation() {
         after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full cursor-pointer hover:!bg-white
         transition-all ${scrolled ? "bg-white top-0" : "bg-transparent border-white border-t-2 mt-8"}`}
       >
-        <Container fluid className="w-20 inline-block -ml-0 ">
+        <Container fluid className="w-20 inline-block -ml-0">
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='mt-2' />
           <Navbar.Brand href="#" />
           <Navbar.Offcanvas
@@ -102,7 +102,8 @@ function Nevigation() {
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
-              <div className="flex gap-4 mt-2 mb-4 ml-4"></div>
+              <div className="flex gap-4 mt-2 mb-4 ml-4
+            "></div>
               <hr />
               <p className="mt-3 cursor-pointer font-mono inline-block ">PAKISTAN</p>
               
@@ -110,29 +111,29 @@ function Nevigation() {
           </Navbar.Offcanvas>
         </Container>
                                                    {/* BAROQUE CENTER OF NAV */}
-        <div className="text-center">
-          <img className='ml-96 sm:block hidden' 
+        <div>
+          <img className='md:ml-96 mr-28 ' 
             src="https://baroque.pk/cdn/shop/files/LOGO_PNG_V01.png?v=1689675712&width=150"
             alt=""
           />
         </div>
-        <Container fluid className="w-72 !bg-transparent transition-all duration-300 
-        mr-28 ">
+        <Container fluid className="w-72 transition-all duration-300
+        mr-28  ">
           <div className="flex space-x-3">
             <div>
               <p className="font-serif font-medium mr-5 text-black hover:!text-gray-700 
-              sm:block hidden 
+              md:block hidden 
              ">Pakistan</p></div>
-           <div><button onClick={() => navigate("/crud")}><img className='h-5 w-5 mr-5 -ml-4 sm:block hidden ' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
+           <div><button onClick={() => navigate("/crud")}><img className='h-5 w-5 mr-5 -ml-4 md:block hidden ' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
            </div>
            <div>
-            <button onClick={() => navigate("/customerSignup")}><img className='h-5 w-5 mr-3 sm:block hidden ' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
+            <button onClick={() => navigate("/customerSignup")}><img className='h-5 w-5 mr-3 md:block hidden ' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
            </div>
            <div>
-            <button onClick={() => navigate("/")}><img className='h-5 w-5 mr-3 sm:block hidden ' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img></button>
+            <button onClick={() => navigate("/")}><img className='h-5 w-5 mr-3 md:block hidden ' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img></button>
            </div>
            <div>
-            <button onClick={() => navigate("/cart")}><img className='h-5 w-5 sm:block hidden ' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
+            <button onClick={() => navigate("/cart")}><img className='h-5 w-5 md:block hidden ' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img></button>
            </div>
           </div>
         </Container>
