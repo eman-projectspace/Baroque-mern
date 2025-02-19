@@ -74,16 +74,16 @@ const decreaseQuantity = () => {
   };
 
   return (
-    <div className="flex flex-row mb-28 mt-16">
+    <div className="md:flex md:flex-row md:mb-28 md:mt-16">
       <hr />
-      <div className="w-32 h-auto flex flex-col space-y-5 ml-6 items-center">
-        <div className="w-20 h-20 border-2 border-black "></div>
-        <div className="w-20 h-20 border-2 border-black  "></div>
-        <div className="w-20 h-20 border-2 border-black  "></div>
-        <div className="w-20 h-20 border-2 border-black  "></div>
-        <div className="w-20 h-20 border-2 border-black  "></div>
+      <div className="md:w-32 md:h-auto md:flex md:flex-col md:space-y-5 md:ml-6 md:items-center">
+        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
+        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
+        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
+        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
+        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
       </div>
-      <div className=" w-2/4 flex flex-col ml-10 ">
+      <div className=" md:w-2/4 md:flex md:flex-col md:ml-10 ">
         <img src={product.image} alt={product.name} />
       </div>
       <div className="w-80 ml-12 text-left ">
@@ -94,7 +94,7 @@ const decreaseQuantity = () => {
         <p className="text-gray-600 font-semibold mt-2">3 PIECE</p>
         <p className="text-gray-600 font-semibold mt-2 mb-5">Colour : Printed piece</p>
         <hr />
-        <p className="text-balck text-left text-xl mt-2 mb-2">Type : </p>
+        <p className="text-balck text-left text-xl mt-4 mb-3">Type : </p>
         <button className="border-gray-500 border-2 px-6 py-2">Stitched</button>
         <br />
         <p className="text-balck text-left text-xl mt-2 mb-2">Size : </p>
@@ -114,14 +114,14 @@ const decreaseQuantity = () => {
         
         {/* INCREASE AND DECREASE BUTTON */}
         <div className="flex items-center space-x-4 ">
-        <div className="border-2 border-gray-700 h-10 w-28 flex flex-row  ml-28">
+        <div className="border-2 border-gray-700 h-10 w-28 flex flex-row  md:ml-28">
   <button onClick={decreaseQuantity} className="mr-5 ml-5">-</button>
   <p className="text-xl">{quantity} </p>
   <button onClick={increaseQuantity} className="mr-5 ml-5">+</button>
   </div>
  </div>
                  {/* ADD TO CART BUTTON */}
-    <button onClick={handleAddToCart}
+    <button onClick={handleAddToCart} 
       className="bg-black text-white px-6 py-2 w-80 mt-10 mb-5 border-2
       hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out">
     Add to Cart</button>

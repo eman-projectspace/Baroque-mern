@@ -11,22 +11,23 @@ const Cart = () => {
 
   return (
     <div>
-      <h1 className="text-center font-bold text-3xl mt-4">Your Cart</h1>
-      <div className="flex flex-col items-center p-10">
+      <h1 className="text-center font-bold text-3xl mt-4 mb-3">
+        Your Cart</h1>
+      <div className="flex flex-col md:items-center md:p-10 gap-10 ">
         {cart.map((product) => (
-          <div key={product._id} className="flex items-center justify-between w-full p-4 border-b">
-            <img src={product.image} alt={product.name} className="w-24 h-auto" />
+          <div key={product._id} className="flex flex-col md:flex-row items-center justify-between w-full p-4 border-b">
+            <img src={product.image} alt={product.name} className="md:w-24 h-auto w-72 " />
             <div className="ml-4">
-              <h3 className="text-lg font-semibold">{product.name}</h3>
-              <p>PKR {product.price}</p>
+              <h3 className="text-lg font-semibold mt-3 md:mt-0 mb-2">{product.name}</h3>
+              <p >PKR {product.price}</p>
             </div>
             <button
               onClick={() => removeFromCart(product._id)}  // Remove the product from the cart
-              className="bg-red-500 text-white px-4 py-2 rounded-lg"
-            >
+              className="bg-orange-500 text-white px-4 py-2 mt-2 mb-2 rounded-lg"
+                        >
               Remove
             </button>
-            <Link to="/checkout" className="bg-green-500 text-white px-6 py-2 rounded-lg">Proceed to Checkout</Link>
+            <Link to="/checkout" className="bg-purple-500 text-white px-6 py-2 rounded-lg">Proceed to Checkout</Link>
 
           </div>
           
