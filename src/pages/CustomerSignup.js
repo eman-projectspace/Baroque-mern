@@ -48,6 +48,10 @@ import { useNavigate } from "react-router-dom";
         <p className="text-right">If you already made an account then Click here !!!</p>
          <button className="w-30 hover:text-blue-800 ml-96 "
            onClick={() => navigate("/Customerlogin")}>Login In</button>
+                    <button className="w-30 hover:text-blue-800 ml-96 "
+           onClick={() => navigate("/login")}>Admin Login In</button>
+            <button className="w-30 hover:text-blue-800 ml-96 "
+           onClick={() => navigate("/signup")}>Admin Login In</button>
       </div>
     </div>
   );

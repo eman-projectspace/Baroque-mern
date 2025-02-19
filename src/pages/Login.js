@@ -9,13 +9,14 @@ const Login = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    const response = await fetch("http://localhost:8888/api/accounts/login", {
+    const response = await fetch("http://localhost:8888/api/admin/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
     });
 
     const data = await response.json();
+    console.log("Login Response:", data);  // ✅ Log the response
     if (response.ok) {
       localStorage.setItem("token", data.token); // Store JWT Token
       alert("Login successful!");

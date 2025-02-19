@@ -20,7 +20,6 @@ import DressesContext from './Context/DressesContext';
 import axios from "axios";
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
 import PrivateRoute from './pages/PrivateRoute';
 import ProductDetails from './Baroque/ProductDetails';
 import Cart from './Baroque/Cart';
@@ -29,6 +28,7 @@ import EditProduct from './pages/EditProducts';
 import CustomerLogin from './pages/CustomerLogin';
 import CustomerSignup from './pages/CustomerSignup';
 import CustomerDashboard from './pages/CustomerDashboard';
+import AdminDashboard from './pages/AdminDashboard';
 
 
 function App() {
@@ -74,7 +74,7 @@ useEffect(() => {
   <Route path="/signup" element={<Signup />} />
   <Route path="/login" element={<Login />} />
   <Route path="/dashboard" element={<PrivateRoute />}>
-  <Route path="" element={<Dashboard />} />
+  <Route path="" element={<AdminDashboard />} />
 </Route>
          {/* CRUD API */}
   <Route path="/crud" element={<Crud />} />
