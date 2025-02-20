@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import SalesChart from "./SalesChart"; // Import the chart component
 
 const AdminDashboard = () => {
   const [user, setUser] = useState(null);
@@ -45,31 +46,21 @@ const AdminDashboard = () => {
   }, [token, navigate]);
 
   return (
-    <div className="p-6">
+    <div>
       <h2 className="text-3xl font-bold">Admin Dashboard</h2>
       {user ? (
         <p>Welcome, <strong>{user.name}</strong>!</p>
       ) : (
         <p>Loading...</p>
       )}
-
-      {/* Admin Sections */}
-      <div className="grid grid-cols-3 gap-6 mt-6">
-        <div className="border p-4 shadow-md">
-          <h2 className="text-xl font-bold">Manage Products</h2>
-          <button className="mt-2 bg-blue-500 text-white px-4 py-2 rounded">View Products</button>
-        </div>
-
-        <div className="border p-4 shadow-md">
-          <h2 className="text-xl font-bold">Manage Orders</h2>
-          <button className="mt-2 bg-green-500 text-white px-4 py-2 rounded">View Orders</button>
-        </div>
-
-        <div className="border p-4 shadow-md">
-          <h2 className="text-xl font-bold">Manage Customers</h2>
-          <button className="mt-2 bg-red-500 text-white px-4 py-2 rounded">View Customers</button>
-        </div>
+    
+        {/* Dashboard Chart Section */}
+        <div className="mt-8 p-4 border shadow-md ">
+        <h2 className="text-xl font-bold mb-4">Sales Overview</h2>
+        <SalesChart /> 
       </div>
+
+    
     </div>
   );
 };
