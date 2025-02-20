@@ -26,8 +26,8 @@ import { useNavigate } from "react-router-dom";
   };
   const navigate = useNavigate();
   return (
-      <div  className="h-96 w-2/3 border-2 border-gray ml-48 mt-10 mb-24 shadow-lg bg-slate-200">
-       <img className="h-20 w-52 ml-80 mt-3 " 
+      <div  className="md:h-96 md:w-2/3 md:border-2 md:border-gray md:ml-48 md:mt-10 md:mb-24 md:shadow-lg bg-slate-200">
+       <img className="ml-44 h-20 w-48 md:h-20 md:w-52 md:ml-80 md:mt-3 " 
            src="https://baroque.pk/cdn/shop/files/LOGO_PNG_V01.png?v=1689675712" alt=""/>
         <p className="text-2xl font-bold text-left ml-10">Sign up</p>
         <p className="text-left ml-10 text-slate-700 font-serif mb-2">enter your email and we will send you will Sign up</p>
@@ -48,7 +48,7 @@ import { useNavigate } from "react-router-dom";
         <p className="text-right">If you already made an account then Click here !!!</p>
          <button className="w-30 hover:text-blue-800 ml-96 "
            onClick={() => navigate("/Customerlogin")}>Login In</button>
-                    <button className="w-30 ml-96 text-white "
+                    <button className="mb-3 w-30 ml-96 text-white "
            onClick={() => navigate("/login")}>Admin Login In</button>
       </div>
     </div>

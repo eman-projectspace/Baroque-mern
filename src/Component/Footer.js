@@ -12,7 +12,7 @@ const Footer = () => {
 <br/><br/><br/><br/>
 {/* Laptop Screen */}
 <div className="leading-8 hidden md:block ">
-  <div className='border-2 flex'>
+  <div className='flex'>
   <div className="md:ms-20 inline ">
     <b>ABOUT</b>
     <br/>who we are
