@@ -108,7 +108,7 @@ useEffect(() => {
               <div className="mt-4 text-center">
                 <h2 className="font-thin font-serif">{product.name}</h2>
                 <p className="text-black font-medium font-serif md:mt-0 mt-2">PKR {product.price}</p>
-                <p className="text-gray-600 md:mb-0 mb-5 text-sm mt-2 md:mt-2">{product.season}</p>
+                <p className="text-gray-600 md:mb-0 mb-5 text-sm mt-2 md:mt-2">{product.chantelle}</p>
                 {/* <p className="text-gray-500 text-sm">{product.fabric} - {product.size}</p>
                 <p className="text-red-600 font-bold mt-2">3 PIECE</p> */}
               </div>

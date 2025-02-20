@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
  import Carousel from 'react-bootstrap/Carousel';
+ import "../Component/Button.css"
+
 function Home({ products }) {
   const navigate = useNavigate();
 
@@ -24,13 +26,14 @@ function Home({ products }) {
       <div className="md:flex md:justify-center mt-20 ml-5 mr-5 md:space-x-12 mb-28">
         <div>
           <img 
-            className="md:w-[350px] md:h-[400px] md:object-cover " 
+            className="md:w-[350px] md:h-[400px] md:object-cover
+            transition-transform duration-100 hover:animate-pulse cursor-pointer " 
             src="https://baroque.pk/cdn/shop/files/02_Banner242.jpg?v=1738845059&width=800" 
             alt="Ready to Wear" 
           />
-          <p className="text-center text-2xl font-serif md:mt-2 mt-4 ">READY TO WEAR</p>
+          <p className="text-center text-2xl font-serif md:mt-2 mt-4  ">READY TO WEAR</p>
           <button
-            className="bg-black text-white md:px-6 py-2 w-40  md:mt-7 md:mb-2 mb-5 mt-2
+            className="bg-black text-white md:px-6 py-2 w-40 h-12 border-2  md:mt-7 md:mb-2 mb-5 mt-2
               hover:!bg-transparent hover:!border-black hover:!border-2
              hover:!text-black hover:!duration-500 ease-in-out"
             onClick={() => navigate("/readytowear")}
@@ -41,15 +44,15 @@ function Home({ products }) {
 
         <div>
           <img 
-            className="md:w-[350px] md:h-[400px] 
-            md:object-cover" 
+            className="md:w-[350px] md:h-[400px]  md:object-cover
+             transition-transform duration-100 hover:animate-pulse cursor-pointer" 
             src="https://baroque.pk/cdn/shop/files/02_Banner240.jpg?v=1738051357&width=800" 
-            alt="Chantelle" 
+            alt="Chantelle"  onClick={() => navigate("/chantelle")}
           />
           <p className="text-center text-2xl font-serif md:mt-2 mt-4">CHANTELLE</p>
           <button
             className="bg-black text-white md:px-6 py-2 w-40  md:mt-7 md:mb-2 mb-5 mt-2
-              hover:!bg-transparent hover:!border-black hover:!border-2
+              hover:!bg-transparent hover:!border-black hover:!border-2 h-12 border-2 
              hover:!text-black hover:!duration-500 ease-in-out"
             onClick={() => navigate("/chantelle")}
           >
@@ -59,14 +62,15 @@ function Home({ products }) {
 
         <div>
           <img 
-            className="md:w-[350px] md:h-[400px] object-cover" 
+            className="md:w-[350px] md:h-[400px] object-cover
+             transition-transform duration-100 hover:animate-pulse cursor-pointer" 
             src="https://baroque.pk/cdn/shop/files/02_Banner239.jpg?v=1738051379&width=800" 
             alt="Shawls" 
-          />
-          <p className="text-center text-2xl font-serif md:mt-2 mt-4">SHAWLS</p>
+            onClick={() => navigate("/shawls")} />
+          <p className="text-center text-2xl font-serif md:mt-2 mt-4">INTERMIX</p>
           <button
             className="bg-black text-white md:px-6 py-2 w-40  md:mt-7 md:mb-2 mb-5 mt-2
-              hover:!bg-transparent hover:!border-black hover:!border-2
+              hover:!bg-transparent hover:!border-black hover:!border-2 h-12 border-2 
              hover:!text-black hover:!duration-500 ease-in-out"
             onClick={() => navigate("/shawls")}
           >

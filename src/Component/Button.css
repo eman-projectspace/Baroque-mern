@@ -1,0 +1,43 @@
+/* Button.css */
+.button {
+  background-color: rgb(var(--button-background)); /* Uses the background color */
+  color: rgb(var(--button-text-color)); /* Uses the text color */
+  border: 2px solid  /* Uses the outline color */rgb(var(--button-outline-color));
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: rgb(var(--button-outline-color)); /* Change background on hover */
+  color: rgb(var(--button-background)); /* Swap text color */
+}
+
+.picture{
+  transition: 2s ease all;
+  position: relative;
+  animation-name: web58;
+  cursor: pointer;
+}
+
+.picture:hover
+            { animation-duration: 2s;
+                animation-iteration-count: alternate-reverse;
+                animation-direction: reverse;
+                animation-delay: 2s;
+                 /* transform: translate(250px,250px); */
+                /* transform: translateX(250px); */
+                /* transform: rotate(360deg); */
+                /* transform: scale(0.0);  */
+                /* transform: skew(180deg); */
+            }
+
+
+@keyframes web58 {
+  from{
+          top: 0px;
+  }
+  to{
+          top: 10px;
+  }
+}
