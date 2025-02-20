@@ -34,9 +34,9 @@ function Nevigation() {
       <Navbar
         key={expand}
         expand={expand}
-        className={`fixed top-0 left-0 w-full  z-50 duration-300 shadow-xl h-20 flex
-        after:content-[''] after:absolute after:left-0 after:bottom-2 after:w-full cursor-pointer hover:!bg-white
-        transition-all ${scrolled ? "bg-white top-0" : "bg-transparent border-white border-t-2 mt-8"}`}
+        className={`fixed top-0 left-0 w-full  z-50 duration-300 h-20 flex 
+          cursor-pointer hover:!bg-white
+         ${scrolled ? "bg-white top-0" : "bg-transparent border-white border-t-2 mt-8"}`}
       >
         <Container fluid className="w-20 inline-block -ml-0">
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='mt-2' />
