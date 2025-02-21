@@ -48,10 +48,10 @@ const Footer = () => {
   {/* ABOUT */}
           <button
             className="w-full text-left text-lg  justify-between font-serif block md:hidden
-             mt-2 pt-3 pb-3  border-y-slate-400 border-t-2 "
+             mt-2 pt-3 pb-3  border-y-slate-200 border-t-2 "
             onClick={() => setAboutOpen(!isAboutOpen)}>
             <span className='ml-5 font-mono mr-5'>About</span> 
-            <span>{isAboutOpen ? "▲" : "▼"}</span> </button>
+            <span>{isAboutOpen ? "-" : "+"}</span> </button>
           {isAboutOpen && <p className="mt-2 ml-2 text-left "> 
 Who We Are<br/>
 Our Responsibility<br/>
@@ -64,9 +64,9 @@ Retail Outlet : Shop F-06, First Floor, Dolmen Mall, Sector A, DHA <br/>Phase 6,
         </div>
         {/* SERVICE */}
  <button
-            className="w-full text-left mt-2 pt-3 pb-3 text-lg border-y-slate-400 border-t-2 border-b-2  justify-between font-serif block md:hidden" onClick={()=>setServiceOpen(!isServiceOpen)}>
+            className="w-full text-left mt-2 pt-3 pb-3 text-lg border-y-slate-200 border-t-2 border-b-2  justify-between font-serif block md:hidden" onClick={()=>setServiceOpen(!isServiceOpen)}>
   <span className='ml-4 font-mono mr-5'> CUSTOMER SERVICE</span> 
-  <span>{isServiceOpen ? "▲" : "▼"}</span></button>
+  <span>{isServiceOpen ? "-" : "+"}</span></button>
   {isServiceOpen && <p className="mt-2 text-left ml-5 ">
     Contact Us <br/>
 Dispatch Timeline  <br/>
@@ -76,9 +76,9 @@ WhatsApp: +92 325 7001111  <br/>
     </p>}      
 {/* About */}
      <button
-            className="w-full  mt-2 pt-3 pb-3 text-lg border-y-slate-400 border-b-2  text-left  justify-between font-serif block md:hidden" onClick={()=>setPoliciesOpen(!isPoliciesOpen)}>
+            className="w-full  mt-2 pt-3 pb-3 text-lg border-y-slate-200 border-b-2  text-left  justify-between font-serif block md:hidden" onClick={()=>setPoliciesOpen(!isPoliciesOpen)}>
   <span className='ml-4 font-mono mr-5'>POLICIES</span> 
-  <span>{isPoliciesOpen ? "▲" : "▼"}</span></button>
+  <span>{isPoliciesOpen ? "-" : "+"}</span></button>
   {isPoliciesOpen && <p className="mt-2 text-left ml-5 ">
  Privacy Policy <br/>
 Refund Policy <br/>
