@@ -25,7 +25,8 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 import AuthContext from "./Context/AuthContext.js";
-import DressesContext from "./Context/DressesContext.js";
+import { ProductProvider } from "./Context/ProductContext.js"; // Import ProductProvider
+//import DressesContext from "./Context/DressesContext.js";
 import { CartProvider } from './Context/CartContext';
 import OrderContext from "./Context/OrderContext.js";
 import AdminContext from "./Context/AdminContext.js";
@@ -35,7 +36,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <AuthContext.Provider value={{ user: null, setUser: () => {} }}>
-      <DressesContext.Provider value={{ dresses: [], setDresses: () => {} }}>
+      <ProductProvider>
         <CartProvider> {/* Use CartProvider here */}
           <OrderContext.Provider value={{ orders: [], setOrders: () => {} }}>
             <AdminContext.Provider value={{ admin: { isAdmin: false }, setAdmin: () => {} }}>
@@ -43,7 +44,7 @@ root.render(
             </AdminContext.Provider>
           </OrderContext.Provider>
         </CartProvider> {/* Close CartProvider here */}
-      </DressesContext.Provider>
+      </ProductProvider>
     </AuthContext.Provider>
   </React.StrictMode>
 );

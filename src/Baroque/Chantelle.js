@@ -1,33 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState , useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { ProductContext } from "../Context/ProductContext"; // Adjust path as needed
 
 const Stitched = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
   const [isPriceOpen, setPriceOpen] = useState(false);
   const [isFabricOpen, setFabricOpen] = useState(false);
   const [isSizeOpen, setSizeOpen] = useState(false);
-  const [products, setProducts] = useState([]); //  State to store products
+  const { products } = useContext(ProductContext); // Get products from context
   const navigate = useNavigate();
 
-  // Fetch products from JSON
-useEffect(() => {
-  const fetchStitchedProducts = async () => {
-    try {
-      const res = await axios.get("http://localhost:8888/api/products/category/chantelle"); 
-      setProducts(res.data); // Store only stitched products
-    } catch (error) {
-      console.error("Error fetching stitched products:", error);
-    }
-  };
-  fetchStitchedProducts();
-}, []);
+// Filter stitched dresses
+const chantelleProducts = products.filter(
+  (product) => product.category === "chantelle"
+);
+
 
   return (
     <div>
            <h1 className='text-center mt-20 mb-20 text-4xl font-serif' >CHANTELLE</h1>
          <div className='flex h-10 w-full p-1 mb-20 border-t-2 border-b-2'>
-          <div className="text-center font-semibold mx-auto hidden md:block">{products.length} PRODUCTS</div>
+          <div className="text-center font-semibold mx-auto hidden md:block">{chantelleProducts.length} PRODUCTS</div>
           <div className='md:mr-8 hidden md:block'>SORT BY</div>
           <div className='mr-20 ml-24 block md:hidden text-gray-500 hover:text-black cursor-pointer '>FILTERS</div>
           <div className="md:block border-r-2 border-gray-400"></div>
@@ -89,7 +82,7 @@ useEffect(() => {
       {/* Product Grid */}
       <div className="md:w-3/4 md:ml-8 ">
       <div className="grid md:grid-cols-2 row-auto md:gap-8 -mt-16 ">
-          {products.map((product) => (
+      {chantelleProducts.map((product) => ( // Use chantelleProducts instead of products
             <div 
               key={product.id} 
               className="cursor-pointer flex flex-col items-center"
