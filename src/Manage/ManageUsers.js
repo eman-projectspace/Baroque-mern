@@ -53,10 +53,11 @@ const ManageUsers = () => {
 
   return (
     <div>
-      <h2>Manage Users</h2>
-      <table border="1">
+      <p className="font-bold text-3xl mb-5">Manage Users</p>
+      <table className="border-2 border-blackc w-full h-full bg-slate-200 border-slate-500" >
         <thead>
-          <tr>
+          <tr className="border-b-2 border-2 border-black">
+            <th>No #</th>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
@@ -64,8 +65,9 @@ const ManageUsers = () => {
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {users.map((user,index) => (
             <tr key={user._id}>
+               <td>{index + 1}</td> {/* Numbering starts from 1 */}
               <td>{user._id}</td>
               <td>{user.name}</td>
               <td>{user.email}</td>

@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 const ManageProducts = () => {
   const [products, setProducts] = useState([]);
-  const [editingProduct, setEditingProduct] = useState(null);
-  const [updatedProduct, setUpdatedProduct] = useState({ name: "", price: "" });
+  const [editingProduct, setEditingProduct] = useState(null);  //This will edit dresses
+  const [updatedProduct, setUpdatedProduct] = useState({ name: "", price: "" });  //This will update dresses
 
-  // ✅ Fetch products from API
+  //  Fetch products from API
   const fetchProducts = async () => {
     try {
       const response = await fetch("http://localhost:8888/api/products");
@@ -20,7 +20,7 @@ const ManageProducts = () => {
     fetchProducts();
   }, []);
 
-  // ✅ Delete Product
+  //  Delete Product
   const deleteProduct = async (productId) => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
 
@@ -40,13 +40,13 @@ const ManageProducts = () => {
     }
   };
 
-  // ✅ Start Editing Product
+  //  Start Editing Product
   const startEditing = (product) => {
     setEditingProduct(product._id);
     setUpdatedProduct({ name: product.name, price: product.price });
   };
 
-  // ✅ Update Product
+  // Update Product
   const updateProduct = async (productId) => {
     try {
       const response = await fetch(`http://localhost:8888/api/products/${productId}`, {
@@ -92,12 +92,12 @@ const ManageProducts = () => {
               <td className="border px-4 py-2">${product.price}</td>
               <td className="border px-4 py-2">{product.stock}</td>
               <td className="border px-4 py-2 flex gap-2 justify-center">
-                {/* ✅ Delete Button */}
+                {/* Delete Button */}
                 <button onClick={() => deleteProduct(product._id)} className="bg-red-500 text-white px-2 py-1 rounded">
                   Delete
                 </button>
 
-                {/* ✅ Edit & Save Buttons */}
+                {/*  Edit & Save Buttons */}
                 {editingProduct === product._id ? (
                   <>
                     <input

@@ -66,16 +66,17 @@ const ManageOrders = () => {
 
   return (
     <div>
-      <h2 className="text-3xl font-bold mb-4">Manage Orders</h2>
+      <h2 className="text-3xl font-bold mb-4 ">Manage Orders</h2>
 
       {loading ? (
         <p>Loading orders...</p>
       ) : orders.length === 0 ? (
         <p>No orders found.</p>
       ) : (
-        <table border="1" width="100%">
-          <thead>
+        <table className="border-2 border-red-400 h-auto w-auto">
+          <thead className="border-2 border-red-400 h-auto w-auto">
             <tr>
+              <th>No#</th>
               <th>Order ID</th>
               <th>Items</th>
               <th>Shipping Address</th>
@@ -83,13 +84,15 @@ const ManageOrders = () => {
               <th>Total Amount</th>
               <th>Status</th>
               <th>Actions</th>
+              <th>Delete Order</th>
             </tr>
           </thead>
           <tbody>
-            {orders.map((order) => (
+            {orders.map((order,index) => (
               <tr key={order._id}>
+                 <td>{index}</td>
                 <td>{order._id}</td>
-                <td>
+                <td className="text-sm ">
                   {order.items.map((item, index) => (
                     <div key={index}>
                       {item.name} (Qty: {item.quantity})

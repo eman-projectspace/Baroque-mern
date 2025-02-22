@@ -1,7 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const ManageMore = () => {
-  const [, setProducts] = useState([]); //i removed products from here
   const [newProduct, setNewProduct] = useState({
     name: "",
     category: "",
@@ -9,14 +8,6 @@ const ManageMore = () => {
     stock: "",
     image: "",
   });
-
-  // Fetch products from API
-  useEffect(() => {
-    fetch("http://localhost:8888/api/products")
-      .then((res) => res.json())
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error fetching products:", error));
-  }, []);
 
   const handleInputChange = (e) => {
     setNewProduct({ ...newProduct, [e.target.name]: e.target.value });
@@ -34,7 +25,6 @@ const ManageMore = () => {
       if (response.ok) {
         alert("Product added successfully!");
         setNewProduct({ name: "", category: "", price: "", stock: "", image: "" });
-        window.location.reload(); // Refresh products
       } else {
         alert("Failed to add product!");
       }
@@ -45,11 +35,8 @@ const ManageMore = () => {
 
   return (
     <div className="p-4">
-      <h2 className="text-2xl font-bold mb-4">Manage Products</h2>
-
-      {/* Add Product Form */}
+      <h2 className="text-2xl font-bold mb-4">Add New Product</h2>
       <form onSubmit={addProduct} className="mb-6 border p-4">
-        <h3 className="text-lg font-semibold mb-2">Add New Product</h3>
         <input
           type="text"
           name="name"
