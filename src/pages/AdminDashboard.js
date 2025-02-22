@@ -1,12 +1,8 @@
 import { useEffect, useState } from "react";
-import { useNavigate, Link, Outlet } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import SalesChart from "./SalesChart"; // Import the chart component
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import Offcanvas from "react-bootstrap/Offcanvas";
+
 
 const AdminDashboard = () => {
   const [user, setUser] = useState(null);
@@ -69,84 +65,29 @@ const AdminDashboard = () => {
         <p>Loading...</p>
       )}
 
-      {/* Display total customers */}
-      <div className="mt-4 p-4 border shadow-md">
-        <h2 className="text-xl font-bold mb-4">Total Logged-In Customers</h2>
-        <p className="text-lg font-semibold">{totalCustomers}</p>
+
+
+<div className="h-5/6 w-2/12 border-2 bg-black fixed top-24"></div>
+
+      <div className="h-auto w-auto gap-5 mt-5 mb-10 ml-56 flex">    
+      <button className="h-24 w-52 bg-orange-400 text-white font-bold" >
+        <Link to="manage-users" className="font-serif">MANAGE USERS{totalCustomers}</Link></button>
+      <button className="h-24 w-52 bg-green-400 text-white font-bold"> 
+        <Link to="manage-orders" className="font-serif">MANAGE ORDERS</Link></button>
+      <button className="h-24 w-52 bg-pink-400 text-white font-bold">
+        <Link to="manage-products" className="font-serif ">Manage Products</Link></button>
+      <button className="h-24 w-52 bg-blue-400">
+        <Link to="manage-more" className="font-serif text-white font-bold">Add More Products </Link></button>
+           
       </div>
 
       {/* Dashboard Chart Section */}
-      <div className="mt-8 p-4 border shadow-md">
+      <div className="w-2/4 ml-72 mt-8 p-4 border shadow-md">
         <h2 className="text-xl font-bold mb-4">Sales Overview</h2>
         <SalesChart />
       </div>
 
-      <div className="w-full h-16">
-        <div>
-          {[false].map((expand) => (
-            <Navbar
-              key={expand}
-              expand={expand}
-              className={`left-0 w-full z-50 duration-300 h-20 flex cursor-pointer border-t-2 mt-8`}
-            >
-              <Container fluid className="w-20 inline-block -ml-0">
-                <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className="mt-2" />
-                <Navbar.Brand href="#" />
-                <Navbar.Offcanvas
-                  id={`offcanvasNavbar-expand-${expand}`}
-                  aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
-                  placement="end"
-                >
-                  <Offcanvas.Header closeButton>
-                    <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                      BAROQUE
-                    </Offcanvas.Title>
-                  </Offcanvas.Header>
-                  <Offcanvas.Body>
-                    <Nav className="text-left">
-                      <Link to="/home" className="font-serif">
-                        Home
-                      </Link>
-                      <hr />
-                      <br />
-                      <Link to="manage-users" className="font-serif">
-                        MANAGE USERS
-                      </Link>
-                      <hr />
-                      <br />
-                      <Link to="manage-orders" className="font-serif">
-                        MANAGE ORDERS
-                      </Link>
-                      <hr />
-                      <br />
-                      <Link to="manage-products" className="font-serif">
-                        Manage Products
-                      </Link>
-                      <hr />
-                      <br />
-                      <Link to="manage-more" className="font-serif">
-                        Add More Products
-                      </Link>
-                      <hr />
-                      <br />
-                      <NavDropdown title="Dropdown" id={`offcanvasNavbarDropdown-expand-${expand}`}>
-                        <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-                        <NavDropdown.Item href="#action4">Another action</NavDropdown.Item>
-                        <NavDropdown.Divider />
-                        <NavDropdown.Item href="#action5">Something else here</NavDropdown.Item>
-                      </NavDropdown>
-                    </Nav>
-                    <div className="flex gap-4 mt-2 mb-4 ml-4"></div>
-                    <hr />
-                    <p className="mt-3 cursor-pointer font-mono inline-block">PAKISTAN</p>
-                  </Offcanvas.Body>
-                </Navbar.Offcanvas>
-              </Container>
-            </Navbar>
-          ))}
-        </div>
-      </div>
-      <Outlet />
+   
     </div>
   );
 };
