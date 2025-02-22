@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Nevigation from "./Component/Nevigation";
 import Header from "./Component/Header";
 import Home from "./Baroque/Home";
@@ -26,58 +26,75 @@ import CustomerLogin from "./pages/CustomerLogin";
 import CustomerSignup from "./pages/CustomerSignup";
 import CustomerDashboard from "./pages/CustomerDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
-import { ProductProvider } from "./Context/ProductContext"; // Import ProductProvider
+import { ProductProvider } from "./Context/ProductContext";
 import ManageOrders from "./Manage/ManageOrders";
 import ManageUsers from "./Manage/ManageUsers";
 import ManageProducts from "./Manage/ManageProducts";
 import ManageMore from "./Manage/ManageMore";
 
+// Move useLocation inside a separate component
+const Layout = () => {
+  const location = useLocation();
+
+  // Routes where Nevigation & Footer should NOT appear
+  const hideOnRoutes = ["/dashboard", "/admin", "/login", "/customerlogin", "/customersignup"];
+
+  const shouldShowNevigationFooter = !hideOnRoutes.some(route => location.pathname.startsWith(route));
+
+  return (
+    <>
+          <Header/>
+      {shouldShowNevigationFooter && <Nevigation />}
+      <Routes>
+        {/* USER ROUTES */}
+        <Route path="/" element={<Home />} />
+        <Route path="/chantelle" element={<Chantelle />} />
+        <Route path="/unstitched" element={<Unstitched />} />
+        <Route path="/stitched" element={<Stitched />} />
+        <Route path="/readytowear" element={<Readytowear />} />
+        <Route path="/specialprices" element={<Specialprices />} />
+        <Route path="/seperates" element={<Seperates />} />
+        <Route path="/shawls" element={<Shawls />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+
+        {/* CUSTOMER AUTH ROUTES */}
+        <Route path="/customerlogin" element={<CustomerLogin />} />
+        <Route path="/customersignup" element={<CustomerSignup />} />
+        <Route path="/customerdashboard" element={<CustomerDashboard />} />
+
+        {/* ADMIN ROUTES */}
+        <Route path="/editproduct" element={<EditProduct />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<PrivateRoute />}>
+          <Route path="" element={<AdminDashboard />} />
+          <Route path="manage-users" element={<ManageUsers />} />
+          <Route path="manage-orders" element={<ManageOrders />} />
+          <Route path="manage-products" element={<ManageProducts />} />
+          <Route path="manage-more" element={<ManageMore />} />
+        </Route>
+
+        {/* CRUD API */}
+        <Route path="/crud" element={<Crud />} />
+        <Route path="/edit" element={<Edit />} />
+        <Route path="crud/student" element={<Student />} />
+      </Routes>
+      {shouldShowNevigationFooter && <Footer />}
+    </>
+  );
+};
+
 function App() {
   return (
-    <ProductProvider> {/* Wrap entire app with ProductProvider */}
-      <Header />
+    <ProductProvider>
       <StudentState>
+        {/*  Wrap the entire app inside BrowserRouter */}
         <BrowserRouter>
-          <Nevigation />
-          <Routes>
-            {/* USER WILL SEE THESE ROUTES */}
-            <Route path="/" element={<Home />} />
-            <Route path="/chantelle" element={<Chantelle />} />
-            <Route path="/unstitched" element={<Unstitched />} />
-            <Route path="/stitched" element={<Stitched />} />
-            <Route path="/readytowear" element={<Readytowear />} />
-            <Route path="/specialprices" element={<Specialprices />} />
-            <Route path="/seperates" element={<Seperates />} />
-            <Route path="/shawls" element={<Shawls />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="/checkout" element={<Checkout />} />
-            
-            {/* CUSTOMER AUTH ROUTES */}
-            <Route path="/customerlogin" element={<CustomerLogin />} />
-            <Route path="/customersignup" element={<CustomerSignup />} />
-            <Route path="/customerdashboard" element={<CustomerDashboard />} />
-            
-            {/* ADMIN ROUTES */}
-            <Route path="/editproduct" element={<EditProduct />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<PrivateRoute />}>
-              <Route path="" element={<AdminDashboard />} />
-              <Route path="manage-users" element={<ManageUsers />} />
-              <Route path="manage-orders" element={<ManageOrders />} />
-            <Route path="manage-products" element={<ManageProducts />} />
-            <Route path="manage-more" element={<ManageMore />} />
-            </Route>
-
-            {/* CRUD API */}
-            <Route path="/crud" element={<Crud />} />
-            <Route path="/edit" element={<Edit />} />
-            <Route path="crud/student" element={<Student />} />
-          </Routes>
+          <Layout />
         </BrowserRouter>
       </StudentState>
-      <Footer />
     </ProductProvider>
   );
 }
