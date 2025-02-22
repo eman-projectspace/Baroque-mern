@@ -27,6 +27,10 @@ import CustomerSignup from "./pages/CustomerSignup";
 import CustomerDashboard from "./pages/CustomerDashboard";
 import AdminDashboard from "./pages/AdminDashboard";
 import { ProductProvider } from "./Context/ProductContext"; // Import ProductProvider
+import ManageOrders from "./Manage/ManageOrders";
+import ManageUsers from "./Manage/ManageUsers";
+import ManageProducts from "./Manage/ManageProducts";
+import ManageMore from "./Manage/ManageMore";
 
 function App() {
   return (
@@ -60,6 +64,10 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<PrivateRoute />}>
               <Route path="" element={<AdminDashboard />} />
+              <Route path="manage-users" element={<ManageUsers />} />
+              <Route path="manage-orders" element={<ManageOrders />} />
+            <Route path="manage-products" element={<ManageProducts />} />
+            <Route path="manage-more" element={<ManageMore />} />
             </Route>
 
             {/* CRUD API */}
