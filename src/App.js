@@ -38,7 +38,7 @@ const Layout = () => {
   const location = useLocation();
 
   // Routes where Nevigation & Footer should NOT appear
-  const hideOnRoutes = ["/dashboard", "/admin", "/login","/signup", "/customerlogin", "/customersignup", "/cart"];
+  const hideOnRoutes = ["/dashboard", "/admin", "/login","/signup", "/customerlogin", "/customersignup", "/cart", "/checkout"];
 
   const shouldShowNevigationFooter = !hideOnRoutes.some(route => location.pathname.startsWith(route));
 

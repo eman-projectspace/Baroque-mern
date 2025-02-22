@@ -7,18 +7,20 @@ const Checkout = () => {
   const navigate = useNavigate();
 
   const [shippingAddress, setShippingAddress] = useState("");
+  const [shippingName, setShippingName] = useState("");
   const [paymentMethod, setPaymentMethod] = useState("Cash on Delivery");
 
   const totalAmount = cart.reduce((acc, item) => acc + item.price, 0);
 
   const handlePlaceOrder = async () => {
-    if (!shippingAddress) {
-      alert("Please enter a shipping address.");
+    if (!shippingAddress || !shippingName) {
+      alert("Please fill the information.");
       return;
     }
   
     const orderDetails = {
       items: cart,
+      shippingName, 
       shippingAddress,
       paymentMethod,
       totalAmount,
@@ -47,30 +49,31 @@ const Checkout = () => {
   
 
   return (
-    <div className="p-10">
+    <div className="pt-10 pl-10 pr-10 pb-5 ml-5 mr-5 shadow-lg border-2 border-black">
       <h1 className="text-center font-bold text-3xl">Checkout</h1>
 
       {/* Cart Summary */}
-      <div className="mt-6">
+      <div className="mt-3 ">
+        <p className="text-xl text-blue-600 mb-2">YOUR SELECTED DRESS</p>
         {cart.map((product) => (
-          <div key={product._id} className="flex justify-between border-b p-4">
+          <div key={product._id} className="flex justify-between  border-b-2 ">
             <p>{product.name}</p>
             <p>PKR {product.price}</p>
           </div>
         ))}
-        <p className="font-bold mt-4">Total: PKR {totalAmount}</p>
+        <p className="font-bold mt-2 mb-2">Total: PKR {totalAmount}</p>
       </div>
 
       {/* Shipping Address */}
-      <div className="mt-6">
-        <label className="block font-semibold">Shipping Address:</label>
+      <div>
+        <label className="block font-semibold">Shipping Details:</label>
+        <input type="text" className={`w-full p-2 border ${!shippingName && "border-red-500"}`}
+         placeholder="Enter your Name" value={shippingName} onChange={(e) => setShippingName(e.target.value)}/>
+         <br/> <br/>
         <input
-          type="text"
-          className="w-full p-2 border"
-          placeholder="Enter your address"
-          value={shippingAddress}
-          onChange={(e) => setShippingAddress(e.target.value)}
-        />
+          type="text" className={`w-full p-2 border ${!shippingAddress && "border-red-500"}`}
+          placeholder="Enter your address"value={shippingAddress}onChange={(e) => setShippingAddress(e.target.value)}/>
+         
       </div>
 
       {/* Payment Method */}

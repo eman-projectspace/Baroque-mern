@@ -73,12 +73,14 @@ const ManageOrders = () => {
       ) : orders.length === 0 ? (
         <p>No orders found.</p>
       ) : (
-        <table className="border-2 border-red-400 h-auto w-auto">
-          <thead className="border-2 border-red-400 h-auto w-auto">
+        <table className="border-2 bg-red-100 border-red-300 h-auto w-auto">
+          <thead className="border-2 bg-red-300 border-red-700 h-auto w-auto">
             <tr>
               <th>No#</th>
               <th>Order ID</th>
               <th>Items</th>
+              <th>Order Date</th>
+              <th>Shipping Name</th>
               <th>Shipping Address</th>
               <th>Payment Method</th>
               <th>Total Amount</th>
@@ -87,7 +89,7 @@ const ManageOrders = () => {
               <th>Delete Order</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="text-sm">
             {orders.map((order,index) => (
               <tr key={order._id}>
                  <td>{index}</td>
@@ -99,6 +101,8 @@ const ManageOrders = () => {
                     </div>
                   ))}
                 </td>
+                <td>{new Date(order.createdAt).toLocaleDateString()}</td>
+                <td>{order.shippingName}</td>
                 <td>{order.shippingAddress}</td>
                 <td>{order.paymentMethod}</td>
                 <td>PKR {order.totalAmount}</td>
