@@ -43,71 +43,71 @@ const ManageOrders = () => {
     }
   };
 
-
   const handleDeleteOrder = async (orderId) => {
     if (!window.confirm("Are you sure you want to delete this order?")) return;
-  
+
     try {
       const response = await fetch(`http://localhost:8888/api/orders/delete/${orderId}`, {
         method: "DELETE",
       });
-  
+
       if (!response.ok) {
         throw new Error("Failed to delete order");
       }
-  
+
       // Remove the deleted order from the UI
       setOrders((prevOrders) => prevOrders.filter((order) => order._id !== orderId));
     } catch (error) {
       console.error("Error deleting order:", error);
     }
   };
-  
 
   return (
-    <div>
-      <h2 className="text-3xl font-bold mb-4 ">Manage Orders</h2>
+    <div className="p-6">
+      <h2 className="text-3xl font-bold mb-4 text-center">Manage Orders</h2>
 
       {loading ? (
-        <p>Loading orders...</p>
+        <p className="text-center">Loading orders...</p>
       ) : orders.length === 0 ? (
-        <p>No orders found.</p>
+        <p className="text-center">No orders found.</p>
       ) : (
-        <table className="border-2 bg-red-100 border-red-300 h-auto w-auto">
-          <thead className="border-2 bg-red-300 border-red-700 h-auto w-auto">
+        <table className="w-full border-collapse border border-gray-300">
+          <thead className="bg-red-300 border border-red-700">
             <tr>
-              <th>No#</th>
-              <th>Order ID</th>
-              <th>Items</th>
-              <th>Order Date</th>
-              <th>Shipping Name</th>
-              <th>Shipping Address</th>
-              <th>Payment Method</th>
-              <th>Total Amount</th>
-              <th>Status</th>
-              <th>Actions</th>
-              <th>Delete Order</th>
+              <th className="border p-2">No#</th>
+              <th className="border p-2">Order ID</th>
+              <th className="border p-2">Items</th>
+              <th className="border p-2">Order Date</th>
+              <th className="border p-2">Customer</th>
+              <th className="border p-2">Address</th>
+              <th className="border p-2">Payment</th>
+              <th className="border p-2">Total</th>
+              <th className="border p-2">Status</th>
+              <th className="border p-2">Actions</th>
+              <th className="border p-2">Delete</th>
             </tr>
           </thead>
-          <tbody className="text-sm">
-            {orders.map((order,index) => (
-              <tr key={order._id}>
-                 <td>{index}</td>
-                <td>{order._id}</td>
-                <td className="text-sm ">
-                  {order.items.map((item, index) => (
-                    <div key={index}>
-                      {item.name} (Qty: {item.quantity})
-                    </div>
-                  ))}
-                </td>
-                <td>{new Date(order.createdAt).toLocaleDateString()}</td>
-                <td>{order.shippingName}</td>
-                <td>{order.shippingAddress}</td>
-                <td>{order.paymentMethod}</td>
-                <td>PKR {order.totalAmount}</td>
-                <td>
+          <tbody>
+            {orders.map((order, index) => (
+              <tr key={order._id} className="text-center border">
+                <td className="border p-2">{index + 1}</td>
+                <td className="border p-2">{order._id}</td>
+                <td className="border p-2">
+                {order.items.map((item, idx) => (
+                <div key={idx}>
+                {item.name} (Size: {item.size || "N/A"}) (Qty: {item.quantity})
+                </div>
+                 ))}
+                  </td>
+
+                <td className="border p-2">{new Date(order.createdAt).toLocaleDateString()}</td>
+                <td className="border p-2">{order.shippingName}</td>
+                <td className="border p-2">{order.shippingAddress}</td>
+                <td className="border p-2">{order.paymentMethod}</td>
+                <td className="border p-2">PKR {order.totalAmount}</td>
+                <td className="border p-2">
                   <select
+                    className="p-1 border rounded"
                     value={order.status}
                     onChange={(e) => handleStatusChange(order._id, e.target.value)}
                   >
@@ -116,19 +116,33 @@ const ManageOrders = () => {
                     <option value="Delivered">Delivered</option>
                   </select>
                 </td>
-                <td>
-                  <button onClick={() => handleStatusChange(order._id, "Shipped")}>Mark as Shipped</button>
-                  <button onClick={() => handleStatusChange(order._id, "Delivered")}>Mark as Delivered</button>
+                <td className="border p-2 space-x-2">
+                  <button
+                    onClick={() => handleStatusChange(order._id, "Shipped")}
+                    className="bg-blue-500 text-white px-3 py-1 rounded"
+                  >
+                    Ship
+                  </button>
+                  <button
+                    onClick={() => handleStatusChange(order._id, "Delivered")}
+                    className="bg-green-500 text-white px-3 py-1 rounded"
+                  >
+                    Deliver
+                  </button>
                 </td>
-                <td>
-              <button onClick={() => handleDeleteOrder(order._id)} style={{ color: "red" }}> Delete</button>
-              </td>
+                <td className="border p-2">
+                  <button
+                    onClick={() => handleDeleteOrder(order._id)}
+                    className="bg-red-500 text-white px-3 py-1 rounded"
+                  >
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
       )}
-      
     </div>
   );
 };
