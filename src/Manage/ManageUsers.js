@@ -48,31 +48,34 @@ const ManageUsers = () => {
   };
 
   if (loading) {
-    return <p>Loading users...</p>;
+    return <p className="text-center text-xl font-semibold">Loading users...</p>;
   }
 
   return (
-    <div>
-      <p className="font-bold text-3xl mb-5">Manage Users</p>
-      <table className="border-2 border-blackc w-full h-full bg-slate-200 border-slate-500" >
+    <div className="p-6">
+      <p className="font-bold text-3xl mb-5 text-orange-500">Manage Users</p>
+      <table className="w-full border-collapse border border-gray-400 bg-orange-100">
         <thead>
-          <tr className="border-b-2 border-2 border-black">
-            <th>No #</th>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
-            <th>Actions</th>
+          <tr className="bg-orange-400 text-white">
+            <th className="border border-gray-400 px-4 py-2">No #</th>
+            <th className="border border-gray-400 px-4 py-2">ID</th>
+            <th className="border border-gray-400 px-4 py-2">Name</th>
+            <th className="border border-gray-400 px-4 py-2">Email</th>
+            <th className="border border-gray-400 px-4 py-2">Actions</th>
           </tr>
         </thead>
         <tbody>
-          {users.map((user,index) => (
-            <tr key={user._id}>
-               <td>{index + 1}</td> {/* Numbering starts from 1 */}
-              <td>{user._id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <td>
-                <button onClick={() => handleDelete(user._id)}>Delete</button>  
+          {users.map((user, index) => (
+            <tr key={user._id} className="text-center border border-gray-400">
+              <td className="border border-gray-400 px-4 py-2">{index + 1}</td>
+              <td className="border border-gray-400 px-4 py-2">{user._id}</td>
+              <td className="border border-gray-400 px-4 py-2">{user.name}</td>
+              <td className="border border-gray-400 px-4 py-2">{user.email}</td>
+              <td className="border border-gray-400 px-4 py-2">
+                <button
+                  onClick={() => handleDelete(user._id)}
+                  className="bg-red-500 hover:bg-red-600 text-white font-semibold px-4 py-1 rounded"
+                > Delete</button>  
               </td>
             </tr>
           ))}
