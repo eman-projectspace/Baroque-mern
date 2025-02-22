@@ -10,7 +10,7 @@ import { useState, useEffect } from "react";
 
 function Nevigation() {
   const navigate = useNavigate(); // Hook to navigate
-
+   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -129,10 +129,14 @@ function Nevigation() {
            <div>
             <button onClick={() => navigate("/customerSignup")}><img className='h-5 w-5 mr-5 hidden md:block' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>
            </div>
+           {/* When user click this search bar will open */}
            <div>
-            <button onClick={() => navigate("/")}><img className=' h-5 w-5 md:mr-3 hidden md:block ' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img>
-            <img className=' h-5 w-5 mr-3 ml-64 -mt-14 block md:hidden sm:hidden' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img>
+          <button
+            onClick={() => setAvailabilityOpen(!isAvailabilityOpen)}>
+          <img className=' h-5 w-5 md:mr-3 hidden md:block ' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img>
+          <img className=' h-5 w-5 mr-3 ml-64 -mt-14 block md:hidden sm:hidden' src="https://cdn-icons-png.flaticon.com/128/54/54481.png " alt=""></img>
             </button>
+    
            </div>
            <div>
             <button onClick={() => navigate("/cart")}><img className='h-5 w-5 md:mr-10 hidden sm:block md:block' src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png" alt=""></img>
@@ -140,11 +144,15 @@ function Nevigation() {
             </button>
            </div>
           </div>
+          {isAvailabilityOpen &&
+    <input className='md:hidden
+    bg-slate-100 border-2 h-10 w-full -mt-3 ' placeholder='Search '/>}
         </Container>
       </Navbar>
+      
     ))}
   </div>
-
+ 
   <Outlet />
 </div>
 
