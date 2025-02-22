@@ -31,13 +31,14 @@ import ManageOrders from "./Manage/ManageOrders";
 import ManageUsers from "./Manage/ManageUsers";
 import ManageProducts from "./Manage/ManageProducts";
 import ManageMore from "./Manage/ManageMore";
+import DisplayAdmins from "./pages/DisplayAdmins";
 
 // Move useLocation inside a separate component
 const Layout = () => {
   const location = useLocation();
 
   // Routes where Nevigation & Footer should NOT appear
-  const hideOnRoutes = ["/dashboard", "/admin", "/login", "/customerlogin", "/customersignup"];
+  const hideOnRoutes = ["/dashboard", "/admin", "/login","/signup", "/customerlogin", "/customersignup"];
 
   const shouldShowNevigationFooter = !hideOnRoutes.some(route => location.pathname.startsWith(route));
 
@@ -74,6 +75,7 @@ const Layout = () => {
           <Route path="manage-orders" element={<ManageOrders />} />
           <Route path="manage-products" element={<ManageProducts />} />
           <Route path="manage-more" element={<ManageMore />} />
+          <Route path="display-admins" element={<DisplayAdmins />} />
         </Route>
 
         {/* CRUD API */}
