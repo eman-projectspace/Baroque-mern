@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const ManageMore = () => {
-  const [products, setProducts] = useState([]);
+  const [, setProducts] = useState([]); //i removed products from here
   const [newProduct, setNewProduct] = useState({
     name: "",
     category: "",

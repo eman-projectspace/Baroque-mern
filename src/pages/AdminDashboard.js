@@ -58,26 +58,21 @@ const AdminDashboard = () => {
 
   return (
     <div>
-      <h2 className="text-3xl font-bold">Admin Dashboard</h2>
-      {user ? (
-        <p>Welcome, <strong>{user.name}</strong>!</p>
-      ) : (
-        <p>Loading...</p>
-      )}
-
-
-
-<div className="h-5/6 w-2/12 border-2 bg-black fixed top-24"></div>
+     
+<div className="h-full w-2/12 bg-black fixed top-0">
+<div><p className="font-bold text-white mt-10 mb-2">ADMIN DASHBOARD</p>
+           {user ? ( <p className="text-white">Welcome, <strong>{user.name}</strong>!</p>  ) : (<p>Loading...</p> )}   </div>
+</div>
 
       <div className="h-auto w-auto gap-5 mt-5 mb-10 ml-56 flex">    
       <button className="h-24 w-52 bg-orange-400 text-white font-bold" >
-        <Link to="manage-users" className="font-serif">MANAGE USERS{totalCustomers}</Link></button>
+        <Link to="manage-users" className="font-serif">LOGIN USERS</Link><br/>{totalCustomers}</button>
       <button className="h-24 w-52 bg-green-400 text-white font-bold"> 
-        <Link to="manage-orders" className="font-serif">MANAGE ORDERS</Link></button>
+        <Link to="manage-orders" className="font-serif">ORDERS</Link></button>
       <button className="h-24 w-52 bg-pink-400 text-white font-bold">
-        <Link to="manage-products" className="font-serif ">Manage Products</Link></button>
+        <Link to="manage-products" className="font-serif ">Products</Link></button>
       <button className="h-24 w-52 bg-blue-400">
-        <Link to="manage-more" className="font-serif text-white font-bold">Add More Products </Link></button>
+        <Link to="manage-more" className="font-serif text-white font-bold">Add More</Link></button>
            
       </div>
 
