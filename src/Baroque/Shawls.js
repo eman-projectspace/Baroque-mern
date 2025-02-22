@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { ProductContext } from "../Context/ProductContext"; // Adjust path as needed
+import { ProductContext } from "../Context/ProductContext"; 
 
-const Stitched = () => {
+  const Shawls = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
   const [isPriceOpen, setPriceOpen] = useState(false);
   const [isFabricOpen, setFabricOpen] = useState(false);
@@ -11,7 +11,7 @@ const Stitched = () => {
   const navigate = useNavigate();
 
     // Filter seperates dresses
-const shawlsProducts = products.filter(
+   const shawlsProducts = products.filter(
   (product) => product.category === "shawls"
 );
 
@@ -82,7 +82,7 @@ const shawlsProducts = products.filter(
       {/* Product Grid */}
       <div className="md:w-3/4 md:ml-8 ">
       <div className="grid md:grid-cols-2 row-auto md:gap-8 -mt-16 ">
-      {shawlsProducts.map((product) => ( // Use sperates Products instead of products
+      {shawlsProducts.map((product) => ( // Use shawls/intermix Products instead of products
             <div 
               key={product.id} 
               className="cursor-pointer flex flex-col items-center"
@@ -115,7 +115,7 @@ const shawlsProducts = products.filter(
   );
 };
 
-export default Stitched;
+export default Shawls;
 // import React,{ useState,useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 

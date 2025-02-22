@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { ProductContext } from "../Context/ProductContext"; // Adjust path as needed
+import { ProductContext } from "../Context/ProductContext"; 
 
 const Unstitched = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
@@ -10,7 +10,7 @@ const Unstitched = () => {
   const { products } = useContext(ProductContext); // Get products from context
   const navigate = useNavigate();
 
-   // Filter seperates dresses
+   // Filter unstitced dresses
    const unstitchedProducts = products.filter(
     (product) => product.category === "unstitched"
   );
@@ -116,16 +116,6 @@ const Unstitched = () => {
 };
 
 export default Unstitched;
-// import React, { useState, useEffect } from "react";
-// import { useNavigate } from "react-router-dom";
-
-// const Unstitched = () => {
-//   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
-//   const [isPriceOpen, setPriceOpen] = useState(false);
-//   const [isFabricOpen, setFabricOpen] = useState(false);
-//   const [isSizeOpen, setSizeOpen] = useState(false);
-//   const [products, setProducts] = useState([]); // State to store products (dresses)
-//   const navigate = useNavigate();
 
 //   // Fetch products from JSON
 //   useEffect(() => {
@@ -145,60 +135,6 @@ export default Unstitched;
 //           <div className="text-center font-semibold mx-auto ">{products.length} PRODUCTS</div>
 //           <div className='mr-8'>SORT BY</div>
 //           </div>
-//     <div className="flex p-8"> {/* Flex container for sidebar & products */}
-      
-//       {/* Left Sidebar (Filter) */}
-//       <div className="w-1/4 p-6 bg-gray-100 shadow-md rounded-lg sticky top-20 h-fit">
-
-//         {/* Availability Filter */}
-//         <div>
-//           <button
-//             className="w-full text-left font-serif text-lg flex justify-between"
-//             onClick={() => setAvailabilityOpen(!isAvailabilityOpen)}
-//           >
-//             Availability
-//             <span>{isAvailabilityOpen ? "▲" : "▼"}</span>
-//           </button>
-//           {isAvailabilityOpen && <p className="mt-2 pl-4 font-semibold">In Stock</p>}
-//         </div>
-//          <hr/>
-//         {/* Price Filter */}
-//         <div className="mt-4">
-//           <button
-//             className="w-full text-left font-serif text-lg flex justify-between"
-//             onClick={() => setPriceOpen(!isPriceOpen)}
-//           >
-//             Price
-//             <span>{isPriceOpen ? "▲" : "▼"}</span>
-//           </button>
-//           {isPriceOpen && <p className="mt-2 pl-4 font-bold">PKR 5,000 - 30,000</p>}
-//         </div>
-//         <hr/>
-//         {/* Fabric Filter */}
-//         <div className="mt-4">
-//           <button
-//             className="w-full text-left font-serif text-lg flex justify-between"
-//             onClick={() => setFabricOpen(!isFabricOpen)}
-//           >
-//             Fabric
-//             <span>{isFabricOpen ? "▲" : "▼"}</span>
-//           </button>
-//           {isFabricOpen && <p className="mt-2 pl-4 font-semibold">Cotton, Silk, Chiffon</p>}
-//         </div>
-//         <hr/>
-//         {/* Size Filter */}
-//         <div className="mt-4">
-//           <button
-//             className="w-full text-left font-serif text-lg flex justify-between"
-//             onClick={() => setSizeOpen(!isSizeOpen)}
-//           >
-//             Size
-//             <span>{isSizeOpen ? "▲" : "▼"}</span>
-//           </button>
-//           {isSizeOpen && <p className="mt-2 pl-4 font-semibold">S, M, L, XL</p>}
-//         </div>
-//         <hr/>
-//       </div>
 
 //       {/* Product Grid */}
 //       <div className="w-3/4 ml-8">
@@ -224,16 +160,4 @@ export default Unstitched;
 //                 <p className="text-gray-600 font-medium">PKR {product.price}</p>
 //                 <p className="text-gray-500 text-sm">{product.fabric} - {product.size}</p>
 //                 <p className="text-red-600 font-bold mt-2">3 PIECE</p>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-      
-//     </div>
-//     </div>
-//   );
-// };
 
-
-// export default Unstitched;

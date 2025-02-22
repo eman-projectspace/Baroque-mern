@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { ProductContext } from "../Context/ProductContext"; // Adjust path as needed
+import { ProductContext } from "../Context/ProductContext"; 
 
-const Stitched = () => {
+  const Readytowear = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
   const [isPriceOpen, setPriceOpen] = useState(false);
   const [isFabricOpen, setFabricOpen] = useState(false);
@@ -81,7 +81,7 @@ const readytowearProducts = products.filter(
       {/* Product Grid */}
       <div className="md:w-3/4 md:ml-8 ">
       <div className="grid md:grid-cols-2 row-auto md:gap-8 -mt-16 ">
-      {readytowearProducts.map((product) => ( // Use chantelleProducts instead of products
+      {readytowearProducts.map((product) => ( // Use readytowearProducts instead of products
             <div 
               key={product.id} 
               className="cursor-pointer flex flex-col items-center"
@@ -114,7 +114,7 @@ const readytowearProducts = products.filter(
   );
 };
 
-export default Stitched;
+export default Readytowear;
 // import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 

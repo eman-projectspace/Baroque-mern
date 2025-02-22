@@ -1,6 +1,6 @@
 import React, { useState,useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { ProductContext } from "../Context/ProductContext"; // Adjust path as needed
+import { ProductContext } from "../Context/ProductContext"; 
 
 
   const Stitched = () => {
@@ -90,11 +90,7 @@ import { ProductContext } from "../Context/ProductContext"; // Adjust path as ne
             >
               {/* Image (Full View) */}
               <div className="w-full h-full">
-                <img
-                src={product.image} 
-                  alt={product.name} 
-                  className="w-full h-full object-cover"
-                />
+                <img src={product.image} alt={product.name}  className="w-full h-full object-cover"/>
               </div>
 
               {/* Product Details */}

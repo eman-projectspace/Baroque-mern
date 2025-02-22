@@ -19,12 +19,19 @@ const Checkout = () => {
     }
   
     const orderDetails = {
-      items: cart,
+      items: cart.map(item => ({
+        id: item._id,
+        name: item.name,
+        price: item.price,
+        selectedSize: item.selectedSize, // Include size
+        quantity: item.quantity,         // Include quantity
+      })),
       shippingName, 
       shippingAddress,
       paymentMethod,
       totalAmount,
     };
+    
   
     try {
       const response = await fetch("http://localhost:8888/api/orders/place-order", {
@@ -53,16 +60,17 @@ const Checkout = () => {
       <h1 className="text-center font-bold text-3xl">Checkout</h1>
 
       {/* Cart Summary */}
-      <div className="mt-3 ">
-        <p className="text-xl text-blue-600 mb-2">YOUR SELECTED DRESS</p>
-        {cart.map((product) => (
-          <div key={product._id} className="flex justify-between  border-b-2 ">
-            <p>{product.name}</p>
-            <p>PKR {product.price}</p>
-          </div>
-        ))}
-        <p className="font-bold mt-2 mb-2">Total: PKR {totalAmount}</p>
-      </div>
+      {cart.map((product) => (
+  <div key={product._id} className="flex justify-between border-b-2">
+    <div>
+      <p className="font-semibold">{product.name}</p>
+      <p>Size: <span className="font-bold">{product.selectedSize}</span></p>
+      <p>Quantity: <span className="font-bold">{product.quantity}</span></p>
+    </div>
+    <p>PKR {product.price}</p>
+  </div>
+))}
+
 
       {/* Shipping Address */}
       <div>

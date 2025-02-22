@@ -1,8 +1,8 @@
 import React, { useState , useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { ProductContext } from "../Context/ProductContext"; // Adjust path as needed
+import { ProductContext } from "../Context/ProductContext";
 
-const Stitched = () => {
+const Chantelle = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
   const [isPriceOpen, setPriceOpen] = useState(false);
   const [isFabricOpen, setFabricOpen] = useState(false);
@@ -10,7 +10,7 @@ const Stitched = () => {
   const { products } = useContext(ProductContext); // Get products from context
   const navigate = useNavigate();
 
-// Filter stitched dresses
+// Filter chantelle dresses
 const chantelleProducts = products.filter(
   (product) => product.category === "chantelle"
 );
@@ -115,7 +115,7 @@ const chantelleProducts = products.filter(
   );
 };
 
-export default Stitched;
+export default Chantelle;
 // import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 

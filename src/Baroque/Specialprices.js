@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { ProductContext } from "../Context/ProductContext"; // Adjust path as needed
+import { ProductContext } from "../Context/ProductContext";
 
-const Stitched = () => {
+const Specialprices = () => {
   const [isAvailabilityOpen, setAvailabilityOpen] = useState(false);
   const [isPriceOpen, setPriceOpen] = useState(false);
   const [isFabricOpen, setFabricOpen] = useState(false);
@@ -115,7 +115,7 @@ const Stitched = () => {
   );
 };
 
-export default Stitched;
+export default Specialprices;
 // import React,{useState,useEffect} from "react";
 // import { useNavigate } from "react-router-dom";
 

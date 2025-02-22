@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useCart } from "../Context/CartContext";  
 
-const ProductDetails = () => {
+  const ProductDetails = () => {
   const { id } = useParams(); // It Get product ID from URL
   const { addToCart } = useCart();  // Access addToCart function from context
 
@@ -29,7 +29,7 @@ const decreaseQuantity = () => {
 }; 
 
 
-//SIDE BAR 
+                    //SIDE BAR 
   const [isProductDetailsOpen, setProductDetailsOpen] = useState(false);
   const [isDeliveryOpen, setDeliveryOpen] = useState(false);
   const [isreturnOpen, setreturnOpen] = useState(false);
@@ -66,8 +66,14 @@ const decreaseQuantity = () => {
   if (!product) return <p className="text-red-500">Product not found.</p>;
 
   const handleAddToCart = () => {
-    addToCart(product);  // Add the product to the cart
+    if (!selectedSize) {
+      alert("Please select a size before adding to cart!");
+      return;
+    }
+    addToCart({ ...product, selectedSize, quantity });
+    console.log("Added to Cart:", { ...product, selectedSize, quantity });
   };
+  
 
   const handleSizeSelect = (size) => {
     setSelectedSize(size);
@@ -115,9 +121,9 @@ const decreaseQuantity = () => {
         {/* INCREASE AND DECREASE BUTTON */}
         <div className="flex items-center space-x-4 ">
         <div className="border-2 border-gray-700 h-10 w-28 flex flex-row  md:ml-28">
-  <button onClick={decreaseQuantity} className="mr-5 ml-5">-</button>
-  <p className="text-xl">{quantity} </p>
-  <button onClick={increaseQuantity} className="mr-5 ml-5">+</button>
+        <button onClick={decreaseQuantity} className="mr-5 ml-5">-</button>
+        <p className="text-xl">{quantity} </p>
+       <button onClick={increaseQuantity} className="mr-5 ml-5">+</button>
   </div>
  </div>
                  {/* ADD TO CART BUTTON */}
