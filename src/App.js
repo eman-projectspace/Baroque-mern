@@ -38,7 +38,7 @@ import DisplayAdmins from "./pages/DisplayAdmins";
   const location = useLocation();
 
   // Routes where Nevigation & Footer should NOT appear
-  const hideOnRoutes = ["/dashboard", "/admin", "/login","/signup", "/customerlogin", "/customersignup", "/cart", "/checkout"];
+  const hideOnRoutes = ["/dashboard", "/admin", "/login","/signup", "/customerlogin", "/customersignup","/customerdashboard", "/cart", "/checkout"];
 
   const shouldShowNevigationFooter = !hideOnRoutes.some(route => location.pathname.startsWith(route));
 
