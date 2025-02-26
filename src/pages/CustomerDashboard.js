@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from "react";
-import MyOrders from "./MyOrders"; // Import MyOrders component
+import MyOrders from "./MyOrders";
 
 const CustomerDashboard = () => {
   const [activeTab, setActiveTab] = useState("my-orders");
   const [user, setUser] = useState(null);
+  const [orders, setOrders] = useState([]);
   const token = localStorage.getItem("token");
 
   useEffect(() => {
     const fetchProfile = async () => {
       try {
         const response = await fetch("http://localhost:8888/api/customers/profile", {
-          headers: { Authorization: token },
+          headers: { Authorization: `Bearer ${token}` }, // Fix token format
         });
         const data = await response.json();
         setUser(data);
@@ -19,7 +20,20 @@ const CustomerDashboard = () => {
       }
     };
 
+    const fetchOrders = async () => {
+      try {
+        const response = await fetch("http://localhost:8888/api/customers/my-orders", {
+          headers: { Authorization: `Bearer ${token}` }, // Ensure token is sent properly
+        });
+        const data = await response.json();
+        setOrders(data);
+      } catch (error) {
+        console.error("Error fetching orders:", error);
+      }
+    };
+
     fetchProfile();
+    fetchOrders();
   }, [token]);
 
   return (
@@ -45,7 +59,7 @@ const CustomerDashboard = () => {
 
       {/* Display Content Based on Active Tab */}
       <div className="mt-4">
-        {activeTab === "my-orders" && <MyOrders />}
+        {activeTab === "my-orders" && <MyOrders orders={orders} />}
         {activeTab === "profile" && <p>Profile Section (To be implemented)</p>}
       </div>
     </div>

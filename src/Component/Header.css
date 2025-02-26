@@ -1,18 +1,17 @@
-body{
-  margin: 0px;
-  text-align: center;
-}
 .div1{
   height:50px ;
+  width:100% ;
+  background-color: black;
   }
   .toptext {
+    position: relative;
     cursor: pointer;
   }
   
   .toptext::after {
-    text-align: center; 
     content: "";
     position: absolute;
+    left: 0;
     bottom: 0;
     height: 2px;
     width: 0;
@@ -20,36 +19,33 @@ body{
     transition: width 0.2s ease-in-out;
   }
   
-  /* .toptext:hover::after {
-    width: 0;
-  } */
+  .toptext:hover::after {
+    width: 100%;
+  }
   
       .animated-text{
-        top: 0;           /* Aligns it at the very top */
-        left: 0;          /* Ensures it starts from the left */
-        width: 100%;      /* Full width */
-        height: 30px;     /* Adjust as needed */
-        background: black;
-        color: white;
-        text-align: center;
-        line-height: 30px;
-        font-size: 14px;
-        font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        overflow: hidden; /* Prevents extra lines from showing */
-        z-index: 1000;    /* Ensures it stays above other content */
+          margin-top: 40px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          margin-left: 600px; 
+          color:white;
+          position: absolute;
+          transform: translate(-230px,-40px);
+          height: 30px;
+          position: absolute;
+          overflow: hidden;
+          padding: 0 40px;
       }
       .line{
-  width: 100%; 
-  background-color: black;
+        
   text-transform: uppercase;
-  margin-top: 1px;
   text-align: center;
-  line-height: 29px;
+  line-height: 30px;
   font-size: 13px;
-  font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:sans-serif;
       }
       .line:first-child{
-          animation: anim 3s infinite;
+          animation: anim 2s infinite;
       }
   
   
