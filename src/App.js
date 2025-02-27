@@ -11,9 +11,6 @@ import Specialprices from "./Baroque/Specialprices";
 import Seperates from "./Baroque/Seperates";
 import Shawls from "./Baroque/Shawls";
 import StudentState from "./Context/StudentState";
-import Crud from "./Sub-components/Crud";
-import Edit from "./Sub-components/Edit";
-import Student from "./Sub-components/Student";
 import Footer from "./Component/Footer";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
@@ -77,11 +74,6 @@ import DisplayAdmins from "./pages/DisplayAdmins";
         <Route path="manage-more" element={<ManageMore />} />
         <Route path="display-admins" element={<DisplayAdmins />} />
         </Route>
-
-        {/* Basic API */}
-        <Route path="/crud" element={<Crud />} />
-        <Route path="/edit" element={<Edit />} />
-        <Route path="crud/student" element={<Student />} />
       </Routes>
       {shouldShowNevigationFooter && <Footer />}
     </>
