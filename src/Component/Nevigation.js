@@ -35,8 +35,8 @@ function Nevigation() {
         key={expand}
         expand={expand}
         className={`fixed top-0 left-0 w-full  z-50 duration-300 h-20 flex 
-          cursor-pointer hover:!bg-white
-         ${scrolled ? "bg-white top-0" : "bg-transparent border-white border-t-2 mt-8"}`}
+          cursor-pointer 
+         ${scrolled ? "bg-white top-0" : "bg-transparent  border-t-2 mt-8"}`}
       >
         <Container fluid className="w-20 inline-block -ml-0">
           <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='mt-2' />
@@ -101,13 +101,19 @@ function Nevigation() {
                     Something else here
                   </NavDropdown.Item>
                 </NavDropdown>
-              </Nav>
-              <div className="flex gap-4 mt-2 mb-4 ml-4
-            "></div>
-              <hr />
-              <p className="mt-3 cursor-pointer font-mono inline-block ">PAKISTAN</p>
-              
-            </Offcanvas.Body>
+                </Nav>
+                <div className='flex gap-4 mt-2 mb-4 ml-4'>
+                <img className='w-5 h-5 cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/20/20837.png" alt=""/>
+                <img  className='w-5 h-5  cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png" alt=""/>
+                <img  className='w-5 h-5  cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/1384/1384028.png" alt=""/>
+                <img  className='w-5 h-5  cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt=""/>
+                <img  className='w-5 h-5  cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/733/733627.png" alt=""/>
+                <img  className='w-5 h-5  cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/1384/1384023.png" alt=""/>
+                </div>
+                <hr></hr>
+                <p className='mt-3 cursor-pointer font-mono inline-block '>PAKISTAN</p>
+               
+              </Offcanvas.Body>
           </Navbar.Offcanvas>
         </Container>
                                                    {/* BAROQUE CENTER OF NAV */}
@@ -124,7 +130,7 @@ function Nevigation() {
               <p className="font-serif font-medium mr-5 text-black hover:!text-gray-700 hidden md:block
               
              ">Pakistan</p></div>
-           <div><button onClick={() => navigate("/crud")}><img className='h-5 w-5 mr-10 -ml-4 hidden md:block ' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
+           <div><button onClick={() => navigate("/select")}><img className='h-5 w-5 mr-10 -ml-4 hidden md:block ' src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png" alt=""></img></button>
            </div>
            <div>
             <button onClick={() => navigate("/customerSignup")}><img className='h-5 w-5 mr-5 hidden md:block' src="https://cdn-icons-png.flaticon.com/128/747/747376.png" alt=""></img></button>

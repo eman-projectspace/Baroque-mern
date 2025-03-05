@@ -10,7 +10,7 @@ const navigate = useNavigate();
                                                   {/* Main Baroque Banner */}
       <div>
         <img 
-        className="-mt-20 h-96 md:h-auto md:w-auto"
+        className="-mt h-96 md:h-auto md:w-auto"
         src="https://baroque.pk/cdn/shop/files/MAin_BAnner96.jpg?v=1739970727&width=2000" alt="Main Banner"/></div>
         <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-4">
                                                 {/*STITCHED & UNSTITCHED BUTTON */}
