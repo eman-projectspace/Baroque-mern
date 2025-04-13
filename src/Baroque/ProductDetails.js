@@ -1,35 +1,35 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useCart } from "../Context/CartContext";  
+import { useCart } from "../Context/CartContext";
 
-  const ProductDetails = () => {
+const ProductDetails = () => {
   const { id } = useParams(); // It Get product ID from URL
   const { addToCart } = useCart();  // Access addToCart function from context
 
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [selectedSize, setSelectedSize] = useState(null);  
+  const [selectedSize, setSelectedSize] = useState(null);
 
   const sizes = ['XS', 'S', 'M', 'L', 'XL'];
 
   console.log("Product ID from URL:", id);  // If any error occur
 
-//INCREASE AND DECREASE
-const [quantity, setQuantity] = useState(1);  // State to track quantity
-const increaseQuantity = () => {
-  setQuantity((prevQuantity) => prevQuantity + 1);
-};
+  //INCREASE AND DECREASE
+  const [quantity, setQuantity] = useState(1);  // State to track quantity
+  const increaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
 
-const decreaseQuantity = () => {
-  if (quantity > 1) {
-    setQuantity((prevQuantity) => prevQuantity - 1);
-  }
-}; 
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity((prevQuantity) => prevQuantity - 1);
+    }
+  };
 
 
-                    //SIDE BAR 
+  //SIDE BAR 
   const [isProductDetailsOpen, setProductDetailsOpen] = useState(false);
   const [isDeliveryOpen, setDeliveryOpen] = useState(false);
   const [isreturnOpen, setreturnOpen] = useState(false);
@@ -73,7 +73,7 @@ const decreaseQuantity = () => {
     addToCart({ ...product, selectedSize, quantity });
     console.log("Added to Cart:", { ...product, selectedSize, quantity });
   };
-  
+
 
   const handleSizeSelect = (size) => {
     setSelectedSize(size);
@@ -109,71 +109,71 @@ const decreaseQuantity = () => {
           <div className="flex space-x-4 mt-4">
             {sizes.map((size) => (
               <button key={size}
-            className={`w-10 h-10 border-black border-1
+                className={`w-10 h-10 border-black border-1
           ${selectedSize === size ? 'border-black text-black' : 'bg-gray-200'}`}
-            onClick={() => handleSizeSelect(size)}>{size}</button>
+                onClick={() => handleSizeSelect(size)}>{size}</button>
             ))}
           </div>
           {selectedSize && <p className="mt-2">Selected Size: {selectedSize}</p>}
         </div>
         <br />
-        
+
         {/* INCREASE AND DECREASE BUTTON */}
         <div className="flex items-center space-x-4 ">
-        <div className="border-2 border-gray-700 h-10 w-28 flex flex-row  md:ml-28">
-        <button onClick={decreaseQuantity} className="mr-5 ml-5">-</button>
-        <p className="text-xl">{quantity} </p>
-       <button onClick={increaseQuantity} className="mr-5 ml-5">+</button>
-  </div>
- </div>
-                 {/* ADD TO CART BUTTON */}
-    <button onClick={handleAddToCart} 
-      className="bg-black text-white px-6 py-2 w-80 mt-10 mb-5 border-2
+          <div className="border-2 border-gray-700 h-10 w-28 flex flex-row  md:ml-28">
+            <button onClick={decreaseQuantity} className="mr-5 ml-5">-</button>
+            <p className="text-xl">{quantity} </p>
+            <button onClick={increaseQuantity} className="mr-5 ml-5">+</button>
+          </div>
+        </div>
+        {/* ADD TO CART BUTTON */}
+        <button onClick={handleAddToCart}
+          className="bg-black text-white px-6 py-2 w-80 mt-10 mb-5 border-2
       hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out">
-    Add to Cart</button>
+          Add to Cart</button>
 
-    <div className="sticky top-96 h-fit">
-        {/* Product Filter */}
-        <div>
-          <button
-            className="w-full text-left text-lg flex justify-between font-serif"
-            onClick={() => setProductDetailsOpen(!isProductDetailsOpen)}>
-            Product Details<span>{isProductDetailsOpen ? "▲" : "▼"}</span> </button>
-          {isProductDetailsOpen && <p className="mt-2 pl-4 font-semibold">lrny laiwr 3 dwrfyc  clu</p>}
-        </div>
-     <hr/>
+        <div className="sticky top-96 h-fit">
+          {/* Product Filter */}
+          <div>
+            <button
+              className="w-full text-left text-lg flex justify-between font-serif"
+              onClick={() => setProductDetailsOpen(!isProductDetailsOpen)}>
+              Product Details<span>{isProductDetailsOpen ? "▲" : "▼"}</span> </button>
+            {isProductDetailsOpen && <p className="mt-2 pl-4 font-semibold">lrny laiwr 3 dwrfyc  clu</p>}
+          </div>
+          <hr />
 
-        {/* Delivry Filter */}
-        <div className="mt-4">
-          <button
-            className="w-full text-left font-serif text-lg flex justify-between"
-            onClick={() => setDeliveryOpen(!isDeliveryOpen)}
-          >Delivery<span>{isDeliveryOpen ? "▲" : "▼"}</span></button>
-          {isDeliveryOpen && <p className="mt-2 pl-4 font-bold">PKR 5,000 - 30,000</p>}
-        </div>
-        <hr/>
+          {/* Delivry Filter */}
+          <div className="mt-4">
+            <button
+              className="w-full text-left font-serif text-lg flex justify-between"
+              onClick={() => setDeliveryOpen(!isDeliveryOpen)}
+            >Delivery<span>{isDeliveryOpen ? "▲" : "▼"}</span></button>
+            {isDeliveryOpen && <p className="mt-2 pl-4 font-bold">PKR 5,000 - 30,000</p>}
+          </div>
+          <hr />
 
-        {/* Return & Exchange Filter */}
-        <div className="mt-4">
-          <button
-            className="w-full text-left font-serif text-lg flex justify-between"
-            onClick={() => setreturnOpen(!isreturnOpen)}
+          {/* Return & Exchange Filter */}
+          <div className="mt-4">
+            <button
+              className="w-full text-left font-serif text-lg flex justify-between"
+              onClick={() => setreturnOpen(!isreturnOpen)}
             >Return and Exchange<span>{isreturnOpen ? "▲" : "▼"}</span></button>
-          {isreturnOpen && <p className="mt-2 pl-4 font-semibold">Cotton, Silk, Chiffon</p>}
-        </div>
-        <hr/>
+            {isreturnOpen && <p className="mt-2 pl-4 font-semibold">Cotton, Silk, Chiffon</p>}
+          </div>
+          <hr />
 
-        {/* Care Filter */}
-        <div className="mt-4">
-          <button
-            className="w-full text-left font-serif text-lg flex justify-between"
-            onClick={() => setCareOpen(!isCareOpen)}
-          > Care <span>{isCareOpen ? "▲" : "▼"}</span> </button>
-          {isCareOpen && <p className="mt-2 pl-4 font-semibold"></p>}
+          {/* Care Filter */}
+          <div className="mt-4">
+            <button
+              className="w-full text-left font-serif text-lg flex justify-between"
+              onClick={() => setCareOpen(!isCareOpen)}
+            > Care <span>{isCareOpen ? "▲" : "▼"}</span> </button>
+            {isCareOpen && <p className="mt-2 pl-4 font-semibold"></p>}
 
+          </div>
+          <hr />
         </div>
-        <hr/>
-      </div>
 
       </div>
     </div>
