@@ -30,6 +30,7 @@ import ManageProducts from "./Manage/ManageProducts";
 import ManageMore from "./Manage/ManageMore";
 import DisplayAdmins from "./pages/DisplayAdmins";
 import Select from "./Baroque/Select";
+import SearchResults from "./Baroque/search";
 
 // Move useLocation inside a separate component
 const Layout = () => {
@@ -47,6 +48,7 @@ const Layout = () => {
       <Routes>
         {/* USER ROUTES */}
         <Route path="/" element={<Home />} />
+        <Route path="/search" element={<SearchResults />} />
         <Route path="/chantelle" element={<Chantelle />} />
         <Route path="/unstitched" element={<Unstitched />} />
         <Route path="/stitched" element={<Stitched />} />
