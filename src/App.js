@@ -32,17 +32,17 @@ import DisplayAdmins from "./pages/DisplayAdmins";
 import Select from "./Baroque/Select";
 
 // Move useLocation inside a separate component
-  const Layout = () => {
+const Layout = () => {
   const location = useLocation();
 
   // Routes where Nevigation & Footer should NOT appear
-  const hideOnRoutes = ["/dashboard", "/admin", "/login","/signup", "/customerlogin", "/customersignup","/customerdashboard", "/cart", "/checkout"];
+  const hideOnRoutes = ["/dashboard", "/admin", "/login", "/signup", "/customerlogin", "/customersignup", "/customerdashboard", "/cart", "/checkout"];
 
   const shouldShowNevigationFooter = !hideOnRoutes.some(route => location.pathname.startsWith(route));
 
   return (
     <>
-          <Header/>
+      <Header />
       {shouldShowNevigationFooter && <Nevigation />}
       <Routes>
         {/* USER ROUTES */}
@@ -69,12 +69,12 @@ import Select from "./Baroque/Select";
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard" element={<PrivateRoute />}>
-        <Route path="" element={<AdminDashboard />} />
-        <Route path="manage-users" element={<ManageUsers />} />
-        <Route path="manage-orders" element={<ManageOrders />} />
-        <Route path="manage-products" element={<ManageProducts />} />
-        <Route path="manage-more" element={<ManageMore />} />
-        <Route path="display-admins" element={<DisplayAdmins />} />
+          <Route path="" element={<AdminDashboard />} />
+          <Route path="manage-users" element={<ManageUsers />} />
+          <Route path="manage-orders" element={<ManageOrders />} />
+          <Route path="manage-products" element={<ManageProducts />} />
+          <Route path="manage-more" element={<ManageMore />} />
+          <Route path="display-admins" element={<DisplayAdmins />} />
         </Route>
       </Routes>
       {shouldShowNevigationFooter && <Footer />}
@@ -86,7 +86,6 @@ function App() {
   return (
     <ProductProvider>
       <StudentState>
-        {/*  Wrap the entire app inside BrowserRouter */}
         <BrowserRouter>
           <Layout />
         </BrowserRouter>
