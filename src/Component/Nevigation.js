@@ -35,15 +35,15 @@ function Nevigation() {
 
   return (
 
-    <div className="w-full h-16">
+    <div className="w-full h-16 ">
       <div>
         {[false].map((expand) => (
           <Navbar
             key={expand}
             expand={expand}
-            className={`fixed top-0 left-0 w-full  z-50 duration-300 h-20 flex 
+            className={`fixed top-0 left-0 w-full  z-50 duration-300 h-14  pt-3 flex 
           cursor-pointer 
-         ${scrolled ? "bg-white top-0" : "bg-transparent  border-t-2 mt-8"}`}
+         ${scrolled ? "bg-white top-0" : "bg-transparent mt-8"}`}
           >
             <Container fluid className="w-20 inline-block -ml-0">
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='mt-2' />
@@ -158,6 +158,7 @@ function Nevigation() {
                       src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png"
                       alt="Cart"
                     />
+
                     <img
                       className="h-5 w-5 mr-3 ml-5 -mt-14 block sm:hidden md:hidden"
                       src="https://cdn-icons-png.flaticon.com/128/1828/1828415.png"
@@ -166,18 +167,19 @@ function Nevigation() {
 
                     {/* Notification Indicator */}
                     {cartNotification && (
-                      <div className="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+                      <div className="absolute top-0 right-0 bg-blue-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
                         !
                       </div>
                     )}
 
                     {/* Cart Item Count */}
                     {cart.length > 0 && (
-                      <div className="absolute  top-0 right-0 bg-black text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
+                      <div className=" hidden sm:block md:block  absolute  top-0 right-0  text-black text-xs rounded-full w-6 h-6  items-center justify-center -mt-2 mr-2">
                         {cart.length}
                       </div>
                     )}
                   </button>
+
 
                 </div>
               </div>
