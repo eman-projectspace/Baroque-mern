@@ -14,13 +14,8 @@ function Home({ products }) {
           src="https://baroque.pk/cdn/shop/files/essential_banner_1.jpg?v=1744492537&width=2000" alt="Main Banner" /></div>
       <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-4">
         {/*STITCHED & UNSTITCHED BUTTON */}
-        <button className=" 
-      bg-white text-black md:px-6 md:py-2 w-40 md:mt-40 border-white border-2 h-12 mb-28
-     hover:!bg-transparent hover:!border-white hover:!border-2 hover:!text-white hover:!duration-500 ease-in-out"
-          onClick={() => navigate("/stitched")}>STITCHED</button>
-        <button className="bg-black text-white md:px-6 md:py-2 w-40 md:mt-40 h-12
-      hover:!bg-transparent hover:!border-black hover:!border-2  hover:!text-black hover:!duration-500 ease-in-out"
-          onClick={() => navigate("/unstitched")}>UNSTITCHED</button>
+        <button className="button-slide md:px-6 md:py-2 w-28 md:mt-40 h-12 mb-28"
+          onClick={() => navigate("/unstitched")}>SHOP NOW</button>
       </div>
       {/* Category Section (Ready to Wear, Chantelle, Shawls) */}
       <div className="md:flex md:justify-center mt-20 ml-5 mr-5 md:space-x-12 mb-28">
@@ -28,13 +23,11 @@ function Home({ products }) {
           <img
             className="md:w-[350px] md:h-[500px] md:object-cover
             transition-transform duration-100 hover:animate-pulse cursor-pointer "
-            src="https://baroque.pk/cdn/shop/files/02_Banner242.jpg?v=1738845059&width=800" alt="Ready to Wear" />
-          <p className="text-center text-2xl font-serif md:mt-2 mt-4  ">READY TO WEAR</p>
+            src="https://baroque.pk/cdn/shop/files/11111_1.jpg?v=1744714701&width=1000" alt="Ready to Wear" />
+          <p className="text-center text-2xl font-serif md:mt-2 mt-4  ">UNSTITCHED</p>
           <button
-            className="bg-black text-white md:px-6 py-2 w-40 h-12 border-2  md:mt-7 md:mb-2 mb-5 mt-2 md:ml-20 ml-32
-              hover:!bg-transparent hover:!border-black hover:!border-2
-             hover:!text-black hover:!duration-500 ease-in-out"
-            onClick={() => navigate("/readytowear")}>SHOP NOW</button>
+            className="button-slide md:px-6 py-2 w-36 h-10 md:w-36  md:mt-7 md:mb-2 mb-5 mt-2 md:ml-20 ml-40"
+            onClick={() => navigate("/unstitched")}>SHOP NOW</button>
         </div>
 
         <div>
@@ -45,9 +38,7 @@ function Home({ products }) {
             alt="Chantelle" onClick={() => navigate("/chantelle")} />
           <p className="text-center text-2xl font-serif md:mt-2 mt-4">CHANTELLE</p>
           <button
-            className="bg-black text-white md:px-6 py-2 w-40  md:mt-7 md:mb-2 mb-5 mt-2
-              hover:!bg-transparent hover:!border-black hover:!border-2 h-12 border-2 
-             hover:!text-black hover:!duration-500 ease-in-out md:ml-20 ml-32"
+            className="button-slide md:px-6 py-2 w-28 h-12  md:mt-7 md:mb-2 mb-5 mt-2 md:ml-28 ml-40"
             onClick={() => navigate("/chantelle")}>SHOP NOW</button>
         </div>
 
@@ -60,9 +51,7 @@ function Home({ products }) {
             onClick={() => navigate("/shawls")} />
           <p className="text-center text-2xl font-serif md:mt-2 mt-4">INTERMIX</p>
           <button
-            className="bg-black text-white md:px-6 py-2 w-40  md:mt-7 md:mb-2 mb-5 mt-2
-              hover:!bg-transparent hover:!border-black hover:!border-2 h-12 border-2 
-             hover:!text-black hover:!duration-500 ease-in-out md:ml-24 ml-36"
+            className="button-slide md:px-6 py-2 w-28 h-12  md:mt-7 md:mb-2 mb-5 mt-2 md:ml-24 ml-40"
             onClick={() => navigate("/shawls")}>SHOP NOW</button>
         </div>
       </div>
@@ -84,8 +73,7 @@ function Home({ products }) {
               <div className='font-serif md:w-52 md:mt-2'>EMBROIDERED CHIFFON PR-1056</div>
 
               <div className='font-serif'>PKR 29,900.00</div>
-              <button className='md:w-44 md:h-12 md:mt-3
-          bg-black text-white    hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out'>VIEW PRODUCT</button>
+              <button className='button-slide md:w-44 md:h-12 md:mt-3'>VIEW PRODUCT</button>
             </div>
           </div>
         </Carousel.Item>
@@ -99,8 +87,7 @@ function Home({ products }) {
               <img src="https://baroque.pk/cdn/shop/files/88_a84d6f90-d659-4fab-9637-d77cfe27f98a.jpg?v=1735813514" alt=""></img>
               <div className='font-serif md:w-52 md:mt-2'>EMBROIDERED CHIFFON PR-1056</div>
               <div className='font-serif'>PKR 10,900.00</div>
-              <button className='bg-black md:w-44 md:h-12 text-white md:mt-3
-          hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out'>VIEW PRODUCT</button>
+              <button className='button-slide md:w-44 md:h-12 md:mt-3'>VIEW PRODUCT</button>
             </div>
           </div>
         </Carousel.Item>
@@ -114,14 +101,12 @@ function Home({ products }) {
               <img src="https://baroque.pk/cdn/shop/files/27_44117e97-c365-4b12-9d32-17b4a9d77f7f.jpg?v=1733309562" alt=""></img>
               <div className='font-serif md:w-52 md:mt-2'>EMBROIDERED CHIFFON PR-1056</div>
               <div className='font-serif'>PKR 29,900.00</div>
-              <button className='md:w-44 md:h-12 md:mt-3
-        h-20 w-20
-        text-white
-          hover:!bg-transparent hover:!border-black border-2 hover:!text-black bg-black hover:!duration-500 ease-in-out"'>VIEW PRODUCT</button>
+              <button className='button-slide md:w-44 md:h-12 md:mt-3'>VIEW PRODUCT</button>
             </div>
           </div>
         </Carousel.Item>
       </Carousel>
+
       {/* BE INSPIRED */}
       <br /><br /><br />
       <hr />
@@ -134,9 +119,7 @@ function Home({ products }) {
             src="https://baroque.pk/cdn/shop/videos/c/vp/66c69f47322c49cfb73d44220fc567fc/66c69f47322c49cfb73d44220fc567fc.HD-1080p-2.5Mbps-40062159.mp4?v=0"
             type="video/mp4" playsInline autoPlay loop muted />
           <div className="absolute -mt-44 ml-36  md:-mt-36 md:ml-20 ">
-            <button className=" 
-      bg-black text-white  w-40  h-12
-     hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
+            <button className=" w-28  h-12 button-slide"
               onClick={() => navigate("/")}>CLIENT LOVE</button></div>
         </div>
         <div>
@@ -144,9 +127,7 @@ function Home({ products }) {
             src="https://baroque.pk/cdn/shop/videos/c/vp/8335de5a5387470494ab6c998865d268/8335de5a5387470494ab6c998865d268.HD-1080p-2.5Mbps-40062160.mp4?v=0"
             type="video/mp4" playsInline autoPlay loop muted />
           <div className="absolute -mt-40 ml-36 md:-mt-36 md:ml-20">
-            <button className=" 
-      bg-black text-white  w-40  h-12 
-     hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
+            <button className="w-40  h-12  button-slide"
               onClick={() => navigate("/stitched")}>CELEBERITY STYLE</button>
           </div></div>
         <div>
@@ -154,9 +135,7 @@ function Home({ products }) {
             src="https://baroque.pk/cdn/shop/videos/c/vp/3398a9dc34404ca78f8621b87f59e445/3398a9dc34404ca78f8621b87f59e445.HD-1080p-2.5Mbps-40062158.mp4?v=0"
             type="video/mp4" playsInline autoPlay loop muted />
           <div className="absolute -mt-20 ml-36 md:-mt-20 md:ml-20 ">
-            <button className=" 
-      bg-black text-white  w-40  h-12 mr-20
-     hover:!bg-transparent hover:!border-black hover:!border-2 hover:!text-black hover:!duration-500 ease-in-out"
+            <button className=" button-slide w-32  h-12 mr-20"
               onClick={() => navigate("/stitched")}>STYLE SPOTTED</button>
           </div>  </div>
       </div>
@@ -169,9 +148,7 @@ function Home({ products }) {
       <div className="flex mb-24">
         <div className="flex-col md:flex-row flex ml-20">
           <input placeholder="E-mail" className="md:ml-72 border 1 h-12 w-80 " />&nbsp;
-          <button className="bg-black  h-12 w-80  text-white
-   hover:!bg-transparent hover:!border-black hover:!border-2
-  hover:!text-black hover:!duration-500 ease-in-out">SUBSCRIBE</button></div>
+          <button className="button-slide  h-12 w-80  ">SUBSCRIBE</button></div>
       </div>
       {/* Features Section */}
       <div className="flex md:flex-row flex-col md:gap-3 ml-10 mr-10 mb-5">

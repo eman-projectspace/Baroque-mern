@@ -35,7 +35,7 @@ const ProductDetails = () => {
   const [isreturnOpen, setreturnOpen] = useState(false);
   const [isCareOpen, setCareOpen] = useState(false);
 
-
+  const [mainImage, setMainImage] = useState(null);
 
   useEffect(() => {
     if (!id) {
@@ -80,18 +80,31 @@ const ProductDetails = () => {
   };
 
   return (
-    <div className="md:flex md:flex-row md:mb-28 md:mt-16">
+    <div className="md:flex md:flex-row md:mb-28 md:mt-16 ml-2 mr-2">
       <hr />
-      <div className="md:w-32 md:h-auto md:flex md:flex-col md:space-y-5 md:ml-6 md:items-center">
-        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
-        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
-        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
-        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
-        <div className="md:w-20 md:h-20 md:border-2 md:border-black "></div>
+      {/* Thumbnails only if more than one image */}
+      {product.images && product.images.length > 1 && (
+        <div className="md:w-32 md:h-auto md:flex md:flex-col md:space-y-5 md:ml-6 md:items-center ">
+          {product.images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`Thumbnail ${index}`}
+              className="w-20 h-20 border-2 border-gray-300 cursor-pointer hover:border-black"
+              onClick={() => setMainImage(img)}
+            />
+          ))}
+        </div>
+      )}
+      {/* Main Image Section */}
+      <div className="md:w-2/4 md:flex md:flex-col md:ml-10">
+        <img
+          src={mainImage || product.images?.[0] || product.image}
+          alt={product.name}
+          className="w-full"
+        />
       </div>
-      <div className=" md:w-2/4 md:flex md:flex-col md:ml-10 ">
-        <img src={product.image} alt={product.name} />
-      </div>
+
       <div className="w-80 ml-12 text-left ">
         <p className="text-xl text-gray-500 mt-2">{product.name}</p>
         <p className="mt-2 font-semibold font-serif text-gray-700">PKR {product.price}</p>
