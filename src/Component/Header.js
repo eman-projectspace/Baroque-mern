@@ -1,22 +1,18 @@
-import React, { useEffect, useState } from 'react';
 import "./Header.css";
 
 function Header() {
-  const [showSecondLine, setShowSecondLine] = useState(false);
 
-  useEffect(() => {
-    const timer = setTimeout(() => setShowSecondLine(true), 2000);
-    return () => clearTimeout(timer);
-  }, []);
+
 
   return (
     <div id="div1">
-      <div className="animated-text">
-        <div className="line">CLICK HERE FOR : <u className="toptext">DISPATCH TIMELINE</u></div>
-        {showSecondLine && (
-          <div className="line">FOR INTERNATIONAL WEBSITE VISIT : <u className="toptext">WWW.BAROQUE.COM.PK</u></div>
-        )}
-        <div className="line">CLICK HERE FOR : <u className="toptext">DISPATCH TIMELINE</u></div>
+      <div class="animated-text">
+        <div class="lines-container">
+          <div class="line">CLICK HERE FOR : <u class="toptext">DISPATCH TIMELINE</u></div>
+          <div class="line">FOR INTERNATIONAL WEBSITE VISIT : <u class="toptext">WWW.BAROQUE.COM.PK</u></div>
+          <div class="line">CLICK HERE FOR : <u class="toptext">DISPATCH TIMELINE</u></div>
+          <div class="line">CLICK HERE FOR : <u class="toptext">DISPATCH TIMELINE</u></div>
+        </div>
       </div>
     </div>
   );

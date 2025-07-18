@@ -1,97 +1,40 @@
-body {
-  padding: 0;
-  margin: 0;
-  border-style: solid;
-}
+    .animated-text {
+      width: 100%;
+      height: 30px;
+      overflow: hidden;
+      position: relative;
+      margin-top: 0px;
+      color: white;
+      background-color: black;
+      text-align: center;
+    }
 
-/* *,
-::before,
-::after {
-  box-sizing: unset;
-  border-width: unset;
-  border-style: unset;
-  border-color: unset;
-} */
+    .lines-container {
+      display: flex;
+      flex-direction: column;
+      animation: scroll 7s linear infinite;
+    }
 
-#div1 {
-  height: 40px;
-  width: 100%;
-  background-color: black;
-}
+    .toptext:hover {
+      cursor: pointer;
+      text-decoration: none;
+    }
 
-.toptext {
-  cursor: pointer;
-}
+    .line {
+      height: 30px;
+      line-height: 30px;
+      font-size: 13px;
+      font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      text-transform: uppercase;
+    }
 
-.toptext:hover {
-  text-decoration: none;
-}
+    @keyframes scroll {
+      0% {
+        transform: translateY(0);
+      }
 
-.animated-text {
-  margin-top: 45px;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  margin-left: 550px;
-  color: white;
-  position: absolute;
-  transform: translate(-230px, -40px);
-  height: 30px;
-  overflow: hidden;
-  padding: 0 40px;
-}
-
-.line {
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 30px;
-  font-size: 13px;
-  font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-.line:first-child {
-  animation: anim 4s infinite;
-}
-
-@keyframes anim {
-  50% {
-    margin-top: -30px;
-  }
-
-  100% {
-    margin-top: -60px;
-  }
-}
-
-
-@media (max-width: 768px) {
-  .animated-text {
-    margin-left: 20px;
-    transform: translate(0, -40px);
-    padding: 0 10px;
-  }
-
-  .line {
-    font-size: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  #div1 {
-    height: 50px;
-  }
-
-  .animated-text {
-    margin-top: 10px;
-    margin-left: 10px;
-    padding: 0 5px;
-  }
-
-  .line {
-    font-size: 11px;
-  }
-
-  .toptext {
-    font-size: 14px;
-
-  }
-}
+      100% {
+        transform: translateY(-120px);
+        /* 4 lines × 30px */
+      }
+    }

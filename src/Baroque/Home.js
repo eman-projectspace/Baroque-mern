@@ -14,7 +14,7 @@ function Home({ products }) {
           src="https://baroque.pk/cdn/shop/files/essential_banner_1.jpg?v=1744492537&width=2000" alt="Main Banner" /></div>
       <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex gap-4">
         {/*STITCHED & UNSTITCHED BUTTON */}
-        <button className="button-slide md:px-6 md:py-2 w-28 md:mt-40 h-12 mb-28"
+        <button className="relative left-0 hover:left-5 transition-all duration-[2000ms] ease-in-out bg-black text-white px-6 py-2"
           onClick={() => navigate("/unstitched")}>SHOP NOW</button>
       </div>
       {/* Category Section (Ready to Wear, Chantelle, Shawls) */}
