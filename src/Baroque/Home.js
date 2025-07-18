@@ -26,7 +26,7 @@ function Home({ products }) {
             src="https://baroque.pk/cdn/shop/files/11111_1.jpg?v=1744714701&width=1000" alt="Ready to Wear" />
           <p className="text-center text-2xl font-serif md:mt-2 mt-4  ">UNSTITCHED</p>
           <button
-            className="button-slide md:px-6 py-2 w-36 h-10 md:w-36  md:mt-7 md:mb-2 mb-5 mt-2 md:ml-20 ml-40"
+            className="button-slide md:px-6 py-2 w-32 h-10 md:w-36  md:mt-7 md:mb-2 mb-5 mt-2 md:ml-20 ml-40"
             onClick={() => navigate("/unstitched")}>SHOP NOW</button>
         </div>
 
