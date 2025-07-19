@@ -26,7 +26,18 @@
       font-size: 13px;
       font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       text-transform: uppercase;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
     }
+
+    @media (max-width: 767px) {
+      .line {
+        font-size: 11px;
+      }
+    }
+
 
     @keyframes scroll {
       0% {
