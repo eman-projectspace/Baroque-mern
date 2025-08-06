@@ -7,11 +7,11 @@ function Header() {
   return (
     <div id="div1">
       <div class="animated-text">
-        <div class="lines-container">
-          <div class="line">CLICK HERE FOR : <u class="toptext">DISPATCH TIMELINE</u></div>
-          <div class="line">FOR INTERNATIONAL WEBSITE VISIT : <u class="toptext">WWW.BAROQUE.COM.PK</u></div>
-          <div class="line">CLICK HERE FOR : <u class="toptext">DISPATCH TIMELINE</u></div>
-          <div class="line">CLICK HERE FOR : <u class="toptext">DISPATCH TIMELINE</u></div>
+        <div class="line-container">
+          <div class="line">CLICK HERE: <span class="toptext">DISPATCH TIMELINE</span></div>
+          <div class="line">FOR INTERNATIONAL WEBSITE VISIT <span class="toptext">WWW.BAROQUE.COM.PK</span></div>
+          <div class="line">CLICK HERE: <span class="toptext">DISPATCH TIMELINE</span></div>
+          <div class="line">FOR INTERNATIONAL WEBSITE VISIT <span class="toptext">WWW.BAROQUE.COM.PK</span></div>
         </div>
       </div>
     </div>

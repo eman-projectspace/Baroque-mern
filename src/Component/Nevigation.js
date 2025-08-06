@@ -10,7 +10,7 @@ import {
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
 
-function Nevigation() {
+function Navigation() {
   const { cart, cartNotification } = useCart();
   const navigate = useNavigate();
 
@@ -27,16 +27,16 @@ function Nevigation() {
   }, []);
 
   return (
-    <div className="w-full">
+    <div className="relative">
       {[false].map((expand) => (
         <Navbar
           key={expand}
           expand={expand}
-          className={`fixed top-0 left-0 w-full z-50 duration-300 h-14 ${scrolled ? "bg-white shadow-sm" : "bg-transparent mt-8"
+          className={`fixed top-0 left-0 w-full z-50 duration-300 h-30 ${scrolled ? "bg-white shadow-sm" : "bg-transparent mt-4 "
             }`}
         >
-          <Container fluid className="flex items-center justify-between px-4">
-            {/* --- Toggle --- */}
+          <Container fluid className="flex items-center justify-between px-4  h-20 bg-white w-full">
+            {/* --- Left Side--- */}
             <Navbar.Toggle
               aria-controls={`offcanvasNavbar-expand-${expand}`}
               className="border-0"
@@ -91,7 +91,7 @@ function Nevigation() {
             </Navbar.Offcanvas>
 
             {/* --- Center Logo --- */}
-            <div className="flex-1 flex justify-center">
+            <div className="justify-center">
               <img
                 className="h-10"
                 src="https://baroque.pk/cdn/shop/files/LOGO_PNG_V01.png?v=1689675712&width=150"
@@ -100,7 +100,7 @@ function Nevigation() {
             </div>
 
             {/* --- Right Side Icons --- */}
-            <div className="flex items-center gap-3 relative">
+            <div className=" flex items-center gap-3 relative">
               {/* Hide on small screen */}
               <p className="hidden md:block text-sm">Pakistan</p>
 
@@ -123,7 +123,7 @@ function Nevigation() {
               <button onClick={() => setAvailabilityOpen(!isAvailabilityOpen)}>
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/54/54481.png"
-                  className="w-5 h-5"
+                  className="w-5 h-5 "
                   alt="Search"
                 />
               </button>
@@ -179,4 +179,4 @@ function Nevigation() {
   );
 }
 
-export default Nevigation;
+export default Navigation;
