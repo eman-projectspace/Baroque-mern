@@ -8,21 +8,23 @@ function Home({ products }) {
   return (
     <div className="overflow-x-hidden">
       {/* Main Banner */}
-      <div>
+      <div className="relative">
         <img
-          className="w-full h-64 md:h-auto object-cover"
+          className="w-full h-[250px] md:h-auto object-cover"
           src="https://baroque.pk/cdn/shop/files/essential_banner_1.jpg?v=1744492537&width=2000"
           alt="Main Banner"
         />
+
+        <div className="absolute top-3/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+          <button
+            className="bg-black text-white px-6 py-2 hover:translate-x-1 transition-all duration-700"
+            onClick={() => navigate("/unstitched")}
+          >
+            SHOP NOW
+          </button>
+        </div>
       </div>
-      <div className="text-center mt-[-40px] md:absolute md:top-3/4 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2">
-        <button
-          className="bg-black text-white px-6 py-2 hover:translate-x-1 transition-all duration-700"
-          onClick={() => navigate("/unstitched")}
-        >
-          SHOP NOW
-        </button>
-      </div>
+
 
       {/* Category Section */}
       <div className="flex flex-col md:flex-row items-center justify-center gap-8 my-16 px-4">
@@ -84,7 +86,7 @@ function Home({ products }) {
                 <img src={item.thumb} alt="product thumbnail" />
                 <div className="font-serif mt-2">{item.title}</div>
                 <div className="font-serif">{item.price}</div>
-                <button className="button-slide mt-3 w-full h-12">VIEW PRODUCT</button>
+                <button className="button-slide mt-3 w-full h-12" onClick={() => navigate("/unstitched")}>VIEW PRODUCT</button>
               </div>
             </div>
           </Carousel.Item>
