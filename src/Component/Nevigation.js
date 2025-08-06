@@ -150,13 +150,13 @@ function Navigation() {
 
       {/* --- Search Input --- */}
       {isAvailabilityOpen && (
-        <div className="p-4 bg-white shadow-md fixed top-14 w-full z-40">
+        <div className="p-4 bg-white shadow-md fixed top-24 w-full z-40">
           <div className="flex gap-2">
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 border border-gray-300 rounded px-3 py-2"
+              className="flex-1 border border-gray-300 rounded px-3 py-2 "
               placeholder="Search products..."
             />
             <button
