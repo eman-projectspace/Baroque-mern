@@ -1,107 +1,133 @@
 import React, { useState } from 'react';
 
 const Footer = () => {
-  const [isAboutOpen, setAboutOpen] = useState(false)
-  const [isServiceOpen, setServiceOpen] = useState(false)
-  const [isPoliciesOpen, setPoliciesOpen] = useState(false)
+  const [isAboutOpen, setAboutOpen] = useState(false);
+  const [isServiceOpen, setServiceOpen] = useState(false);
+  const [isPoliciesOpen, setPoliciesOpen] = useState(false);
+
   return (
+    <div className="bg-white px-5 md:px-20 py-10">
+      <hr className="mb-10" />
 
-    <div >
-
-      <hr />
-      <br /><br /><br /><br />
-      {/* Laptop Screen */}
-      <div className="leading-8 hidden md:block ">
-        <div className='flex'>
-          <div className="md:ms-20 inline ">
-            <b>ABOUT</b>
-            <br />who we are
-            <br />Our Responsibility
-            <br />Servie We Provide
-            <br />Careers
-            <br />Legal
-          </div>
-          <div className="md:ms-80 inline">
-            <b>CUSTOMER SERVICE</b>
-            <br />Contact Us
-            <br />Dispatch TimeLine
-            <br />Email: info@ baroque.pk
-            <br />Call:+92 325 700 1111
-            <br />Whatsapp:+92 325 700 1111
-          </div>
-          <div className="md:ms-80 inline">
-            <b>POLICIES</b>
-            <br />Privacy Policy
-            <br />Refund Policy
-            <br />Shipping Policy
-            <br />Terms of Service
-            <br />Exchange Information
-          </div>
-        </div>
-
-
-      </div>
-
-      {/* Mobile Screen */}
-      <div className='ml-5 mr-5'>
+      {/* Desktop View */}
+      <div className="hidden md:flex justify-between text-sm leading-8">
+        {/* ABOUT */}
         <div>
-          {/* ABOUT */}
-          <button
-            className="w-full text-left text-lg  justify-between font-serif block md:hidden
-             mt-2 pt-3 pb-3  border-y-slate-200 border-t-2 "
-            onClick={() => setAboutOpen(!isAboutOpen)}>
-            <span className='ml-5 font-mono mr-5'>About</span>
-            <span>{isAboutOpen ? "-" : "+"}</span> </button>
-          {isAboutOpen && <p className="mt-2 ml-2 text-left ">
-            Who We Are<br />
-            Our Responsibility<br />
-            Service We Provide<br />
-            Careers<br />
-            Legal<br />
-            Retail Outlet : Shop F-06, First Floor, Dolmen Mall, Sector A, DHA <br />Phase 6, Lahore, Punjab, Pakistan
-          </p>}
-
+          <b>ABOUT</b>
+          <p>Who we are</p>
+          <p>Our Responsibility</p>
+          <p>Service We Provide</p>
+          <p>Careers</p>
+          <p>Legal</p>
         </div>
-        {/* SERVICE */}
-        <button
-          className="w-full text-left mt-2 pt-3 pb-3 text-lg border-y-slate-200 border-t-2 border-b-2  justify-between font-serif block md:hidden" onClick={() => setServiceOpen(!isServiceOpen)}>
-          <span className='ml-4 font-mono mr-5'> CUSTOMER SERVICE</span>
-          <span>{isServiceOpen ? "-" : "+"}</span></button>
-        {isServiceOpen && <p className="mt-2 text-left ml-5 ">
-          Contact Us <br />
-          Dispatch Timeline  <br />
-          Email: info@baroque.pk  <br />
-          Call: +92 325 700 1111  <br />
-          WhatsApp: +92 325 7001111  <br />
-        </p>}
-        {/* About */}
-        <button
-          className="w-full  mt-2 pt-3 pb-3 text-lg border-y-slate-200 border-b-2  text-left  justify-between font-serif block md:hidden" onClick={() => setPoliciesOpen(!isPoliciesOpen)}>
-          <span className='ml-4 font-mono mr-5'>POLICIES</span>
-          <span>{isPoliciesOpen ? "-" : "+"}</span></button>
-        {isPoliciesOpen && <p className="mt-2 text-left ml-5 ">
-          Privacy Policy <br />
-          Refund Policy <br />
-          Shipping Policy <br />
-          Terms of Service <br />
-          Exchange Information <br />
-        </p>}
+
+        {/* CUSTOMER SERVICE */}
+        <div>
+          <b>CUSTOMER SERVICE</b>
+          <p>Contact Us</p>
+          <p>Dispatch Timeline</p>
+          <p>Email: info@baroque.pk</p>
+          <p>Call: +92 325 700 1111</p>
+          <p>Whatsapp: +92 325 700 1111</p>
+        </div>
+
+        {/* POLICIES */}
+        <div>
+          <b>POLICIES</b>
+          <p>Privacy Policy</p>
+          <p>Refund Policy</p>
+          <p>Shipping Policy</p>
+          <p>Terms of Service</p>
+          <p>Exchange Information</p>
+        </div>
       </div>
 
-      {/* IMAGES */}
-      <div className='flex gap-4 mt-10 mb-5 ml-10'>
-        <img className='w-5 h-5 ml-5 cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/20/20837.png" alt="" />
-        <img className='w-5 h-5 ml-5 cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/1077/1077042.png" alt="" />
-        <img className='w-5 h-5 ml-5 cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/1384/1384028.png" alt="" />
-        <img className='w-5 h-5 ml-5 cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/3046/3046120.png" alt="" />
-        <img className='w-5 h-5 ml-5  cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/733/733627.png" alt="" />
-        <img className='w-5 h-5 ml-5 cursor-pointer' src="https://cdn-icons-png.flaticon.com/128/1384/1384023.png" alt="" />
+      {/* Mobile View */}
+      <div className="md:hidden text-sm">
+        {/* ABOUT */}
+        <div>
+          <button
+            className="w-full text-left text-lg font-semibold py-3 border-t"
+            onClick={() => setAboutOpen(!isAboutOpen)}
+          >
+            <span className="ml-2 font-mono">ABOUT</span>
+            <span className="float-right mr-5">{isAboutOpen ? '-' : '+'}</span>
+          </button>
+          {isAboutOpen && (
+            <div className="pl-5 mt-2">
+              <p>Who We Are</p>
+              <p>Our Responsibility</p>
+              <p>Service We Provide</p>
+              <p>Careers</p>
+              <p>Legal</p>
+              <p>Retail Outlet: Shop F-06, First Floor, Dolmen Mall, Sector A, DHA Phase 6, Lahore</p>
+            </div>
+          )}
+        </div>
+
+        {/* CUSTOMER SERVICE */}
+        <div>
+          <button
+            className="w-full text-left text-lg font-semibold py-3 border-t"
+            onClick={() => setServiceOpen(!isServiceOpen)}
+          >
+            <span className="ml-2 font-mono">CUSTOMER SERVICE</span>
+            <span className="float-right mr-5">{isServiceOpen ? '-' : '+'}</span>
+          </button>
+          {isServiceOpen && (
+            <div className="pl-5 mt-2">
+              <p>Contact Us</p>
+              <p>Dispatch Timeline</p>
+              <p>Email: info@baroque.pk</p>
+              <p>Call: +92 325 700 1111</p>
+              <p>WhatsApp: +92 325 700 1111</p>
+            </div>
+          )}
+        </div>
+
+        {/* POLICIES */}
+        <div>
+          <button
+            className="w-full text-left text-lg font-semibold py-3 border-t border-b"
+            onClick={() => setPoliciesOpen(!isPoliciesOpen)}
+          >
+            <span className="ml-2 font-mono">POLICIES</span>
+            <span className="float-right mr-5">{isPoliciesOpen ? '-' : '+'}</span>
+          </button>
+          {isPoliciesOpen && (
+            <div className="pl-5 mt-2">
+              <p>Privacy Policy</p>
+              <p>Refund Policy</p>
+              <p>Shipping Policy</p>
+              <p>Terms of Service</p>
+              <p>Exchange Information</p>
+            </div>
+          )}
+        </div>
       </div>
 
-      <p className='mt-3 cursor-pointer font-mono inline-block text-gray-500 ml-20 '>PAKISTAN</p>
-      <br />  <br />  <br />
+      {/* SOCIAL ICONS */}
+      <div className="flex flex-wrap gap-4 mt-10 ml-2 md:ml-0 ">
+        {[
+          'https://cdn-icons-png.flaticon.com/128/20/20837.png',
+          'https://cdn-icons-png.flaticon.com/128/1077/1077042.png',
+          'https://cdn-icons-png.flaticon.com/128/1384/1384028.png',
+          'https://cdn-icons-png.flaticon.com/128/3046/3046120.png',
+          'https://cdn-icons-png.flaticon.com/128/733/733627.png',
+          'https://cdn-icons-png.flaticon.com/128/1384/1384023.png',
+        ].map((icon, index) => (
+          <img
+            key={index}
+            src={icon}
+            className="w-6 h-6 cursor-pointer"
+            alt={`icon-${index}`}
+          />
+        ))}
+      </div>
+
+      <p className="mt-6 font-mono text-gray-500 ml-2 md:ml-20">PAKISTAN</p>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
