@@ -29,8 +29,9 @@ import ManageUsers from "./Manage/ManageUsers";
 import ManageProducts from "./Manage/ManageProducts";
 import ManageMore from "./Manage/ManageMore";
 import DisplayAdmins from "./pages/DisplayAdmins";
-import Select from "./Baroque/Select";
+import Select from "./Baroque/CountryAlert";
 import SearchResults from "./Baroque/search";
+import CountryAlert from "./Baroque/CountryAlert";
 
 // Move useLocation inside a separate component
 const Layout = () => {
@@ -60,6 +61,7 @@ const Layout = () => {
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
+        <Route path="/countryalert" element={<CountryAlert />} />
 
         {/* CUSTOMER AUTH ROUTES */}
         <Route path="/customerlogin" element={<CustomerLogin />} />
@@ -78,6 +80,7 @@ const Layout = () => {
           <Route path="manage-more" element={<ManageMore />} />
           <Route path="display-admins" element={<DisplayAdmins />} />
         </Route>
+
       </Routes>
       {shouldShowNevigationFooter && <Footer />}
     </>

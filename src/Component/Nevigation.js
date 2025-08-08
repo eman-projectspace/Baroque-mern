@@ -9,6 +9,7 @@ import {
 } from "react-bootstrap";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import { useCart } from "../Context/CartContext";
+import CountryAlert from "../Baroque/CountryAlert";
 
 function Navigation() {
   const { cart, cartNotification } = useCart();
@@ -25,6 +26,8 @@ function Navigation() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const [showCountryAlert, setShowCountryAlert] = useState(false);
 
   return (
     <div className="relative">
@@ -104,7 +107,10 @@ function Navigation() {
               {/* Hide on small screen */}
               <p className="hidden md:block text-sm">Pakistan</p>
 
-              <button onClick={() => navigate("/select")} className="hidden md:block">
+              <button
+                onClick={() => setShowCountryAlert(true)}
+                className="hidden md:block"
+              >
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/2985/2985150.png"
                   className="w-5 h-5"
@@ -112,6 +118,9 @@ function Navigation() {
                 />
               </button>
 
+              {showCountryAlert && (
+                <CountryAlert onClose={() => setShowCountryAlert(false)} />
+              )}
               <button onClick={() => navigate("/customerSignup")} className="hidden md:block">
                 <img
                   src="https://cdn-icons-png.flaticon.com/128/747/747376.png"
